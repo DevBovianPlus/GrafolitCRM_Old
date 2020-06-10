@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{552E697F-6CB7-4457-909E-4268220DA133}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnalizaProdaje</RootNamespace>
+    <AssemblyName>AnalizaProdaje</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGauges.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.Web, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.1.Presets, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Web.WebForms, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Web, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Nav_bar\MainMenu.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\arrowDown.png" />
+    <Content Include="Images\arrowNeutral.png" />
+    <Content Include="Images\arrowUp.png" />
+    <Content Include="Images\eventDetailIcon.png" />
+    <Content Include="Images\eventDetailIconHover.png" />
+    <Content Include="Images\PorociloSestanek.png" />
+    <Content Include="Images\PripravaSestanek.png" />
+    <Content Include="Pages\Display\FinancialControl.aspx" />
+    <Content Include="Pages\Testing\MailTest.aspx" />
+    <Content Include="UserControls\Widgets\CalendarWidget.ascx" />
+    <Content Include="UserControls\Widgets\DateTimeWidget.ascx" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\1493052378_icon-136-document-edit.png" />
+    <Content Include="Images\1493054064_icon-81-document-add.png" />
+    <Content Include="Images\1493054096_icon-27-trash-can.png" />
+    <Content Include="Images\1493054387_icon-103-folder-cancel.png" />
+    <Content Include="Images\add2.png" />
+    <Content Include="Images\addEventBtn.png" />
+    <Content Include="Images\addEventBtnPressed.png" />
+    <Content Include="Images\addForPopUp.png" />
+    <Content Include="Images\addPopUp.png" />
+    <Content Include="Images\addPopupDisabled.png" />
+    <Content Include="Images\Arrow-right.png" />
+    <Content Include="Images\arrow_left_24.ico" />
+    <Content Include="Images\BackArrow.png" />
+    <Content Include="Images\BackButton.png" />
+    <Content Include="Images\bovianplus_logo.png" />
+    <Content Include="Images\bovian_logo.png" />
+    <Content Include="Images\btnDeleteDisabled.png" />
+    <Content Include="Images\btnEditDisabled.png" />
+    <Content Include="Images\btnPopUpDeleteDisabled.png" />
+    <Content Include="Images\btnPopUpEditDisabled.png" />
+    <Content Include="Images\cancel1.png" />
+    <Content Include="Images\cancelPopUp.png" />
+    <Content Include="Images\clearImage.png" />
+    <Content Include="Images\DisplayAllCharts.png" />
+    <Content Include="Images\DisplayAllChartsPressed.png" />
+    <Content Include="Images\downloadPDF.png" />
+    <Content Include="Images\DrawChart.png" />
+    <Content Include="Images\edit2.png" />
+    <Content Include="Images\editForPopup.png" />
+    <Content Include="Images\editPopup.png" />
+    <Content Include="Images\ErrorBackBtn.png" />
+    <Content Include="Images\eventBtn4.png" />
+    <Content Include="Images\Filter.png" />
+    <Content Include="Images\hamburgerClose.png" />
+    <Content Include="Images\hamburgerMenu.png" />
+    <Content Include="Images\inboxDoc.png" />
+    <Content Include="Images\logoGrafoLit.png" />
+    <Content Include="Images\OneInRow.png" />
+    <Content Include="Images\OneInRow1.png" />
+    <Content Include="Images\OneInRow_hover.png" />
+    <Content Include="Images\PrintChart.png" />
+    <Content Include="Images\Profile2.png" />
+    <Content Include="Images\Profile4.png" />
+    <Content Include="Images\Profile5.png" />
+    <Content Include="Images\searchIcon.png" />
+    <Content Include="Images\Smile.png" />
+    <Content Include="Images\threeInOneRow.png" />
+    <Content Include="Images\threeInOneRow_hover.png" />
+    <Content Include="Images\trash2.png" />
+    <Content Include="Images\trashForPopUp.png" />
+    <Content Include="Images\trashPopUp.png" />
+    <Content Include="Images\TwoInRow.png" />
+    <Content Include="Images\TwoInRow_hover.png" />
+    <Content Include="Pages\CodeList\Clients\ClientsChartsDetail.aspx" />
+    <Content Include="Pages\CodeList\Clients\ClientsForm.aspx" />
+    <Content Include="Pages\CodeList\Clients\ContactPerson_popup.aspx" />
+    <Content Include="Pages\CodeList\Clients\Device_popup.aspx" />
+    <Content Include="Pages\CodeList\Clients\Categorie_popup.aspx" />
+    <Content Include="Pages\CodeList\Clients\Plan_popup.aspx" />
+    <Content Include="Pages\CodeList\Employees\Employees.aspx" />
+    <Content Include="Pages\CodeList\Clients\Clients.aspx" />
+    <Content Include="Pages\CodeList\Employees\Employee_popup.aspx" />
+    <Content Include="Pages\CodeList\Events\EventsForm.aspx" />
+    <Content Include="Pages\CodeList\Events\Events.aspx" />
+    <Content Include="Pages\CodeList\Events\Message_popup.aspx" />
+    <Content Include="Pages\CodeList\Reports\ReportPreview.aspx" />
+    <Content Include="Pages\Error\ErrorPage.aspx" />
+    <Content Include="Pages\Error\ReportError_popup.aspx" />
+    <Content Include="Pages\SalesGraphs.aspx" />
+    <Content Include="Pages\UserInfo\UserData.aspx" />
+    <Content Include="Prijava_popup.aspx" />
+    <Content Include="ProfileImages\plavalniTabor.jpg" />
+    <Content Include="Scripts\ChromeFix_14.js" />
+    <Content Include="Scripts\CommonJS.js" />
+    <Content Include="Styles\Common.css" />
+    <Content Include="Styles\Content.css" />
+    <Content Include="Styles\Custom.css" />
+    <Content Include="Styles\DevexpressCustom.css" />
+    <Content Include="Styles\MasterPage.css" />
+    <Content Include="UserControls\UserControlGraph.ascx" />
+    <Content Include="UserControls\Widgets\EventsWidget.ascx" />
+    <Content Include="UserControls\Widgets\UserActivity.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MasterPage.Master" />
+    <Content Include="HelloMasterPage.Master" />
+    <Content Include="PopUpMaster.Master" />
+    <None Include="Properties\PublishProfiles\AnalizaProdajeDeploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Deploy.pubxml" />
+    <Content Include="Styles\Fonts\RALEWAY-LIGHT.TTF" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\Display\FinancialControl.aspx.cs">
+      <DependentUpon>FinancialControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Display\FinancialControl.aspx.designer.cs">
+      <DependentUpon>FinancialControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Testing\MailTest.aspx.cs">
+      <DependentUpon>MailTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Testing\MailTest.aspx.designer.cs">
+      <DependentUpon>MailTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Widgets\CalendarWidget.ascx.cs">
+      <DependentUpon>CalendarWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Widgets\CalendarWidget.ascx.designer.cs">
+      <DependentUpon>CalendarWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Widgets\DateTimeWidget.ascx.cs">
+      <DependentUpon>DateTimeWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Widgets\DateTimeWidget.ascx.designer.cs">
+      <DependentUpon>DateTimeWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Concrete\Authentication\Authentication.cs" />
+    <Compile Include="Common\CommonMethods.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Domain\Concrete\Authentication\UserPrincipal.cs" />
+    <Compile Include="Common\QueryStringBuilder.cs" />
+    <Compile Include="Common\ServerMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Concrete\ClientDataProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Domain\Concrete\DatabaseConnection.cs" />
+    <Compile Include="Domain\Concrete\EmployeeDataProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Domain\Concrete\EventDataProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Domain\Helpers\CriteriaFilterHelper.cs" />
+    <Compile Include="Domain\Helpers\GraphBinding.cs" />
+    <Compile Include="Domain\Helpers\InfrastructureHelper.cs" />
+    <Compile Include="Domain\Helpers\PrincipalHelper.cs" />
+    <Compile Include="Domain\Helpers\WebServiceHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HelloMasterPage.Master.cs">
+      <DependentUpon>HelloMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelloMasterPage.Master.designer.cs">
+      <DependentUpon>HelloMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\ClientsChartsDetail.aspx.cs">
+      <DependentUpon>ClientsChartsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\ClientsChartsDetail.aspx.designer.cs">
+      <DependentUpon>ClientsChartsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\ClientsForm.aspx.cs">
+      <DependentUpon>ClientsForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\ClientsForm.aspx.designer.cs">
+      <DependentUpon>ClientsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\ContactPerson_popup.aspx.cs">
+      <DependentUpon>ContactPerson_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\ContactPerson_popup.aspx.designer.cs">
+      <DependentUpon>ContactPerson_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Device_popup.aspx.cs">
+      <DependentUpon>Device_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Device_popup.aspx.designer.cs">
+      <DependentUpon>Device_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Categorie_popup.aspx.cs">
+      <DependentUpon>Categorie_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Categorie_popup.aspx.designer.cs">
+      <DependentUpon>Categorie_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Plan_popup.aspx.cs">
+      <DependentUpon>Plan_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Plan_popup.aspx.designer.cs">
+      <DependentUpon>Plan_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Employees\Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Employees\Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Clients.aspx.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Clients.aspx.designer.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Employees\Employee_popup.aspx.cs">
+      <DependentUpon>Employee_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Employees\Employee_popup.aspx.designer.cs">
+      <DependentUpon>Employee_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Events\EventsForm.aspx.cs">
+      <DependentUpon>EventsForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Events\EventsForm.aspx.designer.cs">
+      <DependentUpon>EventsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Events\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Events\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Events\Message_popup.aspx.cs">
+      <DependentUpon>Message_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Events\Message_popup.aspx.designer.cs">
+      <DependentUpon>Message_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Reports\ReportPreview.aspx.cs">
+      <DependentUpon>ReportPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Reports\ReportPreview.aspx.designer.cs">
+      <DependentUpon>ReportPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeList\Reports\ChartReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Reports\ChartReport.Designer.cs">
+      <DependentUpon>ChartReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Error\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Error\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Error\ReportError_popup.aspx.cs">
+      <DependentUpon>ReportError_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Error\ReportError_popup.aspx.designer.cs">
+      <DependentUpon>ReportError_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesGraphs.aspx.cs">
+      <DependentUpon>SalesGraphs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SalesGraphs.aspx.designer.cs">
+      <DependentUpon>SalesGraphs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserInfo\UserData.aspx.cs">
+      <DependentUpon>UserData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserInfo\UserData.aspx.designer.cs">
+      <DependentUpon>UserData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpMaster.Master.cs">
+      <DependentUpon>PopUpMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUpMaster.Master.designer.cs">
+      <DependentUpon>PopUpMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Prijava_popup.aspx.cs">
+      <DependentUpon>Prijava_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prijava_popup.aspx.designer.cs">
+      <DependentUpon>Prijava_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UserControlGraph.ascx.cs">
+      <DependentUpon>UserControlGraph.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlGraph.ascx.designer.cs">
+      <DependentUpon>UserControlGraph.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Widgets\EventsWidget.ascx.cs">
+      <DependentUpon>EventsWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Widgets\EventsWidget.ascx.designer.cs">
+      <DependentUpon>EventsWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Widgets\UserActivity.ascx.cs">
+      <DependentUpon>UserActivity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Widgets\UserActivity.ascx.designer.cs">
+      <DependentUpon>UserActivity.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\CodeList\Reports\ChartReport.resx">
+      <DependentUpon>ChartReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseWebService\DatabaseWebService.csproj">
+      <Project>{84bf1a48-6493-49ff-a98d-64c45391ca29}</Project>
+      <Name>DatabaseWebService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9861</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9861/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

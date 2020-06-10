@@ -1,0 +1,160 @@
+﻿/***LABEL'S COMMON****/
+.label-widt-xtra-small {/*for columns with full width*/
+    white-space: nowrap;
+    width: 68px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.label-width-medium-popup {/*for columns with full width*/
+    white-space: nowrap;
+    width: 96px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lable-width-small {
+    white-space: nowrap;
+    width: 54px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lable-width-medium {
+    white-space: nowrap;
+    width: 63px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lable-width-large {
+    white-space: nowrap;
+    width: 82px;/*Better pixels than percentage for labels*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lable-width-larger {
+    white-space: nowrap;
+    width: 95px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lable-width-xtra-large {
+    white-space: nowrap;
+    width: 108px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/***COMMON COMMON***/
+.content-form-element-label {
+    float: left;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+.content-form-element-label-flex {
+    float: left;
+    margin-right: 10px;
+    /*padding-top: 3px;*/
+}
+
+.content-input-filed {
+    float: left;
+    display:block;
+}
+.content-field-full-width {
+    width: 100%;
+}
+
+.hide-block-important {
+    display: none !important;
+}
+
+.no-float {
+    float: none;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.content-form-input-right {
+    float: right;
+}
+
+.small-margin-r {
+    margin-right: 5px;
+}
+.small-margin-l {
+    margin-left: 5px;
+}
+
+.medium-margin-r {
+    margin-right: 10px;
+}
+.medium-margin-l {
+    margin-left: 10px;
+}
+
+.big-margin-r {
+    margin-right: 15px;
+}
+.big-margin-l {
+    margin-left: 15px;
+}
+
+.big-margin-b {
+    margin-bottom: 15px;
+}
+
+.tiny-paddin-top {
+    padding-top:2px;
+}
+.float-left
+{
+    float: left;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.small-margin-top {
+    margin-top: 5px;
+}
+.medium-margin-top {
+    margin-top: 10px;
+}
+.big-margin-top {
+    margin-top: 15px;
+}
+.large-margin-top {
+    margin-top: 25px;
+}
+
+.initial-hide-block {
+    display: none;
+}
+
+.flex-box-vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-margin-left-important {
+    margin-left: 0 !important;
+}
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-top-bottom-padding td {
+    padding-bottom: 4px !important;
+    padding-top: 4px !important;
+}

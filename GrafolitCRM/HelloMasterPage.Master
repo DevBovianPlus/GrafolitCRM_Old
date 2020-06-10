@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HelloMasterPage.master.cs" Inherits="AnalizaProdaje.HelloMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+
+    <!--Cascade style sheet files importing-->
+    <link href="Styles/MasterPage.css" rel="stylesheet" />
+    <link href="Styles/Content.css" rel="stylesheet" />
+    <link href="Styles/Custom.css" rel="stylesheet" />
+    <link href="Styles/DevexpressCustom.css" rel="stylesheet" />
+    <link href="Styles/Common.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="/Images/favicon.png" />
+    <!--JQuery file imported CDN's-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script>
+            function Redirect(s, e)
+            {
+                document.location.href = '/Pages/Display/FinancialControl.aspx';
+            }
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script src='<%= ResolveUrl("~/Scripts/CommonJS.js") %>'></script>
+    <form id="form1" runat="server" class="main-wrap-form">
+        <header class="main-header">
+            <div class="header-content-wrap">
+                <div class="section group flex-box-vertical-align">
+                    <div class="col span_1_of_2 align-center-small-device">
+                        <div class="content-input-filed">
+                            <a href="/Default.aspx" class="logo">
+                                <img src="/Images/bovianplus_logo.png" alt="No company logo" height="48" width="150" />
+                            </a>
+                        </div>
+                        <div class="content-field-full-width big-margin-l hidden" style="padding-left: 10px;">
+                            <dx:ASPxButton ID="ASPxButton4" runat="server" Text="Nadzor financ" BackColor="Transparent" Border-BorderColor="Transparent"
+                                ForeColor="#999999" Theme="MetropolisBlue" Font-Size="15px" HoverStyle-ForeColor="White" UseSubmitBehavior="false" 
+                                AutoPostBack="false">
+                                <Paddings PaddingTop="10" />
+                                <Border BorderWidth="1px" BorderStyle="Solid" />
+                                <PressedStyle>
+                                    <Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px" />
+                                </PressedStyle>
+                                <ClientSideEvents Click="function(s,e){window.location.href = 'Pages/Display/FinancialControl.aspx';}" />
+                            </dx:ASPxButton>
+                        </div>
+                    </div>
+                    <div class="col span_1_of_2 align_right_column_content-important no-margin-left-important align-center-small-device">
+                        <dx:ASPxButton ID="ASPxButton3" runat="server" Text="Domov" BackColor="Transparent" Border-BorderColor="Transparent"
+                            ForeColor="#999999" Theme="MetropolisBlue" Font-Size="15px" HoverStyle-ForeColor="White" AutoPostBack="false"
+                            UseSubmitBehavior="false">
+                            <Paddings PaddingTop="10" />
+                            <PressedStyle>
+                                <Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px" />
+                            </PressedStyle>
+                            <ClientSideEvents Click="function(s,e){window.location.href = '/Default.aspx'; }" />
+                        </dx:ASPxButton>
+                        <dx:ASPxButton ID="ASPxButton2" runat="server" Text="O Nas" BackColor="Transparent" Border-BorderColor="Transparent"
+                            ForeColor="#999999" Theme="MetropolisBlue" Font-Size="15px" HoverStyle-ForeColor="White">
+                            <Paddings PaddingTop="10" />
+                            <PressedStyle>
+                                <Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px" />
+                            </PressedStyle>
+                        </dx:ASPxButton>
+
+                        <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Prijava" OnClick="ASPxButton1_Click" BackColor="Transparent" Border-BorderColor="Transparent"
+                            ForeColor="#999999" Theme="MetropolisBlue" Font-Size="15px" HoverStyle-ForeColor="White">
+                            <Paddings PaddingTop="10" />
+                            <PressedStyle>
+                                <Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px" />
+                            </PressedStyle>
+                        </dx:ASPxButton>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="master-container">
+
+            <div class="inner-wrap-form">
+                <div class="main-content-section hello-master">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <script type="text/javascript" src="Scripts/ChromeFix_14.js"></script>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+        </section>
+        <footer class="main-footer">
+            &copy; BOVIANPLUS
+        </footer>
+
+    </form>
+</body>
+</html>

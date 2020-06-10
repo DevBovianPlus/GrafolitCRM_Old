@@ -1,0 +1,534 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using AnalizaProdaje.Common;
+using DatabaseWebService.Models.Client;
+using DevExpress.Web;
+using System.Data;
+using Newtonsoft.Json;
+using AnalizaProdaje.Domain.Helpers;
+using System.Reflection;
+using DatabaseWebService.Models;
+using AnalizaProdaje.UserControls;
+using System.Web.UI.HtmlControls;
+using System.Threading;
+using System.Web.Configuration;
+using System.Drawing;
+using DatabaseWebService.Models.Event;
+using DevExpress.XtraCharts.Native;
+using System.IO;
+using System.Drawing.Imaging;
+namespace AnalizaProdaje.Pages.CodeList.Clients
+{
+    public partial class ClientsChartsDetail : ServerMasterPage
+    {
+        ClientFullModel model = null;
+        int clientID = -1;
+        //int action = -1;
+        int chartsInRow = 0;
+        int categorieID = 0;
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            //action = CommonMethods.ParseInt(Request.QueryString[Enums.QueryStringName.action.ToString()].ToString());
+            categorieID = CommonMethods.ParseInt(Request.QueryString[Enums.QueryStringName.categorieId.ToString()].ToString());
+            clientID = CommonMethods.ParseInt(Request.QueryString[Enums.QueryStringName.recordId.ToString()].ToString());
+
+            this.Master.DisableNavBar = true;
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (clientID > 0)
+                {
+                    if (Request.UrlReferrer != null && Request.UrlReferrer.AbsolutePath.Contains("ClientsForm.aspx"))
+                        ClearClientReferralSessions();
+
+                    if (GetClientDataProviderInstance().GetFullModelFromClientModel() != null)
+                        model = GetClientDataProviderInstance().GetFullModelFromClientModel();
+                    else if (PrincipalHelper.IsUserSuperAdmin() || PrincipalHelper.IsUserAdmin())
+                        model = CheckModelValidation<ClientFullModel>(GetDatabaseConnectionInstance().GetClient(clientID));
+                    else
+                    {//this else checks if the signed in user actually have rights to edit this client!
+                        model = CheckModelValidation<ClientFullModel>(GetDatabaseConnectionInstance().GetClient(clientID, PrincipalHelper.GetUserPrincipal().ID));
+                        if (model == null) RedirectHome();
+                    }
+
+                    if (model != null)
+                    {
+                        GetClientDataProviderInstance().SetClientFullModel(model);
+                        FillForm();
+                    }
+                    //This popup shows if we set the session ShowWarning
+                    ShowWarningPopUp("'The new client was not in database. If you want to add new plans or cnotact person you need to save client first. Click OK to finish saving!'");
+                }
+
+                //InitializeEditDeleteButtons();
+                //UserActionConfirmBtnUpdate(btnConfirm, action);
+            }
+            else
+            {
+                if (model == null && SessionHasValue(Enums.ClientSession.ClientModel))
+                    model = (ClientFullModel)GetValueFromSession(Enums.ClientSession.ClientModel);
+            }
+
+            if (ClientPageControl.TabPages.FindByName("Charts").IsActive)
+            {   //First Tab Charts
+                if (SessionHasValue(Enums.ChartSession.GraphCollection))
+                {
+                    ChartsCallback.Controls.Clear();
+                    AddControlsToPanel(GetClientDataProviderInstance().GetGraphBindingList());
+                }
+            }
+
+            if(btnDisplayAllCharts.Checked)
+                filteringBlock.Style.Add("display", "flex");
+
+            if (!String.IsNullOrEmpty(ErrorLabel.Text))
+                ErrorLabel.Text = "";
+        }
+
+        private void FillForm()
+        {
+            ASPxRoundPanel1.HeaderText = model.NazivPrvi;
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearSessionsAndRedirect();
+        }
+
+
+        #region OtherHelperMethods Local
+
+        private void ClearSessionsAndRedirect(bool isIDDeleted = false, string pageToRedirect = "ClientsForm.aspx", bool isCallback = false)
+        {
+            List<QueryStrings> queryStrings = new List<QueryStrings> { 
+                new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = ((int)Enums.UserAction.Edit).ToString() },
+                new QueryStrings() { Attribute = Enums.QueryStringName.recordId.ToString(), Value = clientID.ToString() }
+            };
+
+            string redirectString = "";
+
+            if (isIDDeleted)
+                redirectString = pageToRedirect;
+            else
+                redirectString = GenerateURI(pageToRedirect, queryStrings);
+
+            ClearClientReferralSessions();
+
+            List<Enums.ClientSession> list = Enum.GetValues(typeof(Enums.ClientSession)).Cast<Enums.ClientSession>().ToList();
+
+            ClearAllSessions(list, redirectString, isCallback);
+        }
+
+        private void ClearClientReferralSessions()
+        {
+            RemoveSession(Enums.EmployeeSession.EmployeesList);
+            RemoveSession(Enums.ChartSession.GraphCollection);
+
+            List<Enums.ClientSession> list = Enum.GetValues(typeof(Enums.ClientSession)).Cast<Enums.ClientSession>().ToList();
+            ClearAllSessions(list);
+        }
+
+        private List<ChartRenderSimple> CheckForMissingMoths(List<ChartRenderSimple> list, int period, int type, int categorieID, decimal valuePrice = 0)
+        {
+            if (list.Count > 0)
+            {
+                DateTime currentDate = list[0].Datum;
+
+                for (int i = 0; i < list.Count; i++)
+                {
+                    bool exist = list.Any(dat => dat.Datum.Month == currentDate.Month && dat.Datum.Year == currentDate.Year);
+                    if (!exist)
+                    {
+                        ChartRenderSimple tmpModel = new ChartRenderSimple();
+                        tmpModel.Datum = currentDate.Date;
+                        tmpModel.EnotaMere = "";
+                        tmpModel.IzpisGrafaID = 0;
+                        tmpModel.KategorijaID = categorieID;
+                        tmpModel.Obdobje = period;
+                        tmpModel.Opis = currentDate.Date.ToString("MMMM yyyy");
+                        tmpModel.StrankaID = clientID;
+                        tmpModel.Tip = type;
+                        tmpModel.Vrednost = valuePrice;
+                        list.Insert(list.IndexOf(list[i]), tmpModel);
+                    }
+                    else
+                        currentDate = currentDate.AddMonths(1);
+                }
+            }
+            return list;
+        }
+
+        private HtmlTableRow AddChartsToCell(UserControlGraph ucg, HtmlTableRow row, int graphsInRow)
+        {
+            HtmlTableRow newTRow = new HtmlTableRow();
+            HtmlTableCell tCell = null;
+
+            if (row.Cells.Count < graphsInRow)
+            {
+                if (row.Cells.Count == 0)//we add bottom border only the first time
+                    row.Style.Add("border-bottom", "solid 1px black");
+
+                tCell = new HtmlTableCell();
+                tCell.Controls.Add(ucg);
+                row.Cells.Add(tCell);
+            }
+            else
+            {
+                tCell = new HtmlTableCell();
+                tCell.Controls.Add(ucg);
+                newTRow.Cells.Add(tCell);
+                newTRow.Style.Add("border-bottom", "solid 1px black");
+
+                return newTRow;
+            }
+
+            return row;
+        }
+        #endregion
+
+        #region Charts
+        private void ucf2_btnPostClk(object sender, EventArgs e)
+        {
+            UserControlGraph ucf2 = (UserControlGraph)sender;
+
+            int period = CommonMethods.ParseInt(ucf2.Period.SelectedItem.Value);
+            int type = CommonMethods.ParseInt(ucf2.Type.SelectedItem.Value);
+            if (period != (int)Enums.ChartRenderPeriod.TEDENSKO)
+            {
+                DateTime? selectedDateFrom = null;
+                DateTime? selectedDateTo = null;
+
+                if (!ucf2.DateEdit_OD.Date.Equals(DateTime.MinValue)) selectedDateFrom = ucf2.DateEdit_OD.Date;
+                if (!ucf2.DateEdit_DO.Date.Equals(DateTime.MinValue)) selectedDateTo = ucf2.DateEdit_DO.Date;
+
+                ChartRenderModel chart = CheckModelValidation(GetDatabaseConnectionInstance().GetChartDataFromSQLFunction(clientID, ucf2.CategorieID, period, type, selectedDateFrom, selectedDateTo));
+
+                if (period == (int)Enums.ChartRenderPeriod.MESECNO)
+                    chart.chartRenderData = CheckForMissingMoths(chart.chartRenderData, period, type, ucf2.CategorieID, 0);
+
+
+                GetClientDataProviderInstance().GetGraphBindingList().Find(gb => gb.CategorieID == ucf2.CategorieID).chartData = chart;
+                GetClientDataProviderInstance().GetGraphBindingList().Find(gb => gb.CategorieID == ucf2.CategorieID).YAxisTitle = chart.chartRenderData.Count > 0 ? chart.chartRenderData[0].EnotaMere : "";
+                GetClientDataProviderInstance().GetGraphBindingList().Find(gb => gb.CategorieID == ucf2.CategorieID).obdobje = period;
+                GetClientDataProviderInstance().GetGraphBindingList().Find(gb => gb.CategorieID == ucf2.CategorieID).tip = type;
+                GetClientDataProviderInstance().GetGraphBindingList().Find(gb => gb.CategorieID == ucf2.CategorieID).dateFrom = ucf2.DateEdit_OD.Date;
+                GetClientDataProviderInstance().GetGraphBindingList().Find(gb => gb.CategorieID == ucf2.CategorieID).dateTo = ucf2.DateEdit_DO.Date;
+
+                ucf2.CreateGraph(chart);
+            }
+            else
+            {
+                int previousPeriod = GetClientDataProviderInstance().GetGraphBindingList().Find(gb => gb.CategorieID == ucf2.CategorieID).obdobje;
+                ucf2.Period.SelectedIndex = ucf2.Period.Items.IndexOf(ucf2.Period.Items.FindByValue(previousPeriod.ToString()));
+            }
+        }
+        private void ucf2_btnDeleteGraphClick(object sender, EventArgs e)
+        { }
+
+        protected void ChartsCallback_Callback(object sender, CallbackEventArgsBase e)
+        {
+            List<GraphBinding> list = GetClientDataProviderInstance().GetGraphBindingList();
+
+            List<QueryStrings> queryStrings = new List<QueryStrings> { 
+                new QueryStrings() { Attribute = Enums.QueryStringName.categorieId.ToString(), Value = categorieID.ToString() },
+                new QueryStrings() { Attribute = Enums.QueryStringName.recordId.ToString(), Value = clientID.ToString() }
+            };
+
+            if (!String.IsNullOrEmpty(e.Parameter))
+            {
+                if (e.Parameter.Equals("ThreeInRow"))
+                    chartsInRow = 3;
+                else if (e.Parameter.Equals("TwoInRow"))
+                    chartsInRow = 2;
+
+                else if (e.Parameter.Equals("OneInRow"))
+                    chartsInRow = 1;
+
+                GetClientDataProviderInstance().SetChartsCoutInRow(chartsInRow);
+                ASPxWebControl.RedirectOnCallback(GenerateURI("ClientsChartsDetail.aspx", queryStrings));
+                /*ChartsCallback.Controls.Clear();
+                AddControlsToPanel(list);*/
+            }
+
+            if (model == null)
+                ShowClientPopUp("First save the client and add some categories to view the charts.");
+
+            if (list == null && !btnDisplayAllCharts.Checked)
+                CreateCharts();
+            else if (list == null && btnDisplayAllCharts.Checked)
+            {
+                CreateCharts(true);
+            }
+            else if (model.StrankaKategorija.Count(cat => cat.HasChartDataForCategorie) != list.Count)
+            {
+                GetClientDataProviderInstance().SetGraphBindingList(null);
+                ASPxWebControl.RedirectOnCallback(GenerateURI("ClientsChartsDetail.aspx", queryStrings));
+                //We use this if the user is changing tabs(if the user has deleted one of the categories wee need to refresh it)
+            }
+
+        }
+        private void CreateCharts(bool allCategorieTypes = false)
+        {
+            List<GraphBinding> bindingCollection = new List<GraphBinding>();
+            HtmlTable table = new HtmlTable();
+            table.Style.Add("width", "100%");
+
+            bindingCollection.Select(item => item.control).ToList();//get all controls and only controls from list
+
+            GetClientDataProviderInstance().SetMainContentWidthForCharts(CommonMethods.ParseDouble(hiddenField["browserWidth"]));
+            GetClientDataProviderInstance().SetChartsCoutInRow(1);
+
+            HtmlTableRow tRow = new HtmlTableRow();
+
+            if (allCategorieTypes)//we show all categorie types in one chart
+            {
+                ClientCategorieModel ccm = model.StrankaKategorija.Where(kat => kat.idKategorija == categorieID).FirstOrDefault();
+                Enums.ChartRenderPeriod period = Enums.ChartRenderPeriod.MESECNO;
+                if (isSelectedPeriodChanged())
+                    period = (Enums.ChartRenderPeriod)CommonMethods.ParseInt(rbTypeDetail.SelectedItem.Value);
+                
+                DateTime? selectedDateFrom = null;
+                DateTime? selectedDateTo = null;
+
+                if (!DateEdit_OD.Date.Equals(DateTime.MinValue)) selectedDateFrom = DateEdit_OD.Date;
+                if (!DateEdit_DO.Date.Equals(DateTime.MinValue)) selectedDateTo = DateEdit_DO.Date;
+
+                GraphBinding instance = IncializeChartAndChartData(table, tRow, ccm, Enums.ChartRenderType.KOLICINA, period, false, selectedDateFrom, selectedDateTo);
+                if (instance != null)
+                    bindingCollection.Add(instance);
+            }
+            else//we show only default type for selected categorie
+            {
+                foreach (var item in model.StrankaKategorija)
+                {
+                    if (item.idKategorija == categorieID)
+                    {
+                        GraphBinding instance = IncializeChartAndChartData(table, tRow, item);
+                        if (instance != null)
+                            bindingCollection.Add(instance);
+                    }
+                }
+            }
+            GetClientDataProviderInstance().SetClientFullModel(model);//we set new model because it might changed in the procees of filling data for charts (if there is chart data we change status to true on ClientCategorieModel item)
+            GetClientDataProviderInstance().SetGraphBindingList(bindingCollection);
+        }
+
+        private GraphBinding IncializeChartAndChartData(HtmlTable table, HtmlTableRow tRow, ClientCategorieModel item, 
+            Enums.ChartRenderType type = Enums.ChartRenderType.KOLICINA, 
+            Enums.ChartRenderPeriod period = Enums.ChartRenderPeriod.MESECNO, 
+            bool showFilterOnChart = true,
+            DateTime? dateFROM = null,
+            DateTime? dateTO = null)
+        {
+            UserControlGraph ucf2 = (UserControlGraph)LoadControl("~/UserControls/UserControlGraph.ascx");
+
+            ChartRenderModel chart = null;
+            List<ChartRenderModel> list = null;
+
+            if (showFilterOnChart)
+                chart = CheckModelValidation(GetDatabaseConnectionInstance().GetChartDataFromSQLFunction(clientID, item.Kategorija.idKategorija, (int)period, (int)type));
+            else//if we want to see all types
+                list = CheckModelValidation(GetDatabaseConnectionInstance().GetChartDataForAllTypesSQLFunction(clientID, item.Kategorija.idKategorija, (int)period, dateFROM, dateTO));
+
+            if ((chart != null && chart.chartRenderData.Count > 0) || (list != null && list.Count > 0 && list.Exists(c => c.chartRenderData.Count > 0)))
+            {
+                item.HasChartDataForCategorie = true;
+                //ucf2.ID = model.KodaStranke + "_UserControlGraph_" + (bindingCollection.Count + 1).ToString();
+                ucf2.btnPostClk += ucf2_btnPostClk;
+                ucf2.btnDeleteGraphClick += ucf2_btnDeleteGraphClick;
+                ucf2.btnAddEventClick += ucf2_btnAddEventClick;
+
+
+                tRow = AddChartsToCell(ucf2, tRow, 1);
+                table.Rows.Add(tRow);
+
+                ChartsCallback.Controls.Add(table);
+
+                GraphBinding instance = new GraphBinding();
+
+                if (period.Equals(Enums.ChartRenderPeriod.MESECNO))
+                {
+                    if (chart != null)
+                        chart.chartRenderData = CheckForMissingMoths(chart.chartRenderData, (int)period, (int)type, item.Kategorija.idKategorija, 0);
+                    else
+                    {
+                        foreach (var obj in list)
+                        {
+                            if (obj.chartRenderData.Count > 0)
+                                obj.chartRenderData = CheckForMissingMoths(obj.chartRenderData, (int)period, obj.chartRenderData[0].Tip, item.Kategorija.idKategorija, 0);
+                        }
+                    }
+                }
+
+                ucf2.HeaderName.HeaderText = item.Kategorija.Naziv;
+                ucf2.HeaderLink.Visible = false;
+                ucf2.Period.SelectedIndex = ucf2.Period.Items.FindByValue(((int)period).ToString()).Index;
+                ucf2.Period.Visible = showFilterOnChart ? true : false;
+                ucf2.Type.SelectedIndex = ucf2.Type.Items.FindByValue(((int)type).ToString()).Index;
+                ucf2.Type.Visible = showFilterOnChart ? true : false;
+                ucf2.RenderChart.Text = "Izriši " + item.Kategorija.Koda;
+                ucf2.RenderChart.Visible = showFilterOnChart ? true : false;
+                ucf2.CategorieID = item.Kategorija.idKategorija;
+                ucf2.YAxisTitle = (chart != null && chart.chartRenderData.Count > 0) ? chart.chartRenderData[0].EnotaMere : "";
+                ucf2.ShowFromToDateFilteringUserControl = showFilterOnChart ? true : false;
+
+                if (chart != null)
+                    ucf2.CreateGraph(chart);
+                else if (list != null && list.Count > 0)
+                {
+                    //rbTypeDetail.SelectedIndex = rbTypeDetail.Items.FindByValue(((int)period).ToString()).Index;
+                    ucf2.CreateGraphMultiPane(list);
+                }
+
+                instance.obdobje = (int)period;
+                instance.tip = (int)type;
+                instance.YAxisTitle = ucf2.YAxisTitle;
+                instance.chartData = chart;
+                instance.chartDataMultiplePanes = list;
+                instance.control = ucf2;
+                instance.HeaderText = item.Kategorija.Koda;
+                instance.CategorieID = item.Kategorija.idKategorija;
+                instance.ShowFilterFromToDate = showFilterOnChart ? true : false;
+                instance.dateFrom = DateEdit_OD.Date;
+                instance.dateTo = DateEdit_DO.Date;
+
+                return instance;
+            }
+
+            return null;
+        }
+
+        private void ucf2_btnAddEventClick(object sender, EventArgs e)
+        {
+            UserControlGraph ucf2 = (UserControlGraph)sender;
+            if (PrincipalHelper.GetUserPrincipal().HasSupervisor && (model.StrankaZaposleni != null && model.StrankaZaposleni.Count > 0))
+            {
+                List<QueryStrings> queryList = new List<QueryStrings>();
+
+                int employeeID = 0;
+                if (model != null)
+                    employeeID = model.StrankaZaposleni[0].idOsebe;
+
+                QueryStrings item = new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = "1" };
+                queryList.Add(item);
+                item = new QueryStrings() { Attribute = Enums.QueryStringName.recordId.ToString(), Value = "0" };
+                queryList.Add(item);
+                item = new QueryStrings() { Attribute = Enums.QueryStringName.eventClientId.ToString(), Value = clientID.ToString() };
+                queryList.Add(item);
+                item = new QueryStrings() { Attribute = Enums.QueryStringName.eventCategorieId.ToString(), Value = ucf2 != null ? ucf2.CategorieID.ToString() : (-1).ToString() };
+                queryList.Add(item);
+                item = new QueryStrings() { Attribute = Enums.QueryStringName.eventEmployeeId.ToString(), Value = employeeID.ToString() };
+                queryList.Add(item);
+
+                ClearSessionsAndRedirect(true, GenerateURI("../Events/EventsForm.aspx", queryList));
+            }
+            else {
+                ErrorLabel.Text = "Skrbnik in zaposlen za stranko ni izbran!";
+            }
+        }
+
+        #endregion
+
+        #region Initilizations
+
+        private void AddControlsToPanel(List<GraphBinding> collection)
+        {
+            HtmlTableRow tRow = new HtmlTableRow();
+            HtmlTable table = new HtmlTable();
+            table.Style.Add("width", "100%");
+
+            foreach (GraphBinding item in collection)
+            {
+                UserControlGraph ucf2 = (UserControlGraph)LoadControl("~/UserControls/UserControlGraph.ascx");
+                //ucf2.ID = model.KodaStranke + "_UserControlGraph_" + (collection.Count + 1).ToString();
+                ucf2.btnPostClk += ucf2_btnPostClk;
+                ucf2.btnDeleteGraphClick += ucf2_btnDeleteGraphClick;
+                ucf2.btnAddEventClick += ucf2_btnAddEventClick;
+
+                tRow = AddChartsToCell(ucf2, tRow, GetClientDataProviderInstance().GetChartsCoutInRow());
+                table.Rows.Add(tRow);
+
+                ChartsCallback.Controls.Add(table);
+                ucf2.Period.SelectedIndex = ucf2.Period.Items.FindByValue((item.obdobje >= 0 ? item.obdobje : 0).ToString()).Index;
+                ucf2.Period.Visible = btnDisplayAllCharts.Checked ? false : true;
+                ucf2.Type.SelectedIndex = ucf2.Type.Items.FindByValue((item.tip >= 0 ? item.tip : 0).ToString()).Index;
+                ucf2.Type.Visible = btnDisplayAllCharts.Checked ? false : true;
+                ucf2.HeaderName.HeaderText = item.HeaderText;
+                ucf2.HeaderLink.Visible = false;
+                ucf2.RenderChart.Text = "Izriši " + item.HeaderText;
+                ucf2.RenderChart.Visible = btnDisplayAllCharts.Checked ? false : true;
+                ucf2.CategorieID = item.CategorieID;
+                ucf2.YAxisTitle = item.YAxisTitle;
+                ucf2.ShowFromToDateFilteringUserControl = item.ShowFilterFromToDate;
+
+                if (item.chartData != null)
+                    ucf2.CreateGraph(item.chartData);
+                else if (item.chartDataMultiplePanes != null & item.chartDataMultiplePanes.Count > 0)
+                {
+                    //rbTypeDetail.SelectedIndex = rbTypeDetail.Items.FindByValue((item.obdobje != null ? item.obdobje : 0).ToString()).Index;
+                    ucf2.CreateGraphMultiPane(item.chartDataMultiplePanes); 
+                }
+            }
+        }
+        #endregion
+
+        protected void btnDisplayAllCharts_Click(object sender, EventArgs e)
+        {
+            RemoveSession(Enums.ChartSession.GraphCollection);
+            if (btnDisplayAllCharts.Checked)
+            {//Display all type charts                 
+                btnDisplayAllCharts.Text = "Skrij vse tipe";
+                btnDisplayAllCharts.ImageUrl = "~/Images/DisplayAllChartsPressed.png";
+                filteringBlock.Style.Add("display", "flex");
+                ClientCategorieModel ccm = model.StrankaKategorija.Where(kat => kat.idKategorija == categorieID).FirstOrDefault();
+                string catName = "";
+                if (ccm != null)
+                    catName = ccm.Kategorija.Naziv;
+
+                rbTypeDetail.SelectedIndex = rbTypeDetail.Items.FindByValue(((int)Enums.ChartRenderPeriod.MESECNO).ToString()).Index;
+                GetClientDataProviderInstance().SetSelectedPeriod_AllTypesDisplay(CommonMethods.ParseInt(rbTypeDetail.SelectedItem.Value));
+            }
+            else
+            {//Hide all chart types 
+                btnDisplayAllCharts.Text = "Prikaži vse tipe";
+                btnDisplayAllCharts.ImageUrl = "~/Images/DisplayAllCharts.png";
+                filteringBlock.Style.Add("display", "none");
+            }
+
+
+        }
+
+        protected void btnFilterCharts_Click(object sender, EventArgs e)
+        {
+            GetClientDataProviderInstance().SetGraphBindingList(null);
+        }
+
+
+        /// <summary>
+        /// We use this method if selected period was changed in "display all types"
+        /// </summary>
+        /// <returns></returns>
+        private bool isSelectedPeriodChanged()
+        {
+            //if radiobuttonlist selection has changed we save new value to session
+            if (GetClientDataProviderInstance().GetSelectedPeriod_AllTypesDisplay() != CommonMethods.ParseInt(rbTypeDetail.SelectedItem.Value))
+            {
+                GetClientDataProviderInstance().SetSelectedPeriod_AllTypesDisplay(CommonMethods.ParseInt(rbTypeDetail.SelectedItem.Value));
+                return true;
+            }
+            return false;
+        }
+
+        protected void btnPrintChart_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reports/ReportPreview.aspx");
+        }
+    }
+}

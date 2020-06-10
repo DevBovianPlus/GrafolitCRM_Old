@@ -1,0 +1,60 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="SalesGraphs.aspx.cs" Inherits="AnalizaProdaje.Pages.SalesGraphs" %>
+
+<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+
+
+<asp:Content ID="HeadForJavaScript" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        function OnClosePopupEventHandler_Prijava(param) {
+            switch (param) {
+                case 'Potrdi':
+                    Prijava_Popup.Hide();
+                    window.location.assign("../Default.aspx");
+                    break;
+                case 'Prekliči':
+                    Prijava_Popup.Hide();
+                    break;
+            }
+        }
+
+        function ddlKomercialistiChanged(s, e) {
+            var gridView = s.GetGridView();
+            gridView.GetRowValues(gridView.GetFocusedRowIndex(), "FirstName;LastName", GotValue);
+        }
+
+        function GotValue(value) {
+            txtKomercialisti.SetText(value[0] + " " + value[1]);
+        }
+        function dodajKomponentoClick(s, e) {
+            //alert($(".main-content-section").width());
+            //browserMainContentWidth.SetText($(".main-content-section").width());
+            hiddenFieldClient.Set('browserWidth', $(".main-content-section").width());
+            callbackPanel1.PerformCallback();
+        }
+    </script>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <dx:ASPxRoundPanel ID="ASPxRoundPanel1" ShowCollapseButton="false" runat="server" Theme="MetropolisBlue"
+        HeaderStyle-HorizontalAlign="Center" Font-Bold="true" Width="100%" HeaderText="ANALIZA PRODAJE - GRAFI">
+        <ContentPaddings PaddingBottom="7px" PaddingLeft="3px" PaddingRight="3px" PaddingTop="7px" />
+        <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
+        <PanelCollection>
+            <dx:PanelContent runat="server">
+                <dx:ASPxHiddenField ID="hiddenField" runat="server" ClientInstanceName="hiddenFieldClient"></dx:ASPxHiddenField>
+                <dx:ASPxLabel ID="mainContentWidth" runat="server" Visible="true" ClientInstanceName="browserMainContentWidth"></dx:ASPxLabel>
+
+                <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server" Width="100%" ClientInstanceName="callbackPanel1" OnCallback="ASPxCallbackPanel1_Callback">
+                </dx:ASPxCallbackPanel>
+                
+                <div class="new-component-btn-wrap">
+                    <dx:ASPxButton runat="server" Text="Dodaj komponento" AutoPostBack="false">
+                        <ClientSideEvents Click="dodajKomponentoClick" />
+                    </dx:ASPxButton>
+                </div>
+
+            </dx:PanelContent>
+        </PanelCollection>
+    </dx:ASPxRoundPanel>
+</asp:Content>

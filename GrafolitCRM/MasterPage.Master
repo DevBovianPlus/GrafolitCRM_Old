@@ -1,0 +1,209 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="AnalizaProdaje.MasterPage" %>
+
+<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+
+    <!--Cascade style sheet files importing-->
+    <link rel="stylesheet" href="Styles/MasterPage.css" />
+    <link rel="stylesheet" href="Styles/Content.css"/>
+    <link rel="stylesheet" href="Styles/Custom.css"/>
+    <link rel="stylesheet" href="Styles/DevexpressCustom.css"/>
+    <link rel="stylesheet" href="Styles/Common.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+   <link rel="shortcut icon" type="image/x-icon" href="/Images/favicon.png" />
+
+    <!--JQuery file imported CDN's-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        function OnClosePopupEventHandler_Prijava(param, url) {
+            switch (param) {
+                case 'Potrdi':
+                    PonovnaPrijava_Popup.Hide();
+                    window.location.assign(url);//"../Default.aspx"
+                    break;
+                case 'Prekliči':
+                    //window.close();
+                    break;
+            }
+        }
+        function OnClosePopupEventHandler_ReportError(param) {
+            clientPopUpReportError.Hide();
+        }
+        $(document).ready(function () {
+            $('.hamburger-wrap').click(function () {
+                HamburgerMenu(true);
+            });
+
+            $('.hamburger-wrap-close').click(function () {
+                HamburgerMenu(false);
+            });
+        });
+        $(document).mouseup(function (e) {
+            var container = $('.main-menu-section');
+            var closeMenuBtn = $('.hamburger-wrap-close');
+            var hamburgerMenuBtn = $('.hamburger-wrap');
+            HamburgerMenuCloseOutsideClick(e, container, hamburgerMenuBtn, closeMenuBtn);
+            ShowRemoveDropdownOutsideClick(e, $('.logo'), $('#myDropDown'));
+        });
+
+        function OpenDropDown() {
+            document.getElementById("myDropDown").classList.toggle("show");
+        }
+
+        window.onerror = function (msg, url, line) {
+            /*var req = new XMLHttpRequest();
+            var params = "msg=" + encodeURIComponent(msg) + '&amp;url=' + encodeURIComponent(url) + "&amp;line=" + line;
+            req.open("POST", "/scripts/logerror.php");
+            req.send(params);
+            alert(msg + "LALAL");*/
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script src='<%= ResolveUrl("~/Scripts/CommonJS.js") %>'></script>
+    <form id="form1" runat="server" class="main-wrap-form">
+        <header class="main-header">
+            <div class="header-content-wrap">
+                <div class="section group flex-box-vertical-align">
+                    <div class="col span_1_of_3">
+                        <div class="dropdown">
+                            <div class="logo dropbtn" onclick="OpenDropDown()">
+                                <!--/Pages/UserInfo/UserData.aspx-->
+                                <img id="headerProfileImage" runat="server" src="/Images/Profile5.png" alt="No profile logo" class="img-circle hoverProfileImage" height="50" width="50" title="Your profile" />
+                                <div id="myDropDown" class="dropdown-content">
+                                    <div>
+                                        <dx:ASPxLabel ID="SignedInAsLabel" runat="server" Text="Prijavljen si kot: " Font-Size="Smaller" meta:resourcekey="SignedInAsLabelResource1"></dx:ASPxLabel>
+                                        <dx:ASPxLabel ID="UserRoleLabel" runat="server" Text="ASPxLabel" Font-Size="Small" meta:resourcekey="UserRoleLabelResource1"></dx:ASPxLabel>
+                                    </div>
+                                    <div>Verzija: 1.5.2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/Pages/UserInfo/UserData.aspx" style="display: block; text-decoration: none; padding-left: 5px;">
+                            <div style="display: block;">
+                                <dx:ASPxLabel ID="SignedInHelloLabel" runat="server" Text="Pozdravljeni," Font-Size="Smaller" ForeColor="#999999" meta:resourcekey="SignedInHelloLabelResource1">
+                                </dx:ASPxLabel>
+                            </div>
+                            <div style="display: block;">
+                                <dx:ASPxLabel ID="UsernameLabel" runat="server" Text="ASPxLabel" Font-Size="Small" ForeColor="#999999" CssClass="userNamePosition" meta:resourcekey="UsernameLabelResource1"></dx:ASPxLabel>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col span_1_of_3 align_center_column_content-important no-margin-left-important">
+                        <a href="/Default.aspx" class="logo">
+                            <img src="/Images/bovianplus_logo.png" alt="No company logo" height="48" width="150" />
+                        </a>
+                    </div>
+                    <div class="col span_1_of_3 align_right_column_content-important no-margin-left-important">
+                        <dx:ASPxButton ID="ASPxButton3" runat="server" Text="Domov" BackColor="Transparent" Border-BorderColor="Transparent"
+                            ForeColor="#999999" Theme="MetropolisBlue" Font-Size="15px" HoverStyle-ForeColor="White" AutoPostBack="False" meta:resourcekey="ASPxButton3Resource1">
+                            <Paddings PaddingTop="10" />
+                            <PressedStyle>
+                                <Border BorderColor="Transparent" BorderStyle="Solid" BorderWidth="1px" />
+                            </PressedStyle>
+                            <ClientSideEvents Click="function(s,e){document.location.href = '/Default.aspx'; }" />
+                        </dx:ASPxButton>
+                        <dx:ASPxButton ID="ReportErrorBtnClick" runat="server" Text="Prijavi napako" BackColor="Transparent" Border-BorderColor="Transparent"
+                            ForeColor="#999999" Theme="MetropolisBlue" Font-Size="15px" HoverStyle-ForeColor="White" meta:resourcekey="ASPxButton2Resource1"
+                            OnClick="ReportErrorBtnClick_Click">
+                            <Paddings PaddingTop="10" />
+                            <PressedStyle>
+                                <Border BorderColor="Transparent" BorderStyle="Solid" BorderWidth="1px" />
+                            </PressedStyle>
+                        </dx:ASPxButton>
+
+                        <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Odjava" OnClick="ASPxButton1_Click" BackColor="Transparent" Border-BorderColor="Transparent"
+                            ForeColor="#999999" Theme="MetropolisBlue" Font-Size="15px" HoverStyle-ForeColor="White" meta:resourcekey="ASPxButton1Resource1">
+                            <Paddings PaddingTop="10" />
+                            <PressedStyle>
+                                <Border BorderColor="Transparent" BorderStyle="Solid" BorderWidth="1px" />
+                            </PressedStyle>
+                        </dx:ASPxButton>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="master-container">
+
+            <div class="inner-wrap-form">
+                <div class="hamburger-wrap">
+                    <img src="/Images/hamburgerMenu.png" />
+                </div>
+                <div class="hamburger-wrap-close initial-hide-block">
+                    <img src="/Images/hamburgerClose.png" />
+                </div>
+                <div class="main-menu-section">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <dx:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" Width="100%" Font-Bold="True" HeaderText="ANALIZA PRODAJE" meta:resourcekey="ASPxRoundPanel1Resource1">
+                            <ContentPaddings PaddingLeft="2px" PaddingTop="6px" PaddingRight="2px" PaddingBottom="6px"></ContentPaddings>
+                            <PanelCollection>
+                                <dx:PanelContent ID="PanelContent1" runat="server" meta:resourcekey="PanelContent1Resource1">
+                                    <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/Nav_bar/MainMenu.xml" XPath="GlavniMenu/Oddelek"></asp:XmlDataSource>
+                                    <dx:ASPxNavBar ID="ASPxNavBarMainMenu" runat="server" Theme="DevEx"
+                                        Width="98%" GroupHeaderStyle-HorizontalAlign="Center" GroupHeaderStyle-VerticalAlign="top"
+                                        Height="100%" Font-Bold="True" DataSourceID="XmlDataSource1"
+                                        AutoCollapse="True" EncodeHtml="False" AllowSelectItem="True" ClientInstanceName="navBarMain" meta:resourcekey="ASPxNavBarMainMenuResource1">
+
+                                        <GroupHeaderStyle HorizontalAlign="Center" Font-Bold="true" />
+                                        <ItemStyle HorizontalAlign="Left" />
+                                        <ItemTextTemplate>
+                                            <dx:ASPxLabel ID="lblModel" runat="server" Font-Bold="True" Text='<%# Container.EvalDataItem("Linija") %>' meta:resourcekey="lblModelResource1" />
+                                        </ItemTextTemplate>
+                                        <Paddings Padding="1px" />
+                                        <Border BorderColor="#BCD4F6" BorderStyle="Groove" />
+                                    </dx:ASPxNavBar>
+                                </dx:PanelContent>
+                            </PanelCollection>
+                        </dx:ASPxRoundPanel>
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="main-content-section">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <script type="text/javascript" src="Scripts/ChromeFix_14.js"></script>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <dx:ASPxPopupControl ID="ASPxPopupControl_PonovnaPrijava" runat="server" ContentUrl="Prijava_popup.aspx"
+                ClientInstanceName="PonovnaPrijava_Popup" Modal="True" HeaderText="PRIJAVA" Theme="MetropolisBlue"
+                CloseAction="None" Width="430px" Height="340px" PopupHorizontalAlign="WindowCenter"
+                PopupVerticalAlign="WindowCenter" PopupAnimationType="Fade" AllowDragging="True" ShowSizeGrip="True"
+                PopupElementID="popupPonovnaPrijava" AllowResize="True" meta:resourcekey="ASPxPopupControl_PonovnaPrijavaResource1">
+                <ModalBackgroundStyle Opacity="80" BackColor="Black"></ModalBackgroundStyle>
+                <ContentStyle BackColor="#F7F7F7">
+                    <Paddings PaddingBottom="0px" PaddingLeft="0px" PaddingRight="0px" PaddingTop="0px"></Paddings>
+                </ContentStyle>
+                <ContentCollection>
+                    <dx:PopupControlContentControl ID="PopupControlContentControl1" runat="server" meta:resourcekey="PopupControlContentControl1Resource1">
+                    </dx:PopupControlContentControl>
+                </ContentCollection>
+            </dx:ASPxPopupControl>
+            <dx:ASPxPopupControl ID="ASPxPopupControl_ReportErrorToDeveloper" runat="server" ContentUrl="/Pages/Error/ReportError_popup.aspx"
+                ClientInstanceName="clientPopUpReportError" Modal="True" HeaderText="POŠLJI SPOROČILO RAZVIJALCEM"
+                Theme="MetropolisBlue" CloseAction="CloseButton" Width="620px" Height="365px" PopupHorizontalAlign="WindowCenter"
+                PopupVerticalAlign="WindowCenter" PopupAnimationType="Fade" AllowDragging="true" ShowSizeGrip="true"
+                AllowResize="true">
+                <ContentStyle BackColor="#F7F7F7">
+                    <Paddings PaddingBottom="0px" PaddingLeft="6px" PaddingRight="0px" PaddingTop="0px"></Paddings>
+                </ContentStyle>
+                <ContentCollection>
+                    <dx:PopupControlContentControl ID="PopUpContentControl" runat="server">
+                    </dx:PopupControlContentControl>
+                </ContentCollection>
+            </dx:ASPxPopupControl>
+        </section>
+        <footer class="main-footer">
+            &copy; BOVIANPLUS
+        </footer>
+
+    </form>
+</body>
+</html>

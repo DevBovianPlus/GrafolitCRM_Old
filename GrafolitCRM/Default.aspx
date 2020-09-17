@@ -2,7 +2,7 @@
 
 <%@ MasterType VirtualPath="~/HelloMasterPage.master" %>
 
-<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <%@ Register Src="~/UserControls/Widgets/DateTimeWidget.ascx" TagName="DateTime" TagPrefix="widget" %>
 <%@ Register Src="~/UserControls/Widgets/CalendarWidget.ascx" TagName="Calander" TagPrefix="widget" %>

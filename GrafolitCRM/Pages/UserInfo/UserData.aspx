@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.Master" Title="Urejanje profila" AutoEventWireup="true" CodeBehind="UserData.aspx.cs" Inherits="AnalizaProdaje.Pages.UserInfo.UserData" %>
 
-<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="HeadForJavaScript" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">

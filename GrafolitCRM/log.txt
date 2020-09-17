@@ -1491,3 +1491,1220 @@ http://localhost:9861/Pages/CodeList/Clients/ClientsChartsDetail.aspx?categorieI
 
 10/06/2020 12:28:53 Metoda: CreateCharts => Count ChartRenderData0
 
+17/06/2020 08:46:26 Metoda: CreateCharts => pred foreach 
+
+17/06/2020 08:46:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:28 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => Count ChartRenderData0
+
+17/06/2020 08:46:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => Count ChartRenderData0
+
+17/06/2020 08:46:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:30 Metoda: CreateCharts => Count ChartRenderData0
+
+17/06/2020 08:46:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => Count ChartRenderData0
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => Count ChartRenderData0
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => Count ChartRenderData0
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => Count ChartRenderData0
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+17/06/2020 08:46:31 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 07:46:13  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): A field or property with name 'AktivnostStranke' was not found in the selected data source. Possible causes of this error may be the following: an incorrect or case-insensitive spelling of the grid column name; assigning a wrong or not properly initialized data source to the grid.
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValueByControllerRow(Int32 controllerRow, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValue(Int32 visibleIndex, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataProxy.GetRowValue(Int32 visibleIndex, String fieldName)
+   at DevExpress.Web.Internal.GridTextBuilder.GetDisplayControlArgs(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider provider, ASPxGridBase grid, Boolean highlightSearchText)
+   at DevExpress.Web.Internal.GridRenderHelper.CreateDataCellDisplayControl(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Internal.GridRenderHelper.AddDisplayControlToDataCell(Control cell, IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Rendering.GridViewTableDataCell.CreateControlHierarchy()
+   at DevExpress.Web.Internal.InternalTableCell.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.Internal.InternalTableCell.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at DevExpress.Web.ASPxWebControl.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Clients.Clients.Page_Load(Object sender, EventArgs e) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\Clients.aspx.cs:line 33
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_clients_clients_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\9d07b4a0\20ca8335\App_Web_4nxg0tdu.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:9861/Default.aspx
+
+18/06/2020 08:05:48  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): A field or property with name 'AktivnostStranke' was not found in the selected data source. Possible causes of this error may be the following: an incorrect or case-insensitive spelling of the grid column name; assigning a wrong or not properly initialized data source to the grid.
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValueByControllerRow(Int32 controllerRow, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValue(Int32 visibleIndex, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataProxy.GetRowValue(Int32 visibleIndex, String fieldName)
+   at DevExpress.Web.Internal.GridTextBuilder.GetDisplayControlArgs(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider provider, ASPxGridBase grid, Boolean highlightSearchText)
+   at DevExpress.Web.Internal.GridRenderHelper.CreateDataCellDisplayControl(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Internal.GridRenderHelper.AddDisplayControlToDataCell(Control cell, IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Rendering.GridViewTableDataCell.CreateControlHierarchy()
+   at DevExpress.Web.Internal.InternalTableCell.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.Internal.InternalTableCell.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at DevExpress.Web.ASPxWebControl.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Clients.Clients.Page_Load(Object sender, EventArgs e) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\Clients.aspx.cs:line 33
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_clients_clients_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\9d07b4a0\20ca8335\App_Web_4nxg0tdu.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:9861/Default.aspx
+
+18/06/2020 10:36:20  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): A field or property with name 'Aktivnost' was not found in the selected data source. Possible causes of this error may be the following: an incorrect or case-insensitive spelling of the grid column name; assigning a wrong or not properly initialized data source to the grid.
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValueByControllerRow(Int32 controllerRow, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValue(Int32 visibleIndex, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataProxy.GetRowValue(Int32 visibleIndex, String fieldName)
+   at DevExpress.Web.Internal.GridTextBuilder.GetDisplayControlArgs(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider provider, ASPxGridBase grid, Boolean highlightSearchText)
+   at DevExpress.Web.Internal.GridRenderHelper.CreateDataCellDisplayControl(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Internal.GridRenderHelper.AddDisplayControlToDataCell(Control cell, IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Rendering.GridViewTableDataCell.CreateControlHierarchy()
+   at DevExpress.Web.Internal.InternalTableCell.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.Internal.InternalTableCell.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at DevExpress.Web.ASPxWebControl.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Clients.Clients.Page_Load(Object sender, EventArgs e) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\Clients.aspx.cs:line 33
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_clients_clients_aspx.ProcessRequest(HttpContext context) in c:\Users\BP-Razvoj\AppData\Local\Temp\Temporary ASP.NET Files\vs\9d07b4a0\20ca8335\App_Web_t4fusm3x.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:9861/Default.aspx
+
+18/06/2020 10:39:39  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): A field or property with name 'Aktivnost' was not found in the selected data source. Possible causes of this error may be the following: an incorrect or case-insensitive spelling of the grid column name; assigning a wrong or not properly initialized data source to the grid.
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValueByControllerRow(Int32 controllerRow, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValue(Int32 visibleIndex, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataProxy.GetRowValue(Int32 visibleIndex, String fieldName)
+   at DevExpress.Web.Internal.GridTextBuilder.GetDisplayControlArgs(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider provider, ASPxGridBase grid, Boolean highlightSearchText)
+   at DevExpress.Web.Internal.GridRenderHelper.CreateDataCellDisplayControl(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Internal.GridRenderHelper.AddDisplayControlToDataCell(Control cell, IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Rendering.GridViewTableDataCell.CreateControlHierarchy()
+   at DevExpress.Web.Internal.InternalTableCell.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.Internal.InternalTableCell.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at DevExpress.Web.ASPxWebControl.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Clients.Clients.Page_Load(Object sender, EventArgs e) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\Clients.aspx.cs:line 33
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_clients_clients_aspx.ProcessRequest(HttpContext context) in c:\Users\BP-Razvoj\AppData\Local\Temp\Temporary ASP.NET Files\vs\9d07b4a0\20ca8335\App_Web_t4fusm3x.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:9861/Default.aspx
+
+18/06/2020 10:39:41  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): A field or property with name 'Aktivnost' was not found in the selected data source. Possible causes of this error may be the following: an incorrect or case-insensitive spelling of the grid column name; assigning a wrong or not properly initialized data source to the grid.
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValueByControllerRow(Int32 controllerRow, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataControllerProvider.GetRowValue(Int32 visibleIndex, String fieldName, Boolean isDesignTime)
+   at DevExpress.Web.Data.WebDataProxy.GetRowValue(Int32 visibleIndex, String fieldName)
+   at DevExpress.Web.Internal.GridTextBuilder.GetDisplayControlArgs(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider provider, ASPxGridBase grid, Boolean highlightSearchText)
+   at DevExpress.Web.Internal.GridRenderHelper.CreateDataCellDisplayControl(IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Internal.GridRenderHelper.AddDisplayControlToDataCell(Control cell, IWebGridDataColumn column, Int32 visibleIndex, IValueProvider row)
+   at DevExpress.Web.Rendering.GridViewTableDataCell.CreateControlHierarchy()
+   at DevExpress.Web.Internal.InternalTableCell.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.Internal.InternalTableCell.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.DevExpress.Web.Internal.IWebControl.EnsureChildControls()
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Predicate`1 skipControlCondition)
+   at DevExpress.Web.Internal.RenderUtils.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control, Boolean skipContentContainers)
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControlsRecursive(Control control)
+   at DevExpress.Web.ASPxWebControlBase.CreateChildControls()
+   at DevExpress.Web.ASPxWebControl.CreateChildControls()
+   at System.Web.UI.Control.EnsureChildControls()
+   at DevExpress.Web.ASPxWebControlBase.EnsureChildControls()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Clients.Clients.Page_Load(Object sender, EventArgs e) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\Clients.aspx.cs:line 33
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_clients_clients_aspx.ProcessRequest(HttpContext context) in c:\Users\BP-Razvoj\AppData\Local\Temp\Temporary ASP.NET Files\vs\9d07b4a0\20ca8335\App_Web_t4fusm3x.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:9861/Default.aspx
+
+18/06/2020 10:42:44 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 10:42:44 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:47 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 10:42:49 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 10:42:49 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 10:42:49 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:49 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 10:42:50 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 10:42:51 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:13:17 Request failed! => Message: 
+The request was aborted: The operation has timed out. 
+System
+18/06/2020 11:26:13 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:26:13 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:15 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:16 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:17 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:17 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:17 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:26:53 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:56 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:27:56 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:56 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:56 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:56 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:56 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:56 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:58 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:27:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:27:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:27:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:27:58 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:28:25 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:28:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:25 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:25 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:28:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => Count ChartRenderData3
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => Count ChartRenderData2
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => Count ChartRenderData1
+
+18/06/2020 11:28:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:28:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:28:27 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:12 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:33:12 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:13 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:13 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:13 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:33:14 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:33:15 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:33:15 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:35 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:43:35 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:37 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:38 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:38 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:43:38 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:43:38 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:20 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:21 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:38 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:55:38 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:40 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:40 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:40 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:57 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:55:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:55:59 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:55:59 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:24 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:56:24 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:25 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:26 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred foreach 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:44 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:44 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred nalaganje user contorls 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+18/06/2020 11:56:45 Metoda: CreateCharts => Count ChartRenderData0
+
+18/06/2020 12:28:00  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnalizaProdaje.Pages.CodeList.Clients.ClientsForm.AddOrEditEntityObject(Boolean add) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\ClientsForm.aspx.cs:line 187
+   at AnalizaProdaje.Pages.CodeList.Clients.ClientsForm.btnConfirm_Click(Object sender, EventArgs e) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\ClientsForm.aspx.cs:line 249
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_clients_clientsform_aspx.ProcessRequest(HttpContext context) in c:\Users\BP-Razvoj\AppData\Local\Temp\Temporary ASP.NET Files\vs\9d07b4a0\20ca8335\App_Web_vi3qalmb.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnalizaProdaje.Pages.CodeList.Clients.ClientsForm.AddOrEditEntityObject(Boolean add) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\ClientsForm.aspx.cs:line 187
+   at AnalizaProdaje.Pages.CodeList.Clients.ClientsForm.btnConfirm_Click(Object sender, EventArgs e) in E:\Razvoj\Grafolit\GrafolitCRM\GrafolitCRM\Pages\CodeList\Clients\ClientsForm.aspx.cs:line 249
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Clients/ClientsForm.aspx?action=2&recordId=2
+

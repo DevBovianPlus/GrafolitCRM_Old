@@ -278,7 +278,7 @@
                                                     <ValidationSettings ValidationGroup="Confirm" Display="Dynamic" ErrorDisplayMode="ImageWithTooltip" SetFocusOnError="true"
                                                         RequiredField-ErrorText="Enter valid value">
                                                     </ValidationSettings>
-                                                    <ClientSideEvents TextChanged="FillCodeInput" Init="SetFocus"/>
+                                                    <ClientSideEvents TextChanged="FillCodeInput" Init="SetFocus" />
                                                 </dx:ASPxTextBox>
                                             </div>
                                         </div>
@@ -431,6 +431,14 @@
                                                     Height="35" Width="150" ValidationGroup="Confirm" CssClass="autoAddEventBtn">
                                                     <ClientSideEvents Click="AutoAddEventClick" />
                                                 </dx:ASPxButton>
+                                            </div>
+                                        </div>
+                                        <div class="col span_1_of_3 align_center_column_content">
+                                            <div style="margin-left:-76px" class="content-form-element-label-flex lable-width-large">
+                                                <dx:ASPxLabel ID="ASPxLabel17" runat="server" Text="AKTIVNOST :"></dx:ASPxLabel>
+                                            </div>
+                                            <div class="content-input-filed">
+                                                <dx:ASPxCheckBox style="MARGIN-LEFT:10PX" ID="chkAktivnost" runat="server"></dx:ASPxCheckBox>
                                             </div>
                                         </div>
                                     </div>
@@ -944,7 +952,7 @@
                                                     <SettingsPager PageSize="10" ShowNumericButtons="true">
                                                         <PageSizeItemSettings Visible="true" Items="10,20,30" Caption="Zapisi na stran : " AllItemText="Vsi">
                                                         </PageSizeItemSettings>
-                                                        <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov"/>
+                                                        <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov" />
                                                     </SettingsPager>
                                                     <SettingsBehavior AllowFocusedRow="true" />
                                                     <Styles Header-Wrap="True">

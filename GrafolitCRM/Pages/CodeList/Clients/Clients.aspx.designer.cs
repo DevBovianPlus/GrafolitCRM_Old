@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AnalizaProdaje.Pages.CodeList.Clients {
-    
-    
-    public partial class Clients {
-        
+namespace AnalizaProdaje.Pages.CodeList.Clients
+{
+
+
+    public partial class Clients
+    {
+
         /// <summary>
         /// ASPxRoundPanel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxRoundPanel ASPxRoundPanel1;
-        
+
         /// <summary>
         /// ASPxCallback1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCallback ASPxCallback1;
-        
+
         /// <summary>
         /// ASPxGridViewStranke control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView ASPxGridViewStranke;
-        
+
         /// <summary>
         /// btnDelete control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnDelete;
-        
+
         /// <summary>
         /// btnAdd control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnAdd;
-        
+
         /// <summary>
         /// btnEdit control.
         /// </summary>
@@ -65,15 +67,17 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnEdit;
-        
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new AnalizaProdaje.MasterPage Master {
-            get {
+        public new AnalizaProdaje.MasterPage Master
+        {
+            get
+            {
                 return ((AnalizaProdaje.MasterPage)(base.Master));
             }
         }

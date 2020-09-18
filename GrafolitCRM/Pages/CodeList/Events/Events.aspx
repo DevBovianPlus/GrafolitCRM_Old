@@ -23,6 +23,13 @@
         <PanelCollection>
             <dx:PanelContent>
                 <dx:ASPxCallback ID="ASPxCallback1" runat="server" ClientInstanceName="callback" OnCallback="ASPxCallback1_Callback"></dx:ASPxCallback>
+                 <dx:ASPxButton ID="btnExportEvents" runat="server" RenderMode="Link" ClientEnabled="true" OnClick="btnExportEvents_Click"
+                    AutoPostBack="false" UseSubmitBehavior="false" ClientInstanceName="clientbtnExportStranke" ToolTip="Izvozi v excel">
+                    <DisabledStyle CssClass="icon-disabled" />
+                    <HoverStyle CssClass="icon-hover" />
+                    <Image Url="../../../Images/pdf-export.png" Width="30px" />
+                </dx:ASPxButton>
+                <dx:ASPxGridViewExporter ID="ASPxGridViewExporterEvents" GridViewID="ASPxGridViewEvents" runat="server"></dx:ASPxGridViewExporter>
                 <dx:ASPxGridView ID="ASPxGridViewEvents" runat="server" AutoGenerateColumns="False"
                     EnableTheming="True" EnableCallbackCompression="true" ClientInstanceName="gridEvents"
                     Theme="Moderno" Width="100%" KeyboardSupport="true" AccessKey="G"

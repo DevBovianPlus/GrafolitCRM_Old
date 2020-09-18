@@ -194,6 +194,17 @@ namespace AnalizaProdaje.Domain.Helpers
         {
             return BaseWebServiceClientURI + "DeleteDevice?deviceID=" + deviceID + "&clientID=" + clientID;
         }
+
+        public static string SaveNotesChanges()
+        {
+            return BaseWebServiceClientURI + "SaveNotesData";
+        }
+
+        public static string DeleteNotes(int NotesID, int clientID)
+        {
+            return BaseWebServiceClientURI + "DeleteNotes?NotesID=" + NotesID + "&clientID=" + clientID;
+        }
+
         public static string SaveClientCategorieChanges()
         {
             return BaseWebServiceClientURI + "SaveClientCategorie";

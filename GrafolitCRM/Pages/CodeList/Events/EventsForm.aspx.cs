@@ -561,13 +561,13 @@ namespace AnalizaProdaje.Pages.CodeList.Events
 
             if (e.Parameter.Equals(Enums.EventMeetingType.PRIPRAVA.ToString()))
             {
-                model.Opis = ASPxMemoPripravaSestanek.Text;
+                model.Opis = htmlPriprava.Html;
                 model.Tip = Enums.EventMeetingType.PRIPRAVA.ToString();
 
             }
             else if (e.Parameter.Equals(Enums.EventMeetingType.POROCILO.ToString()))
             {
-                model.Opis = ASPxMemoPorociloSestanek.Text;
+                model.Opis = htmlPorocilo.Html;
                 model.Tip = Enums.EventMeetingType.POROCILO.ToString();
             }
 

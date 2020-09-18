@@ -402,13 +402,13 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
         protected global::DevExpress.Web.ASPxLabel ASPxLabel17;
 
         /// <summary>
-        /// chkAktivnost control.
+        /// cmbAktivnost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxCheckBox chkAktivnost;
+        protected global::DevExpress.Web.ASPxComboBox cmbAktivnost;
 
         /// <summary>
         /// addEventBtn control.
@@ -616,6 +616,69 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnEditEvent;
+
+        /// <summary>
+        /// NotesCallback control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxCallbackPanel NotesCallback;
+
+        /// <summary>
+        /// ASPxGridViewNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView ASPxGridViewNotes;
+
+        /// <summary>
+        /// ASPxPopupControlNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxPopupControl ASPxPopupControlNotes;
+
+        /// <summary>
+        /// PopupControlContentControl4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl4;
+
+        /// <summary>
+        /// btnDeleteNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnDeleteNotes;
+
+        /// <summary>
+        /// btnAddNotese control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnAddNotese;
+
+        /// <summary>
+        /// btnEditNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnEditNotes;
 
         /// <summary>
         /// DeviceCallback control.

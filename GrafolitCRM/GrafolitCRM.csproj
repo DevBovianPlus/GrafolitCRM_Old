@@ -225,6 +225,7 @@
     <Content Include="Images\eventDetailIconHover.png" />
     <Content Include="Images\PorociloSestanek.png" />
     <Content Include="Images\PripravaSestanek.png" />
+    <Content Include="Pages\CodeList\Clients\Notes_popup.aspx" />
     <Content Include="Pages\Display\FinancialControl.aspx" />
     <Content Include="Pages\Testing\MailTest.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
@@ -333,6 +334,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\CodeList\Clients\Notes_popup.aspx.cs">
+      <DependentUpon>Notes_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CodeList\Clients\Notes_popup.aspx.designer.cs">
+      <DependentUpon>Notes_popup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Display\FinancialControl.aspx.cs">
       <DependentUpon>FinancialControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

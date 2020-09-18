@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AnalizaProdaje.Pages.CodeList.Events {
-    
-    
-    public partial class Events {
-        
+namespace AnalizaProdaje.Pages.CodeList.Events
+{
+
+
+    public partial class Events
+    {
+
         /// <summary>
         /// ASPxRoundPanel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace AnalizaProdaje.Pages.CodeList.Events {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxRoundPanel ASPxRoundPanel1;
-        
+
         /// <summary>
         /// ASPxCallback1 control.
         /// </summary>
@@ -29,7 +31,25 @@ namespace AnalizaProdaje.Pages.CodeList.Events {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCallback ASPxCallback1;
-        
+
+        /// <summary>
+        /// btnExportEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnExportEvents;
+
+        /// <summary>
+        /// ASPxGridViewExporterEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridViewExporter ASPxGridViewExporterEvents;
+
         /// <summary>
         /// ASPxGridViewEvents control.
         /// </summary>
@@ -38,7 +58,7 @@ namespace AnalizaProdaje.Pages.CodeList.Events {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView ASPxGridViewEvents;
-        
+
         /// <summary>
         /// btnDelete control.
         /// </summary>
@@ -47,7 +67,7 @@ namespace AnalizaProdaje.Pages.CodeList.Events {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnDelete;
-        
+
         /// <summary>
         /// ErrorLabel control.
         /// </summary>
@@ -56,7 +76,7 @@ namespace AnalizaProdaje.Pages.CodeList.Events {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ErrorLabel;
-        
+
         /// <summary>
         /// btnAdd control.
         /// </summary>
@@ -65,7 +85,7 @@ namespace AnalizaProdaje.Pages.CodeList.Events {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnAdd;
-        
+
         /// <summary>
         /// btnEdit control.
         /// </summary>
@@ -74,15 +94,17 @@ namespace AnalizaProdaje.Pages.CodeList.Events {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnEdit;
-        
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new AnalizaProdaje.MasterPage Master {
-            get {
+        public new AnalizaProdaje.MasterPage Master
+        {
+            get
+            {
                 return ((AnalizaProdaje.MasterPage)(base.Master));
             }
         }

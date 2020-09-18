@@ -38,6 +38,7 @@ namespace AnalizaProdaje.Common
             PlanPopUpID,
             ContactPersonPopUp,
             DevicePopUpID,
+            NotesPopUpID,
             ClientCategoriePopUpID,
             CategorieID,
             Events,

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AnalizaProdaje.Pages.CodeList.Employees {
-    
-    
-    public partial class Employees {
-        
+namespace AnalizaProdaje.Pages.CodeList.Employees
+{
+
+
+    public partial class Employees
+    {
+
         /// <summary>
         /// ASPxRoundPanel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace AnalizaProdaje.Pages.CodeList.Employees {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxRoundPanel ASPxRoundPanel1;
-        
+
         /// <summary>
         /// EmployeeCallback control.
         /// </summary>
@@ -29,7 +31,25 @@ namespace AnalizaProdaje.Pages.CodeList.Employees {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCallbackPanel EmployeeCallback;
-        
+
+        /// <summary>
+        /// btnExportZaposleni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnExportZaposleni;
+
+        /// <summary>
+        /// ASPxGridViewExporterZaposleni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridViewExporter ASPxGridViewExporterZaposleni;
+
         /// <summary>
         /// ASPxGridViewZaposleni control.
         /// </summary>
@@ -38,7 +58,7 @@ namespace AnalizaProdaje.Pages.CodeList.Employees {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView ASPxGridViewZaposleni;
-        
+
         /// <summary>
         /// ASPxPopupControl_Employee control.
         /// </summary>
@@ -47,7 +67,7 @@ namespace AnalizaProdaje.Pages.CodeList.Employees {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPopupControl ASPxPopupControl_Employee;
-        
+
         /// <summary>
         /// PopUpContentControl control.
         /// </summary>
@@ -56,7 +76,7 @@ namespace AnalizaProdaje.Pages.CodeList.Employees {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.PopupControlContentControl PopUpContentControl;
-        
+
         /// <summary>
         /// btnDeleteEmployee control.
         /// </summary>
@@ -65,7 +85,7 @@ namespace AnalizaProdaje.Pages.CodeList.Employees {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnDeleteEmployee;
-        
+
         /// <summary>
         /// btnAddEmployee control.
         /// </summary>
@@ -74,7 +94,7 @@ namespace AnalizaProdaje.Pages.CodeList.Employees {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnAddEmployee;
-        
+
         /// <summary>
         /// btnEditEmployee control.
         /// </summary>

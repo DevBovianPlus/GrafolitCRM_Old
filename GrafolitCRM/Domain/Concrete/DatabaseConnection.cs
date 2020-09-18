@@ -384,6 +384,38 @@ namespace AnalizaProdaje.Domain.Concrete
             return model;
         }
 
+        public WebResponseContentModel<NotesModel> SaveNotesChanges(NotesModel newData)
+        {
+            WebResponseContentModel<NotesModel> model = new WebResponseContentModel<NotesModel>();
+            try
+            {
+                model.Content = newData;
+                model = PostWebRequestData<WebResponseContentModel<NotesModel>>(WebServiceHelper.SaveNotesChanges(), "post", model);
+            }
+            catch (Exception ex)
+            {
+                model.ValidationErrorAppSide = ConcatenateExceptionMessage(ex);
+            }
+
+            return model;
+        }
+
+        public WebResponseContentModel<bool> DeleteNotes(int NotesID, int clientID)
+        {
+            WebResponseContentModel<bool> model = new WebResponseContentModel<bool>();
+
+            try
+            {
+                model = GetResponseFromWebRequest<WebResponseContentModel<bool>>(WebServiceHelper.DeleteNotes(NotesID, clientID), "get"); ;
+            }
+            catch (Exception ex)
+            {
+                model.ValidationErrorAppSide = ConcatenateExceptionMessage(ex);
+            }
+
+            return model;
+        }
+
         public WebResponseContentModel<ClientCategorieModel> SaveClientCategorieChanges(ClientCategorieModel newData)
         {
             WebResponseContentModel<ClientCategorieModel> model = new WebResponseContentModel<ClientCategorieModel>();

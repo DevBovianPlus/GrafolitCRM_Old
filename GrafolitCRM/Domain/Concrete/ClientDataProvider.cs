@@ -284,6 +284,90 @@ namespace AnalizaProdaje.Domain.Concrete
         }
         #endregion
 
+        #region Notes
+        /// <summary>
+        /// Returns NotesModel Instance from ClientModel session.
+        /// </summary>
+        /// <param name="planID">Device ID</param>
+        /// <param name="clientID">Client ID</param>
+        /// <returns></returns>
+        public NotesModel GetNotesFromClientModelSession(int NotesID, int clientID)
+        {
+
+            ClientFullModel tmp = GetFullModelFromClientModel();
+
+            return tmp.Opombe.Where(n => n.idOpombaStranka == NotesID && n.idStranka == clientID).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Delete Notes instance from client model session and add new data to session.
+        /// </summary>
+        /// <param name="planID">Notes ID</param>
+        /// <param name="clientID">Client ID</param>
+        /// <returns>Return true if delete is succesfull. Otherwise false.</returns>
+        public bool DeleteNotesFromClientModelSession(int NotesID, int clientID)
+        {
+            NotesModel model = GetNotesFromClientModelSession(NotesID, clientID);
+            ClientFullModel tmp = GetFullModelFromClientModel();
+
+            if (model != null && tmp != null)
+            {
+                bool isDeleted = tmp.Opombe.Remove(model);
+                AddValueToSession(Enums.ClientSession.ClientModel, tmp);
+
+                return isDeleted;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Add new Notes instance to client model session
+        /// </summary>
+        /// <param name="model">New Notes instance to add</param>
+        /// <returns>Returns true if adding was succesfull. Otherwise false.</returns>
+        public bool AddNotesToClientModelSession(NotesModel model)
+        {
+            ClientFullModel fullModel = GetFullModelFromClientModel();
+            if (fullModel != null)
+            {
+                fullModel.Opombe.Add(model);
+                AddValueToSession(Enums.ClientSession.ClientModel, fullModel);
+
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Udate existing Notes in client model session
+        /// </summary>
+        /// <param name="model">Existing Notes instance to update</param>
+        /// <returns>Returns true if updating was succesfull. Otherwise false.</returns>
+        public bool UpdateNotesToClientModelSession(NotesModel model)
+        {
+            ClientFullModel fullModel = GetFullModelFromClientModel();
+            if (fullModel != null)
+            {
+                var record = fullModel.Opombe.Where(n => n.idOpombaStranka == model.idOpombaStranka).FirstOrDefault();
+                if (record != null)
+                {
+                    int index = fullModel.Opombe.IndexOf(record);
+                    if (index != -1)
+                        fullModel.Opombe[index] = model;
+                    else
+                        return false;
+                }
+                else
+                    return false;
+
+                AddValueToSession(Enums.ClientSession.ClientModel, fullModel);
+
+                return true;
+            }
+            return false;
+        }
+        #endregion
+
         #region Categorie
         /// <summary>
         /// Returns ClientCategorieModel Instance from ClientModel session.

@@ -35,12 +35,19 @@
                 <dx:ASPxCallbackPanel ID="EmployeeCallback" runat="server" ClientInstanceName="clientEmployeeCallback" OnCallback="EmployeeCallback_Callback">
                     <PanelCollection>
                         <dx:PanelContent>
+                            <dx:ASPxButton ID="btnExportZaposleni" runat="server" RenderMode="Link" ClientEnabled="true" OnClick="btnExportZaposleni_Click"
+                                AutoPostBack="false" UseSubmitBehavior="false" ClientInstanceName="clientbtnExportZaposleni" ToolTip="Izvozi v excel">
+                                <DisabledStyle CssClass="icon-disabled" />
+                                <HoverStyle CssClass="icon-hover" />
+                                <Image Url="../../../Images/pdf-export.png" Width="30px" />
+                            </dx:ASPxButton>
+                            <dx:ASPxGridViewExporter ID="ASPxGridViewExporterZaposleni" GridViewID="ASPxGridViewZaposleni" runat="server"></dx:ASPxGridViewExporter>
                             <dx:ASPxGridView ID="ASPxGridViewZaposleni" runat="server" AutoGenerateColumns="False"
                                 EnableTheming="True" EnableCallbackCompression="true"
                                 Theme="Moderno" Width="100%" KeyboardSupport="true" AccessKey="G"
                                 OnDataBinding="ASPxGridViewZaposleni_DataBinding"
                                 KeyFieldName="idOsebe" Paddings-PaddingTop="0" Paddings-PaddingBottom="0"
-                                ClientInstanceName="gridEmployee" CssClass="gridview-no-header-padding" >
+                                ClientInstanceName="gridEmployee" CssClass="gridview-no-header-padding">
                                 <Settings ShowVerticalScrollBar="True" VerticalScrollableHeight="400"
                                     ShowHorizontalScrollBar="True" ShowFilterBar="Auto" ShowFilterRow="True"
                                     ShowFilterRowMenu="True" VerticalScrollBarStyle="Standard" />
@@ -48,7 +55,7 @@
                                 <SettingsPager PageSize="10" ShowNumericButtons="true">
                                     <PageSizeItemSettings Visible="true" Items="10,20,30" Caption="Zapisi na stran : " AllItemText="Vsi">
                                     </PageSizeItemSettings>
-                                    <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov"/>                          
+                                    <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov" />
                                 </SettingsPager>
                                 <SettingsBehavior AllowFocusedRow="true" />
                                 <Styles Header-Wrap="True">

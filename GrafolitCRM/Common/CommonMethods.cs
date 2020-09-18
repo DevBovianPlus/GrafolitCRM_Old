@@ -1,11 +1,15 @@
-﻿using System;
+﻿using DevExpress.Web;
+using DevExpress.XtraPrintingLinks;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Net.Mime;
 using System.Text;
 using System.Web;
+using System.Web.UI;
 
 namespace AnalizaProdaje.Common
 {
@@ -202,5 +206,48 @@ namespace AnalizaProdaje.Common
             }
             return isCallbackRequest || (request["X-Requested-With"] == "XMLHttpRequest") || (request.Headers["X-Requested-With"] == "XMLHttpRequest");
         }
+
+        public static string GetTimeStamp()
+        {
+            return  "_" + DateTime.Now.ToString("dd.MM.yyyy - hh:mm");
+        }
+
+        public static void ExportToPDFFitToPage(ASPxGridViewExporter GridViewExporter, Page pg)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                PrintableComponentLinkBase pcl = new PrintableComponentLinkBase(new DevExpress.XtraPrinting.PrintingSystemBase());
+                pcl.Component = GridViewExporter;
+                pcl.Margins.Left = pcl.Margins.Right = 50;
+                pcl.Landscape = true;
+                pcl.CreateDocument(false);
+                pcl.PrintingSystemBase.Document.AutoFitToPagesWidth = 1;
+                pcl.ExportToPdf(ms);
+                WriteResponse(pg.Response, ms.ToArray(), System.Net.Mime.DispositionTypeNames.Inline.ToString());
+            }
+        }
+
+        public static void WriteResponse(HttpResponse response, byte[] filearray, string type)
+        {
+            response.ClearContent();
+            response.Buffer = true;
+            response.Cache.SetCacheability(HttpCacheability.Private);
+            response.ContentType = "application/pdf";
+            ContentDisposition contentDisposition = new ContentDisposition();
+            contentDisposition.FileName = "test.pdf";
+            contentDisposition.DispositionType = type;
+            response.AddHeader("Content-Disposition", contentDisposition.ToString());
+            response.BinaryWrite(filearray);
+            HttpContext.Current.ApplicationInstance.CompleteRequest();
+            try
+            {
+                response.End();
+            }
+            catch (System.Threading.ThreadAbortException)
+            {
+            }
+
+        }
+
     }
 }

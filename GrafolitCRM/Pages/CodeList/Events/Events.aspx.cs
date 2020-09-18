@@ -41,6 +41,11 @@ namespace AnalizaProdaje.Pages.CodeList.Events
             (sender as ASPxGridView).DataSource = CreateDataSource();
         }
 
+        protected void btnExportEvents_Click(object sender, EventArgs e)
+        {
+            CommonMethods.ExportToPDFFitToPage(ASPxGridViewExporterEvents, this);
+        }
+
         protected override DataTable CreateDataSource()
         {
             DataTable dt = new DataTable();

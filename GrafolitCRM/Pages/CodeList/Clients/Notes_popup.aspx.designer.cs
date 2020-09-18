@@ -11,93 +11,88 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
 {
 
 
-    public partial class Clients
+    public partial class Notes_popup
     {
 
         /// <summary>
-        /// ASPxRoundPanel1 control.
+        /// ASPxPageControl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxRoundPanel ASPxRoundPanel1;
+        protected global::DevExpress.Web.ASPxPageControl ASPxPageControl1;
 
         /// <summary>
-        /// ASPxCallback1 control.
+        /// ContentControl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxCallback ASPxCallback1;
+        protected global::DevExpress.Web.ContentControl ContentControl1;
 
         /// <summary>
-        /// btnExportStranke control.
+        /// ASPxLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnExportStranke;
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel1;
 
         /// <summary>
-        /// ASPxGridViewExporterStranke control.
+        /// txtNotesID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter ASPxGridViewExporterStranke;
+        protected global::DevExpress.Web.ASPxTextBox txtNotesID;
 
         /// <summary>
-        /// ASPxGridViewStranke control.
+        /// ASPxLabel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridViewStranke;
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel2;
 
         /// <summary>
-        /// btnDelete control.
+        /// txtIdStranke control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnDelete;
+        protected global::DevExpress.Web.ASPxTextBox txtIdStranke;
 
         /// <summary>
-        /// btnAdd control.
+        /// htmlOpomba control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnAdd;
+        protected global::DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditor htmlOpomba;
 
         /// <summary>
-        /// btnEdit control.
+        /// btnCancelPopUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnEdit;
+        protected global::DevExpress.Web.ASPxButton btnCancelPopUp;
 
         /// <summary>
-        /// Master property.
+        /// btnConfirmPopUp control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated property.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public new AnalizaProdaje.MasterPage Master
-        {
-            get
-            {
-                return ((AnalizaProdaje.MasterPage)(base.Master));
-            }
-        }
+        protected global::DevExpress.Web.ASPxButton btnConfirmPopUp;
     }
 }

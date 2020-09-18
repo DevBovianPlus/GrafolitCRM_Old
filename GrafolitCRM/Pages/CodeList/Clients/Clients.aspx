@@ -22,16 +22,24 @@
         <PanelCollection>
             <dx:PanelContent>
                 <dx:ASPxCallback ID="ASPxCallback1" runat="server" ClientInstanceName="callback" OnCallback="ASPxCallback1_Callback"></dx:ASPxCallback>
+
+                <dx:ASPxButton ID="btnExportStranke" runat="server" RenderMode="Link" ClientEnabled="true" OnClick="btnExportStranke_Click"
+                    AutoPostBack="false" UseSubmitBehavior="false" ClientInstanceName="clientbtnExportStranke" ToolTip="Izvozi v excel">
+                    <DisabledStyle CssClass="icon-disabled" />
+                    <HoverStyle CssClass="icon-hover" />
+                    <Image Url="../../../Images/pdf-export.png" Width="30px" />
+                </dx:ASPxButton>
+                <dx:ASPxGridViewExporter ID="ASPxGridViewExporterStranke" GridViewID="ASPxGridViewStranke" runat="server"></dx:ASPxGridViewExporter>
                 <dx:ASPxGridView ID="ASPxGridViewStranke" runat="server" AutoGenerateColumns="False"
                     EnableTheming="True" EnableCallbackCompression="true" ClientInstanceName="gridClients"
                     Theme="Moderno" Width="100%" KeyboardSupport="true" AccessKey="G"
-                    KeyFieldName="idStranka" OnDataBinding="ASPxGridViewStranke_DataBinding" 
+                    KeyFieldName="idStranka" OnDataBinding="ASPxGridViewStranke_DataBinding"
                     Paddings-PaddingTop="0" Paddings-PaddingBottom="0"
                     CssClass="gridview-no-header-padding">
                     <%--ColumnResizeMode="Disabled" for setting column width with css--%>
                     <ClientSideEvents RowDblClick="RowDoubleClick" />
                     <SettingsPager PageSize="10" ShowNumericButtons="true">
-                        
+
                         <PageSizeItemSettings Visible="true" Items="10,20,30" Caption="Zapisi na stran : " AllItemText="Vsi">
                         </PageSizeItemSettings>
                         <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov" />
@@ -41,9 +49,9 @@
                         ShowFilterRowMenu="True" VerticalScrollBarStyle="Standard" />
                     <SettingsBehavior AllowFocusedRow="true" />
 
-<SettingsPopup>
-<HeaderFilter MinHeight="140px"></HeaderFilter>
-</SettingsPopup>
+                    <SettingsPopup>
+                        <HeaderFilter MinHeight="140px"></HeaderFilter>
+                    </SettingsPopup>
                     <Columns>
                         <%-- <dx:GridViewDataTextColumn Caption="FAX" FieldName="FAX" Width="120px"
                             Visible="true" ReadOnly="true" ShowInCustomizationForm="True" VisibleIndex="11" Visible="false">
@@ -55,7 +63,7 @@
                         <dx:GridViewCommandColumn ShowInCustomizationForm="True" VisibleIndex="0">
                         </dx:GridViewCommandColumn>
                         <dx:GridViewDataTextColumn Caption="ID" FieldName="idStranka" Width="80px"
-                            ReadOnly="true" Visible="false" ShowInCustomizationForm="True" VisibleIndex="1" >
+                            ReadOnly="true" Visible="false" ShowInCustomizationForm="True" VisibleIndex="1">
                         </dx:GridViewDataTextColumn>
 
                         <dx:GridViewDataTextColumn Caption="Koda" FieldName="KodaStranke" Width="250px"
@@ -69,19 +77,19 @@
                             VisibleIndex="4" Width="22%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                       
+
                         <dx:GridViewDataTextColumn Caption="Naziv drugi"
                             FieldName="NazivDrugi" ShowInCustomizationForm="True"
                             VisibleIndex="5" Width="34%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                                                
+
                         <dx:GridViewDataTextColumn Caption="Naslov"
                             FieldName="Naslov" ShowInCustomizationForm="True"
                             VisibleIndex="6" Width="27%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                                                
+
                         <dx:GridViewDataTextColumn Caption="Telefon"
                             FieldName="Telefon" ShowInCustomizationForm="True"
                             VisibleIndex="7" Width="12%">
@@ -92,18 +100,21 @@
                             VisibleIndex="8" Width="15%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataCheckColumn Caption="Aktivnost" FieldName="Aktivnost" ShowInCustomizationForm="True" VisibleIndex="9">
+
+                        <%--<dx:GridViewDataCheckColumn Caption="Aktivnost" FieldName="Aktivnost" ShowInCustomizationForm="True" VisibleIndex="9">
+
+                            <CellStyle Paddings-Padding="0"></CellStyle>
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
-                        </dx:GridViewDataCheckColumn>
+                        </dx:GridViewDataCheckColumn>--%>
                     </Columns>
                     <Styles Header-Wrap="True">
-                        <Header Paddings-PaddingTop="5" HorizontalAlign="Center" VerticalAlign="Middle" Font-Bold="true" >
-<Paddings PaddingTop="5px"></Paddings>
+                        <Header Paddings-PaddingTop="5" HorizontalAlign="Center" VerticalAlign="Middle" Font-Bold="true">
+                            <Paddings PaddingTop="5px"></Paddings>
                         </Header>
                         <FocusedRow BackColor="#d1e6fe" Font-Bold="true" ForeColor="#606060"></FocusedRow>
                     </Styles>
 
-<Paddings PaddingTop="0px" PaddingBottom="0px"></Paddings>
+                    <Paddings PaddingTop="0px" PaddingBottom="0px"></Paddings>
                 </dx:ASPxGridView>
                 <div class="AddEditButtonsWrap">
                     <div class="DeleteButtonElements">

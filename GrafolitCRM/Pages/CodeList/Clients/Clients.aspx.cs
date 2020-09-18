@@ -11,6 +11,9 @@ using System.Web.UI.WebControls;
 using DevExpress.Data.Filtering;
 using AnalizaProdaje.Domain.Helpers;
 using DatabaseWebService.Models.Client;
+using System.Net.Mime;
+using DevExpress.XtraPrintingLinks;
+using System.IO;
 
 namespace AnalizaProdaje.Pages.CodeList.Clients
 {
@@ -49,6 +52,14 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             if(PrincipalHelper.IsUserSalesman())
                 grid.Columns["ImeInPriimekZaposlen"].Visible = false;
         }
+
+        protected void btnExportStranke_Click(object sender, EventArgs e)
+        {
+           CommonMethods.ExportToPDFFitToPage(ASPxGridViewExporterStranke, this);
+        }
+
+       
+
 
         protected override DataTable CreateDataSource()
         {

@@ -159,6 +159,8 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             txtRokPlacila.Text = model.RokPlacila;
             txtRangStranke.Text = model.RangStranke;
             ComboBoxZaposleniStranke.SelectedIndex = model.StrankaZaposleni.Count > 0 ? ComboBoxZaposleniStranke.Items.IndexOfValue(model.StrankaZaposleni[0].idOsebe.ToString()) : 0;
+            cmbAktivnost.SelectedItem = model.Aktivnost == 1 ? cmbAktivnost.Items.FindByText("DA") : cmbAktivnost.Items.FindByText("NE");
+            //cmbAktivnost.SelectedIndex = model.Aktivnost > 0 ? cmbAktivnost.Items.IndexOfValue(CommonMethods.ParseInt(model.Aktivnost)) : 0;
 
             if (PrincipalHelper.IsUserSalesman() || PrincipalHelper.IsUserUser())
             {
@@ -166,7 +168,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 ComboBoxZaposleniStranke.ReadOnly = true;
                 ComboBoxZaposleniStranke.Enabled = false;
             }
-
+            
             ASPxRoundPanel1.HeaderText = model.NazivPrvi;
         }
 
@@ -219,6 +221,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             model.KontaktnaOseba = txtKontaktnaOseba.Text;
             model.RokPlacila = txtRokPlacila.Text;
             model.RangStranke = txtRangStranke.Text;
+            model.Aktivnost = CommonMethods.ParseInt(cmbAktivnost.SelectedItem.Value);
 
             ClientFullModel returnModel = CheckModelValidation(GetDatabaseConnectionInstance().SaveClientChanges(model));
 
@@ -481,6 +484,19 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 }
             }
         }
+
+        private void CheckForClientName(List<NotesModel> list)
+        {
+            if (list != null)
+            {
+                foreach (var item in list)
+                {
+                    if (String.IsNullOrEmpty(item.Stranka))
+                        item.Stranka = txtNazivPrvi.Text;
+                }
+            }
+        }
+
         private void CheckForClientName(List<ClientCategorieModel> list)
         {
             if (list != null)
@@ -639,6 +655,42 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 (sender as ASPxGridView).DataSource = dt;
                 ASPxGridViewDevice.FocusedRowIndex = 0;
                 ASPxGridViewDevice.Settings.GridLines = GridLines.Both;
+            }
+        }
+        #endregion
+
+        #region Notes
+        protected void NotesCallback_Callback(object sender, CallbackEventArgsBase e)
+        {
+            if (e.Parameter == "RefreshGrid")
+            {
+                InitializeEditDeleteButtons();
+                ASPxGridViewNotes.DataBind();
+            }
+            else
+            {
+                object valueID = null;
+                if (ASPxGridViewNotes.VisibleRowCount > 0)
+                    valueID = ASPxGridViewNotes.GetRowValues(ASPxGridViewNotes.FocusedRowIndex, "idOpombaStranka");
+
+                bool isValid = SetSessionsAndOpenPopUp(e.Parameter, Enums.ClientSession.NotesPopUpID, valueID);
+                if (isValid)
+                    ASPxPopupControlNotes.ShowOnPageLoad = true;
+            }
+        }
+
+        protected void ASPxGridViewNotes_DataBinding(object sender, EventArgs e)
+        {
+            if (CheckClientExistInDB())
+            {
+                DataTable dt = new DataTable();
+                CheckForClientName(model.Opombe);
+                string Notes = JsonConvert.SerializeObject(model.Opombe);
+                dt = JsonConvert.DeserializeObject<DataTable>(Notes);
+
+                (sender as ASPxGridView).DataSource = dt;
+                ASPxGridViewNotes.FocusedRowIndex = 0;
+                ASPxGridViewNotes.Settings.GridLines = GridLines.Both;
             }
         }
         #endregion
@@ -923,6 +975,16 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             else if (!btnEditDevice.Enabled && !btnDeleteDevice.Enabled)
             {
                 EnabledDeleteAndEditBtnPopUp(btnEditDevice, btnDeleteDevice, false);
+            }
+
+            //Check to enable Edit and Delete button for Tab OPOMBE
+            if (model == null || (model.Opombe == null || model.Opombe.Count <= 0))
+            {
+                EnabledDeleteAndEditBtnPopUp(btnEditNotes, btnDeleteNotes);
+            }
+            else if (!btnEditNotes.Enabled && !btnDeleteNotes.Enabled)
+            {
+                EnabledDeleteAndEditBtnPopUp(btnEditNotes, btnDeleteNotes, false);
             }
 
             //Check to enable Edit and Delete button for Tab CATEGORIE

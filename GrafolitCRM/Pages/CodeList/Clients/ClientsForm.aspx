@@ -23,6 +23,8 @@
                 gridEvents.Refresh();
             else if (e.tab.name == "Device")
                 gridDevice.Refresh();
+            else if (e.tab.name == "Notes")
+                gridNotes.Refresh();
             else if (e.tab.name == "Categorie")
                 gridCategorie.Refresh();
             else if (e.tab.name == "Charts")
@@ -69,6 +71,19 @@
             }
         }
 
+        function OnClosePopupEventHandler_Notes(command) {
+            switch (command) {
+                case 'Potrdi':
+                    clientPopUpNotes.Hide();
+                    //gridDevice.Refresh();
+                    clientNotesCallback.PerformCallback("RefreshGrid");
+                    break;
+                case 'Preklici':
+                    clientPopUpNotes.Hide();
+                    break;
+            }
+        }
+
         function OnClosePopupEventHandler_Categorie(command) {
             switch (command) {
                 case 'Potrdi':
@@ -105,6 +120,10 @@
                 case "Device":
                     parameter = HandleUserActionsOnTabs(gridDevice, clientBtnAddDevice, clientBtnEditDevice, clientBtnDeleteDevice, s);
                     clientDeviceCallback.PerformCallback(parameter);
+                    break;
+                case "Notes":
+                    parameter = HandleUserActionsOnTabs(gridNotes, clientBtnAddNotes, clientBtnEditNotes, clientBtnDeleteNotes, s);
+                    clientNotesCallback.PerformCallback(parameter);
                     break;
                 case "Categorie":
                     parameter = HandleUserActionsOnTabs(gridCategorie, clientBtnAddCategorie, clientBtnEditCategorie, clientBtnDeleteCategorie, s);
@@ -434,11 +453,17 @@
                                             </div>
                                         </div>
                                         <div class="col span_1_of_3 align_center_column_content">
-                                            <div style="margin-left:-76px" class="content-form-element-label-flex lable-width-large">
+                                            <div style="margin-left: -76px" class="content-form-element-label-flex lable-width-large">
                                                 <dx:ASPxLabel ID="ASPxLabel17" runat="server" Text="AKTIVNOST :"></dx:ASPxLabel>
                                             </div>
                                             <div class="content-input-filed">
-                                                <dx:ASPxCheckBox style="MARGIN-LEFT:10PX" ID="chkAktivnost" runat="server"></dx:ASPxCheckBox>
+                                                <dx:ASPxComboBox ID="cmbAktivnost" runat="server" Width="80px" CssClass="text-box-input">
+                                                    <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
+                                                    <Items>                                                        
+                                                        <dx:ListEditItem Text="NE" Value="0" Selected="true" />
+                                                        <dx:ListEditItem Text="DA" Value="1" />
+                                                    </Items>
+                                                </dx:ASPxComboBox>
                                             </div>
                                         </div>
                                     </div>
@@ -817,6 +842,107 @@
                                             </dx:PanelContent>
                                         </PanelCollection>
                                         <ClientSideEvents EndCallback="function(s,e){ EndCallbackValidation(s,e); }" />
+                                    </dx:ASPxCallbackPanel>
+                                </dx:ContentControl>
+                            </ContentCollection>
+                        </dx:TabPage>
+                        <dx:TabPage Name="Notes" Text="OPOMBE">
+                            <ContentCollection>
+                                <dx:ContentControl>
+                                    <dx:ASPxCallbackPanel ID="NotesCallback" runat="server" ClientInstanceName="clientNotesCallback" OnCallback="NotesCallback_Callback">
+                                        <PanelCollection>
+                                            <dx:PanelContent>
+                                                <dx:ASPxGridView ID="ASPxGridViewNotes" runat="server" AutoGenerateColumns="False"
+                                                    EnableTheming="True" EnableCallbackCompression="true" ClientInstanceName="gridNotes"
+                                                    Theme="Moderno" Width="100%" KeyboardSupport="true" AccessKey="G"
+                                                    KeyFieldName="idOpombaStranka" OnDataBinding="ASPxGridViewNotes_DataBinding"
+                                                    Paddings-PaddingTop="0" Paddings-PaddingBottom="0"
+                                                    CssClass="gridview-no-header-padding">
+                                                    <ClientSideEvents RowDblClick="PlanPopUpShow" />
+                                                    <Settings ShowVerticalScrollBar="True" VerticalScrollableHeight="400"
+                                                        ShowHorizontalScrollBar="True" ShowFilterBar="Auto" ShowFilterRow="True"
+                                                        ShowFilterRowMenu="True" VerticalScrollBarStyle="Standard" />
+                                                    <SettingsPager PageSize="10" ShowNumericButtons="true">
+                                                        <PageSizeItemSettings Visible="true" Items="10,20,30" Caption="Zapisi na stran : " AllItemText="Vsi">
+                                                        </PageSizeItemSettings>
+                                                        <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov" />
+                                                    </SettingsPager>
+                                                    <SettingsBehavior AllowFocusedRow="true" />
+                                                    <Styles Header-Wrap="True">
+                                                        <Header Paddings-PaddingTop="5" HorizontalAlign="Center" VerticalAlign="Middle" Font-Bold="true"></Header>
+                                                        <FocusedRow BackColor="#d1e6fe" Font-Bold="true" ForeColor="#606060"></FocusedRow>
+                                                    </Styles>
+                                                    <Columns>
+                                                        <dx:GridViewDataTextColumn Caption="ID" FieldName="idOpombaStranka" Width="80px"
+                                                            ReadOnly="true" ShowInCustomizationForm="True" VisibleIndex="1"
+                                                            Visible="false">
+                                                        </dx:GridViewDataTextColumn>
+
+                                                        <dx:GridViewDataTextColumn Caption="Stranka"
+                                                            FieldName="Stranka" ShowInCustomizationForm="True"
+                                                            VisibleIndex="2" Width="25%">
+                                                            <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
+                                                        </dx:GridViewDataTextColumn>
+                                                        <dx:GridViewDataTextColumn Caption="Opomba"
+                                                            FieldName="Opomba" ShowInCustomizationForm="True" PropertiesTextEdit-EncodeHtml ="false"
+                                                            VisibleIndex="4" Width="65%">
+                                                            <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
+                                                        </dx:GridViewDataTextColumn>                                                       
+                                                        <dx:GridViewDataDateColumn Caption="Datum vpisa"
+                                                            FieldName="ts" ShowInCustomizationForm="True"
+                                                            VisibleIndex="9" Width="120px" Visible="false">
+                                                            <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy - HH:mm"></PropertiesDateEdit>
+                                                            <CellStyle HorizontalAlign="Right"></CellStyle>
+                                                        </dx:GridViewDataDateColumn>
+                                                        <dx:GridViewDataTextColumn Caption="Oseba vnosa"
+                                                            FieldName="tsIDOsebe" ShowInCustomizationForm="True"
+                                                            VisibleIndex="10" Width="100px" Visible="false">
+                                                            <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
+                                                        </dx:GridViewDataTextColumn>
+                                                    </Columns>
+                                                </dx:ASPxGridView>
+                                                <dx:ASPxPopupControl ID="ASPxPopupControlNotes" runat="server" ContentUrl="Notes_popup.aspx"
+                                                    ClientInstanceName="clientPopUpNotes" Modal="True" HeaderText="DODAJ OPOMBO"
+                                                    Theme="MetropolisBlue" CloseAction="CloseButton" Width="750px" Height="600px" PopupHorizontalAlign="WindowCenter"
+                                                    PopupVerticalAlign="WindowCenter" PopupAnimationType="Fade" AllowDragging="true" ShowSizeGrip="true"
+                                                    AllowResize="true">
+                                                    <ContentStyle BackColor="#F7F7F7">
+                                                        <Paddings PaddingBottom="0px" PaddingLeft="6px" PaddingRight="0px" PaddingTop="0px"></Paddings>
+                                                    </ContentStyle>
+                                                    <ContentCollection>
+                                                        <dx:PopupControlContentControl ID="PopupControlContentControl4" runat="server">
+                                                        </dx:PopupControlContentControl>
+                                                    </ContentCollection>
+                                                </dx:ASPxPopupControl>
+                                                <div class="AddEditButtonsWrap">
+                                                    <div class="DeleteButtonElements">
+                                                        <span class="AddEditButtons">
+                                                            <dx:ASPxButton ID="btnDeleteNotes" runat="server" Text="Izbriši" AutoPostBack="false"
+                                                                Height="25" Width="90" ClientInstanceName="clientBtnDeleteNotes">
+                                                                <ClientSideEvents Click="PlanPopUpShow" />
+                                                                <Image Url="../../../Images/trashForPopUp.png"></Image>
+                                                            </dx:ASPxButton>
+                                                        </span>
+                                                    </div>
+                                                    <div class="AddEditButtonsElements">
+                                                        <span class="AddEditButtons">
+                                                            <dx:ASPxButton ID="btnAddNotese" runat="server" Text="Dodaj" AutoPostBack="false"
+                                                                Height="25" Width="90" ClientInstanceName="clientBtnAddNotes">
+                                                                <ClientSideEvents Click="PlanPopUpShow" />
+                                                                <Image Url="../../../Images/addForPopUp.png"></Image>
+                                                            </dx:ASPxButton>
+                                                        </span>
+                                                        <span class="AddEditButtons">
+                                                            <dx:ASPxButton ID="btnEditNotes" runat="server" Text="Spremeni" AutoPostBack="false"
+                                                                Height="25" Width="90" ClientInstanceName="clientBtnEditNotes">
+                                                                <ClientSideEvents Click="PlanPopUpShow" />
+                                                                <Image Url="../../../Images/editForPopup.png"></Image>
+                                                            </dx:ASPxButton>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </dx:PanelContent>
+                                        </PanelCollection>
                                     </dx:ASPxCallbackPanel>
                                 </dx:ContentControl>
                             </ContentCollection>

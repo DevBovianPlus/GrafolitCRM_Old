@@ -66,6 +66,11 @@ namespace AnalizaProdaje.Pages.CodeList.Employees
             }
         }
 
+        protected void btnExportZaposleni_Click(object sender, EventArgs e)
+        {
+            CommonMethods.ExportToPDFFitToPage(ASPxGridViewExporterZaposleni, this);
+        }
+
         #region HelperMethods Local
         private bool SetSessionsAndOpenPopUp(string eventParameter, Enums.EmployeeSession sessionToWrite, object entityID)
         {

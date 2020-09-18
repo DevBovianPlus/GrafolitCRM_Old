@@ -20,6 +20,8 @@
             }
         }
 
+       
+
         function PlanPopUpShow(s, e) {
             var parameter = "";
             parameter = HandleUserActionsOnTabs(gridMessage, clientBtnAdd, clientBtnEdit, clientBtnDelete, s);
@@ -55,21 +57,43 @@
             return process;
         }
 
+        function ValidationHandlerPriprava(s, e) {
+            if (e.html.length == 0) {
+                e.isValid = false;
+                e.errorText = "To polje je obvezno 1";
+            }
+        }
+
+        function ValidationHandlerPorocilo(s, e) {
+            if (e.html.length == 0) {
+                e.isValid = false;
+                e.errorText = "To polje je obvezno 2";
+            }
+        }
+
         function SaveDocument(s, e) {
             var process = true;
-
+            
             procees = CheckValidData();//we are cheking this if we add new event and we don't save it first
             if (procees) {
                 var elementName = s.name.substring(s.name.lastIndexOf('_') + 1, s.name.length);
 
                 switch (elementName) {
                     case OddajPripravoBtn.name.substring(OddajPripravoBtn.name.lastIndexOf('_') + 1, OddajPripravoBtn.name.length):
-                        if (InputFieldsValidation(null, null, null, [ASPxMemoPripravaSestanekClient]))
+                        cnhtmlPriprava.Validate();
+                        if (cnhtmlPriprava.GetHtml() != "") {                            
                             meetingCallbackPanelClient.PerformCallback("PRIPRAVA");
+                        }
+
+                        //if (InputFieldsValidation(null, null, null, [ASPxMemoPripravaSestanekClient]))
+                        //    meetingCallbackPanelClient.PerformCallback("PRIPRAVA");
                         break;
                     case OddajPorociloBtn.name.substring(OddajPorociloBtn.name.lastIndexOf('_') + 1, OddajPorociloBtn.name.length):
-                        if (InputFieldsValidation(null, null, null, [ASPxMemoPorociloSestanekClient]))
+                        if (cnhtmlPorocilo.GetHtml() != "") {
                             meetingCallbackPanelClient.PerformCallback("POROCILO");
+                        }
+                        //if (InputFieldsValidation(null, null, null, [ASPxMemoPorociloSestanekClient]))
+                        //    meetingCallbackPanelClient.PerformCallback("POROCILO");
                         break;
                 }
             }
@@ -135,7 +159,7 @@
                                                         <FilterBarClearButtonCell></FilterBarClearButtonCell>
                                                     </GridViewStyles>
                                                     <GridViewProperties>
-                                                        <SettingsBehavior AllowDragDrop="False" EnableRowHotTrack="True"  />
+                                                        <SettingsBehavior AllowDragDrop="False" EnableRowHotTrack="True" />
                                                         <SettingsBehavior AllowFocusedRow="True" AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True"></SettingsBehavior>
                                                         <SettingsPager ShowSeparators="True" AlwaysShowPager="True" ShowNumericButtons="true"></SettingsPager>
                                                         <Settings ShowFilterRow="True" ShowFilterRowMenu="True" ShowPreview="True" ShowVerticalScrollBar="True"
@@ -564,7 +588,7 @@
                                                         </dx:GridViewDataTextColumn>
                                                         <dx:GridViewDataTextColumn Caption="Opis"
                                                             FieldName="Opis" ShowInCustomizationForm="True"
-                                                            Width="87%">
+                                                            Width="87%" Visible="true" PropertiesTextEdit-EncodeHtml="false">
                                                             <Settings AllowAutoFilter="False" AllowHeaderFilter="False" />
                                                         </dx:GridViewDataTextColumn>
                                                         <dx:GridViewDataTextColumn Caption="ime" FieldName="ImeInPriimekOsebe"
@@ -582,9 +606,12 @@
                                                             <br />
                                                             <span style="width: 40px; display: inline-block;">Tip:</span>
                                                             <dx:ASPxLabel runat="server" Text='<%# Eval("Tip") %>' Font-Bold="true"></dx:ASPxLabel>
+                                                            <br />
+                                                            <span style="width: 40px; display: inline-block;">Opis:</span>
+                                                            <dx:ASPxLabel runat="server" Text='<%# Eval("Opis") %>' Font-Bold="true"></dx:ASPxLabel>
                                                         </DetailRow>
-                                                    </Templates> 
-                                                    <SettingsDetail ShowDetailRow="true" AllowOnlyOneMasterRowExpanded="true" />
+                                                    </Templates>
+                                                    <SettingsDetail ShowDetailRow="true" AllowOnlyOneMasterRowExpanded="true"  />
                                                 </dx:ASPxGridView>
 
                                                 <div class="section group">
@@ -593,12 +620,19 @@
                                                             <dx:ASPxLabel ID="ASPxLabel11" runat="server" Text="PRIPRAVA :"></dx:ASPxLabel>
                                                         </div>
                                                         <div class="content-field-full-width">
-                                                            <dx:ASPxMemo ID="ASPxMemoPripravaSestanek" runat="server" Width="100%" MaxLength="2000" Theme="Moderno"
+                                                            <%--<dx:ASPxMemo ID="ASPxMemoPripravaSestanek" runat="server" Width="100%" MaxLength="2000" Theme="Moderno"
                                                                 NullText="Priprava sestanka..." Rows="4" HorizontalAlign="Left" BackColor="AliceBlue"
                                                                 CssClass="text-box-input" ClientInstanceName="ASPxMemoPripravaSestanekClient">
                                                                 <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                                                 <ClientSideEvents GotFocus="textareaFocus" />
-                                                            </dx:ASPxMemo>
+                                                            </dx:ASPxMemo>--%>
+                                                            <dx:ASPxHtmlEditor ID="htmlPriprava" ClientInstanceName="cnhtmlPriprava" runat="server" Width="90%" 
+                                                                BackColor="AliceBlue" CssClass="text-box-input" Height="250px">
+                                                                <ClientSideEvents Validation="ValidationHandlerPriprava" />
+                                                                <SettingsValidation>
+                                                                    <RequiredField IsRequired="false" />
+                                                                </SettingsValidation>
+                                                            </dx:ASPxHtmlEditor>
                                                         </div>
                                                         <div class="big-margin-l">
                                                             <dx:ASPxButton runat="server" ID="PotrdiPripravoBtn" Text="Oddaj pripravo" AutoPostBack="false"
@@ -613,12 +647,19 @@
                                                             <dx:ASPxLabel ID="ASPxLabel12" runat="server" Text="POROČILO :"></dx:ASPxLabel>
                                                         </div>
                                                         <div class="content-field-full-width">
-                                                            <dx:ASPxMemo ID="ASPxMemoPorociloSestanek" runat="server" Width="100%" MaxLength="2000" Theme="Moderno"
+                                                           <%-- <dx:ASPxMemo ID="ASPxMemoPorociloSestanek" runat="server" Width="100%" MaxLength="2000" Theme="Moderno"
                                                                 NullText="Poročilo sestanka..." Rows="4" HorizontalAlign="Left" BackColor="AntiqueWhite"
                                                                 CssClass="text-box-input" ClientInstanceName="ASPxMemoPorociloSestanekClient">
                                                                 <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                                                 <ClientSideEvents GotFocus="textareaFocus" />
-                                                            </dx:ASPxMemo>
+                                                            </dx:ASPxMemo>--%>
+                                                            <dx:ASPxHtmlEditor ID="htmlPorocilo" ClientInstanceName="cnhtmlPorocilo" runat="server" Width="90%" 
+                                                                BackColor="AntiqueWhite" CssClass="text-box-input" Height="250px">
+                                                                <ClientSideEvents Validation="ValidationHandlerPorocilo" />
+                                                                <SettingsValidation>
+                                                                    <RequiredField IsRequired="false" />
+                                                                </SettingsValidation>
+                                                            </dx:ASPxHtmlEditor>
                                                         </div>
                                                         <div class="big-margin-l">
                                                             <dx:ASPxButton runat="server" ID="ASPxButton1" Text="Oddaj poročilo" AutoPostBack="false"
@@ -642,7 +683,7 @@
                                                 </dx:ASPxButton>
                                             </span>
                                             <span class="AddEditButtons">
-                                                <dx:ASPxButton ID="btnCancel" runat="server" Text="Preklici" AutoPostBack="false" OnClick="btnCancel_Click"
+                                                <dx:ASPxButton ID="btnCancel" runat="server" Text="Preklici" AutoPostBack="false" OnClick="btnCancel_Click" CausesValidation="false"
                                                     Height="30" Width="100">
                                                     <Image Url="../../../Images/cancel1.png"></Image>
                                                 </dx:ASPxButton>

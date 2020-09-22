@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AnalizaProdaje.Pages.CodeList.Clients {
-    
-    
-    public partial class ContactPerson_popup {
-        
+namespace AnalizaProdaje.Pages.CodeList.Clients
+{
+
+
+    public partial class ContactPerson_popup
+    {
+
         /// <summary>
         /// ASPxPageControl1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPageControl ASPxPageControl1;
-        
+
         /// <summary>
         /// ContentControl1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ContentControl ContentControl1;
-        
+
         /// <summary>
         /// ASPxLabel11 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel11;
-        
+
         /// <summary>
         /// txtContactPersonID control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtContactPersonID;
-        
+
         /// <summary>
         /// ASPxLabel2 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel2;
-        
+
         /// <summary>
         /// txtIdStranke control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtIdStranke;
-        
+
         /// <summary>
         /// ASPxLabel3 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel3;
-        
+
         /// <summary>
         /// txtNaziv control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtNaziv;
-        
+
         /// <summary>
         /// ASPxLabel4 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel4;
-        
+
         /// <summary>
         /// txtTelefon control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtTelefon;
-        
+
         /// <summary>
         /// ASPxLabel5 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel5;
-        
+
         /// <summary>
         /// txtGSM control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtGSM;
-        
+
         /// <summary>
         /// ASPxLabel9 control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel9;
-        
+
         /// <summary>
         /// txtFax control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtFax;
-        
+
         /// <summary>
         /// ASPxLabel6 control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel6;
-        
+
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtEmail;
-        
+
         /// <summary>
         /// ASPxLabel7 control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel7;
-        
+
         /// <summary>
         /// txtDelovnoMesto control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtDelovnoMesto;
-        
+
         /// <summary>
         /// ASPxLabel8 control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel8;
-        
+
         /// <summary>
         /// txtZaporednaStevilka control.
         /// </summary>
@@ -191,7 +193,16 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtZaporednaStevilka;
-        
+
+        /// <summary>
+        /// dtDateRojDan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxDateEdit dtDateRojDan;
+
         /// <summary>
         /// ASPxLabel10 control.
         /// </summary>
@@ -200,7 +211,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel10;
-        
+
         /// <summary>
         /// ASPxMemoZaznamki control.
         /// </summary>
@@ -209,7 +220,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxMemo ASPxMemoZaznamki;
-        
+
         /// <summary>
         /// btnCancelPopUp control.
         /// </summary>
@@ -218,7 +229,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancelPopUp;
-        
+
         /// <summary>
         /// btnConfirmPopUp control.
         /// </summary>

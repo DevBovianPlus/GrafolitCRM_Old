@@ -127,6 +127,16 @@
                                     </dx:ASPxTextBox>
                                 </div>
                             </div>
+                            <div class="col span_1_of_2 align_right_column_content">                                
+                                <div class="content-input-filed">
+                                    <dx:ASPxDateEdit Theme="MetropolisBlue" ID="dtDateRojDan" runat="server" Caption="ROJ. DAN:" EditFormat="Date"
+                                        Width="100">
+                                        <CaptionSettings VerticalAlign="Middle" />
+                                        <CalendarProperties TodayButtonText="Danes" ClearButtonText="Izbriši"></CalendarProperties>
+                                        <DropDownButton Visible="true"></DropDownButton>
+                                    </dx:ASPxDateEdit>
+                                </div>
+                            </div>
                             <div class="col span_2_of_2 no-margin-left-important">
                                 <div class="content-form-element-label-flex label-width-medium-popup">
                                     <dx:ASPxLabel ID="ASPxLabel10" runat="server" Text="OPOMBE :"></dx:ASPxLabel>

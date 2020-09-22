@@ -249,5 +249,17 @@ namespace AnalizaProdaje.Common
 
         }
 
+        public static string ReplaceSumniki(string sName)
+        {
+            sName = sName.Replace("č", "c");
+            sName = sName.Replace("š", "s");
+            sName = sName.Replace("ć", "c");
+            sName = sName.Replace("ž", "z");
+            sName = sName.Replace("đ", "dz");
+            sName = sName.Replace("ö", "o");
+
+            return sName;
+        }
+
     }
 }

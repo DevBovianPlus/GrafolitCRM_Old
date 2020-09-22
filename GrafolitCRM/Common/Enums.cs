@@ -66,7 +66,8 @@ namespace AnalizaProdaje.Common
         {
             ShowWarning,
             UserActionPopUp,
-            activeTab
+            activeTab,
+            DownloadDocument
         }
 
         public enum ChartSession

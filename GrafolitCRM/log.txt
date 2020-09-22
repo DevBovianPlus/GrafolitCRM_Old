@@ -5219,3 +5219,925 @@ http://localhost:9861/Pages/CodeList/Clients/ClientsForm.aspx?action=2&recordId=
 
 18. 09. 2020 15:27:46 Metoda: CreateCharts => Count ChartRenderData0
 
+18. 09. 2020 15:38:47  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnalizaProdaje.Domain.Helpers.PrincipalHelper.IsUserSuperAdmin() in D:\GitHub\GrafolitCRM\GrafolitCRM\Domain\Helpers\PrincipalHelper.cs:line 24
+   at AnalizaProdaje.Pages.CodeList.Events.Events.CreateDataSource() in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 52
+   at AnalizaProdaje.Pages.CodeList.Events.Events.ASPxGridViewEvents_DataBinding(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 41
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Events.Events.Page_Load(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 28
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_events_events_aspx.ProcessRequest(HttpContext context) in c:\Users\win10delo\AppData\Local\Temp\Temporary ASP.NET Files\vs\03566d50\8bfa9ccb\App_Web_5yag32df.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnalizaProdaje.Domain.Helpers.PrincipalHelper.IsUserSuperAdmin() in D:\GitHub\GrafolitCRM\GrafolitCRM\Domain\Helpers\PrincipalHelper.cs:line 24
+   at AnalizaProdaje.Pages.CodeList.Events.Events.CreateDataSource() in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 52
+   at AnalizaProdaje.Pages.CodeList.Events.Events.ASPxGridViewEvents_DataBinding(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 41
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Events.Events.Page_Load(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 28
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:9861/
+
+18. 09. 2020 16:01:19  -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Events/Events.aspx
+
+20. 09. 2020 10:05:38  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnalizaProdaje.Domain.Helpers.PrincipalHelper.IsUserSuperAdmin() in D:\GitHub\GrafolitCRM\GrafolitCRM\Domain\Helpers\PrincipalHelper.cs:line 24
+   at AnalizaProdaje.Pages.CodeList.Events.Events.CreateDataSource() in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 52
+   at AnalizaProdaje.Pages.CodeList.Events.Events.ASPxGridViewEvents_DataBinding(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 41
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Events.Events.Page_Load(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 28
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_events_events_aspx.ProcessRequest(HttpContext context) in c:\Users\win10delo\AppData\Local\Temp\Temporary ASP.NET Files\vs\03566d50\8bfa9ccb\App_Web_ll1nk50m.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnalizaProdaje.Domain.Helpers.PrincipalHelper.IsUserSuperAdmin() in D:\GitHub\GrafolitCRM\GrafolitCRM\Domain\Helpers\PrincipalHelper.cs:line 24
+   at AnalizaProdaje.Pages.CodeList.Events.Events.CreateDataSource() in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 52
+   at AnalizaProdaje.Pages.CodeList.Events.Events.ASPxGridViewEvents_DataBinding(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 41
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at AnalizaProdaje.Pages.CodeList.Events.Events.Page_Load(Object sender, EventArgs e) in D:\GitHub\GrafolitCRM\GrafolitCRM\Pages\CodeList\Events\Events.aspx.cs:line 28
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/Error/ErrorPage.aspx
+
+20. 09. 2020 10:23:55  -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Events/Events.aspx
+
+20. 09. 2020 10:24:22 Metoda: CreateCharts => pred foreach 
+
+20. 09. 2020 10:24:22 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:28 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:28 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:24:28 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:28 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => Count ChartRenderData4
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:29 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => Count ChartRenderData2
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => Count ChartRenderData1
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:24:30 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:24:36  -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Clients/ClientsForm.aspx?action=2&recordId=6
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred foreach 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => Count ChartRenderData4
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => Count ChartRenderData2
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => Count ChartRenderData1
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:32 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:33 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:33 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:27:33 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:27:33 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:27:33 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:27:33 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:27:35  -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Clients/ClientsForm.aspx?action=2&recordId=6
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred foreach 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => Count ChartRenderData4
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => Count ChartRenderData2
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => Count ChartRenderData1
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:29:05 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:29:06 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:29:06 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:30:18  -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpParseException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'. ---> System.Web.HttpException (0x80004005): DevExpress.Web.ContentControlCollection must have items of type 'DevExpress.Web.ContentControl'. 'widget:uploadattachment' is of type 'ASP.usercontrols_widgets_uploadattachment_ascx'.
+   at System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
+   at System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Clients/ClientsForm.aspx?action=2&recordId=6
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred foreach 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => Count ChartRenderData4
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:34 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => Count ChartRenderData2
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => Count ChartRenderData1
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:30:35 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:30:36 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:30:36 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => pred foreach 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => Count ChartRenderData4
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => Count ChartRenderData2
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => Count ChartRenderData1
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 10:34:55 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 15:07:51 Metoda: CreateCharts => pred foreach 
+
+20. 09. 2020 15:07:51 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:53 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 15:07:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => Count ChartRenderData4
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => Count ChartRenderData2
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => Count ChartRenderData1
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:54 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:55 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:55 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 15:07:55 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 15:07:55 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 15:07:55 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 15:07:55 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 22:46:08 Request failed! => Message: 
+'Repository failed to save dataAn error occurred while updating the entries. See the inner exception for details.An error occurred while updating the entries. See the inner exception for details.The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_DOGODEK_REFERENCE_STATUSDO". The conflict occurred in database "GrafolitCRM", table "dbo.StatusDogodek", column idStatusDogodek.The statement has been terminated.'
+20. 09. 2020 22:51:12 Request failed! => Message: 
+The request was aborted: The operation has timed out. 
+System
+20. 09. 2020 22:55:11 Metoda: CreateCharts => pred foreach 
+
+20. 09. 2020 22:55:11 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:13 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:13 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:14 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 22:55:14 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:14 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:14 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:14 Metoda: CreateCharts => Count ChartRenderData4
+
+20. 09. 2020 22:55:14 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:14 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:15 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => Count ChartRenderData2
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => Count ChartRenderData1
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 22:55:16 Metoda: CreateCharts => pred nalaganje user contorls 
+
+20. 09. 2020 22:55:17 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+20. 09. 2020 22:55:17 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+20. 09. 2020 22:55:17 Metoda: CreateCharts => Count ChartRenderData0
+
+20. 09. 2020 23:44:22  -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Cannot use a leading .. to exit above the top directory.
+   at System.Web.Util.UrlPath.ReduceVirtualPath(String path)
+   at System.Web.Util.UrlPath.Reduce(String path)
+   at System.Web.Util.UrlPath.Combine(String appPath, String basepath, String relative)
+   at System.Web.UI.Control.ResolveClientUrl(String relativeUrl)
+   at System.Web.UI.HtmlControls.HtmlLink.RenderAttributes(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlLink.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlHead.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.masterpage_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Users\win10delo\AppData\Local\Temp\Temporary ASP.NET Files\vs\03566d50\8bfa9ccb\App_Web_30q12yuj.0.cs:line 0
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.pages_codelist_events_eventsform_aspx.ProcessRequest(HttpContext context) in c:\Users\win10delo\AppData\Local\Temp\Temporary ASP.NET Files\vs\03566d50\8bfa9ccb\App_Web_vqtvbkjb.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Events/Events.aspx
+
+21. 09. 2020 16:02:35 Metoda: CreateCharts => pred foreach 
+
+21. 09. 2020 16:02:35 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => Count ChartRenderData4
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:38 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => Count ChartRenderData2
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => Count ChartRenderData1
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:02:39 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:08:22 Request failed! => Message: 
+'Repository failed to save dataAn error occurred while updating the entries. See the inner exception for details.An error occurred while updating the entries. See the inner exception for details.The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.The statement has been terminated.'
+21. 09. 2020 16:08:32 Request failed! => Message: 
+'Repository failed to save dataAn error occurred while updating the entries. See the inner exception for details.An error occurred while updating the entries. See the inner exception for details.The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.The statement has been terminated.'
+21. 09. 2020 16:15:15 Metoda: CreateCharts => pred foreach 
+
+21. 09. 2020 16:15:15 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:17 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:17 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:17 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:15:17 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => Count ChartRenderData4
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:15:18 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => Count ChartRenderData2
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:19 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => Count ChartRenderData1
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => Count ChartRenderData0
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => pred nalaganje user contorls 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+21. 09. 2020 16:15:20 Metoda: CreateCharts => Count ChartRenderData0
+

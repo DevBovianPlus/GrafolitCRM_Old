@@ -2,6 +2,8 @@
 
 <%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
+<%@ Register TagPrefix="widget" TagName="UploadAttachment" Src="~/UserControls/Widgets/UploadAttachment.ascx" %>
+
 <%@ MasterType VirtualPath="~/MasterPage.Master" %>
 
 <asp:Content ID="HeadForJavaScript" ContentPlaceHolderID="head" runat="server">
@@ -20,7 +22,7 @@
             }
         }
 
-       
+
 
         function PlanPopUpShow(s, e) {
             var parameter = "";
@@ -49,39 +51,44 @@
 
         function CheckValidData() {
             var process = true;
-
+            var memoItems = [MemoOpis];
             var lookupItems = [clientLookupIzvajalec, clientLookupStranke, clientComboBoxTip];
             var dateEditItems = [ASPxDateEditDatumOtvoritveClient];
-            process = InputFieldsValidation(lookupItems, null, dateEditItems);
+            process = InputFieldsValidation(lookupItems, null, dateEditItems, memoItems);
 
             return process;
         }
 
+        var validatePriprava = false;
         function ValidationHandlerPriprava(s, e) {
-            if (e.html.length == 0) {
+            if (e.html.length == 0 && validatePriprava) {
                 e.isValid = false;
-                e.errorText = "To polje je obvezno 1";
+                e.errorText = "To polje je obvezno";
+                validatePriprava = false;
             }
         }
 
+        var validatePorocilo = false;
         function ValidationHandlerPorocilo(s, e) {
-            if (e.html.length == 0) {
+            if (e.html.length == 0 && validatePorocilo) {
                 e.isValid = false;
-                e.errorText = "To polje je obvezno 2";
+                e.errorText = "To polje je obvezno";
+                validatePorocilo = false;
             }
         }
 
         function SaveDocument(s, e) {
             var process = true;
-            
+
             procees = CheckValidData();//we are cheking this if we add new event and we don't save it first
             if (procees) {
                 var elementName = s.name.substring(s.name.lastIndexOf('_') + 1, s.name.length);
 
                 switch (elementName) {
                     case OddajPripravoBtn.name.substring(OddajPripravoBtn.name.lastIndexOf('_') + 1, OddajPripravoBtn.name.length):
+                        validatePriprava = true;
                         cnhtmlPriprava.Validate();
-                        if (cnhtmlPriprava.GetHtml() != "") {                            
+                        if (cnhtmlPriprava.GetHtml() != "") {
                             meetingCallbackPanelClient.PerformCallback("PRIPRAVA");
                         }
 
@@ -89,6 +96,8 @@
                         //    meetingCallbackPanelClient.PerformCallback("PRIPRAVA");
                         break;
                     case OddajPorociloBtn.name.substring(OddajPorociloBtn.name.lastIndexOf('_') + 1, OddajPorociloBtn.name.length):
+                        validatePorocilo = true;
+                        cnhtmlPorocilo.Validate();
                         if (cnhtmlPorocilo.GetHtml() != "") {
                             meetingCallbackPanelClient.PerformCallback("POROCILO");
                         }
@@ -100,8 +109,8 @@
         }
 
         function onMeetingEntrySaved(s, e) {
-            ASPxMemoPripravaSestanekClient.SetText("");
-            ASPxMemoPorociloSestanekClient.SetText("");
+            //ASPxMemoPripravaSestanekClient.SetText("");
+            //ASPxMemoPorociloSestanekClient.SetText("");
             if (!gridSestanekClient.GetVisible())
                 gridSestanekClient.SetVisible(true);
 
@@ -404,7 +413,7 @@
                                             </div>
                                             <div class="content-field-full-width">
                                                 <dx:ASPxMemo ID="ASPxMemoOpis" runat="server" Width="100%" MaxLength="2000" Theme="Moderno"
-                                                    NullText="Ime dogodka..." Rows="1" HorizontalAlign="Left" BackColor="White"
+                                                    NullText="Ime dogodka..." Rows="1" HorizontalAlign="Left" BackColor="White" ClientInstanceName="MemoOpis"
                                                     CssClass="text-box-input">
                                                     <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                                 </dx:ASPxMemo>
@@ -611,7 +620,7 @@
                                                             <dx:ASPxLabel runat="server" Text='<%# Eval("Opis") %>' Font-Bold="true"></dx:ASPxLabel>
                                                         </DetailRow>
                                                     </Templates>
-                                                    <SettingsDetail ShowDetailRow="true" AllowOnlyOneMasterRowExpanded="true"  />
+                                                    <SettingsDetail ShowDetailRow="true" AllowOnlyOneMasterRowExpanded="true" />
                                                 </dx:ASPxGridView>
 
                                                 <div class="section group">
@@ -626,7 +635,7 @@
                                                                 <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                                                 <ClientSideEvents GotFocus="textareaFocus" />
                                                             </dx:ASPxMemo>--%>
-                                                            <dx:ASPxHtmlEditor ID="htmlPriprava" ClientInstanceName="cnhtmlPriprava" runat="server" Width="90%" 
+                                                            <dx:ASPxHtmlEditor ID="htmlPriprava" ClientInstanceName="cnhtmlPriprava" runat="server" Width="90%"
                                                                 BackColor="AliceBlue" CssClass="text-box-input" Height="250px">
                                                                 <ClientSideEvents Validation="ValidationHandlerPriprava" />
                                                                 <SettingsValidation>
@@ -647,13 +656,13 @@
                                                             <dx:ASPxLabel ID="ASPxLabel12" runat="server" Text="POROČILO :"></dx:ASPxLabel>
                                                         </div>
                                                         <div class="content-field-full-width">
-                                                           <%-- <dx:ASPxMemo ID="ASPxMemoPorociloSestanek" runat="server" Width="100%" MaxLength="2000" Theme="Moderno"
+                                                            <%-- <dx:ASPxMemo ID="ASPxMemoPorociloSestanek" runat="server" Width="100%" MaxLength="2000" Theme="Moderno"
                                                                 NullText="Poročilo sestanka..." Rows="4" HorizontalAlign="Left" BackColor="AntiqueWhite"
                                                                 CssClass="text-box-input" ClientInstanceName="ASPxMemoPorociloSestanekClient">
                                                                 <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                                                 <ClientSideEvents GotFocus="textareaFocus" />
                                                             </dx:ASPxMemo>--%>
-                                                            <dx:ASPxHtmlEditor ID="htmlPorocilo" ClientInstanceName="cnhtmlPorocilo" runat="server" Width="90%" 
+                                                            <dx:ASPxHtmlEditor ID="htmlPorocilo" ClientInstanceName="cnhtmlPorocilo" runat="server" Width="90%"
                                                                 BackColor="AntiqueWhite" CssClass="text-box-input" Height="250px">
                                                                 <ClientSideEvents Validation="ValidationHandlerPorocilo" />
                                                                 <SettingsValidation>
@@ -690,6 +699,16 @@
                                             </span>
                                         </div>
                                     </div>
+                                </dx:ContentControl>
+                            </ContentCollection>
+                        </dx:TabPage>
+                        <dx:TabPage Name="Attachment" Text="PRIPONKE">
+                            <ContentCollection>
+                                <dx:ContentControl BackColor="#f8f8f8">
+                                    <widget:UploadAttachment ID="test" runat="server" OnPopulateAttachments="test_PopulateAttachments" OnUploadComplete="test_UploadComplete"
+                                        OnDeleteAttachments="test_DeleteAttachments" OnDownloadAttachments="test_DownloadAttachments"
+                                        WebsiteDocumentContainerID="ctl00_ContentPlaceHolderMain_CallbackPanelKVPDocumentForm_test_documentContainer" />
+
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:TabPage>

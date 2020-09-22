@@ -59,6 +59,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             txtZaporednaStevilka.Text = model.ZaporednaStevika.ToString();
             txtFax.Text = model.Fax;
             ASPxMemoZaznamki.Text = model.Opombe;
+            dtDateRojDan.Date = model.RojstniDatum > DateTime.MinValue ? model.RojstniDatum : DateTime.MinValue;
         }
 
         private bool AddOrEditEntityObject(bool add = false)
@@ -84,6 +85,8 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             model.ZaporednaStevika = CommonMethods.ParseInt(txtZaporednaStevilka.Text);
             model.Fax = txtFax.Text;
             model.Opombe = ASPxMemoZaznamki.Text;
+             
+            if (!dtDateRojDan.Date.Equals(DateTime.MinValue)) model.RojstniDatum = dtDateRojDan.Date;
 
             ContactPersonModel newModel =  CheckModelValidation(GetDatabaseConnectionInstance().SaveContactPersonChanges(model));
 

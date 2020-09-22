@@ -221,6 +221,7 @@
     <Content Include="Images\arrowDown.png" />
     <Content Include="Images\arrowNeutral.png" />
     <Content Include="Images\arrowUp.png" />
+    <Content Include="Images\documentLogo.png" />
     <Content Include="Images\eventDetailIcon.png" />
     <Content Include="Images\eventDetailIconHover.png" />
     <Content Include="Images\PorociloSestanek.png" />
@@ -229,6 +230,8 @@
     <Content Include="Pages\Display\FinancialControl.aspx" />
     <Content Include="Pages\Testing\MailTest.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="Styles\BootstrapCustom.css" />
+    <Content Include="Styles\UserControls.css" />
     <Content Include="UserControls\Widgets\CalendarWidget.ascx" />
     <Content Include="UserControls\Widgets\DateTimeWidget.ascx" />
     <Content Include="Global.asax" />
@@ -315,6 +318,7 @@
     <Content Include="Styles\MasterPage.css" />
     <Content Include="UserControls\UserControlGraph.ascx" />
     <Content Include="UserControls\Widgets\EventsWidget.ascx" />
+    <Content Include="UserControls\Widgets\UploadAttachment.ascx" />
     <Content Include="UserControls\Widgets\UserActivity.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -570,6 +574,13 @@
     </Compile>
     <Compile Include="UserControls\Widgets\EventsWidget.ascx.designer.cs">
       <DependentUpon>EventsWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Widgets\UploadAttachment.ascx.cs">
+      <DependentUpon>UploadAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Widgets\UploadAttachment.ascx.designer.cs">
+      <DependentUpon>UploadAttachment.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Widgets\UserActivity.ascx.cs">
       <DependentUpon>UserActivity.ascx</DependentUpon>

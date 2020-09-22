@@ -438,6 +438,15 @@ namespace AnalizaProdaje.Pages.CodeList.Events
         protected global::DevExpress.Web.ASPxButton btnCancel;
 
         /// <summary>
+        /// test control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AnalizaProdaje.UserControls.Widgets.UploadAttachment test;
+
+        /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>

@@ -1,0 +1,150 @@
+﻿.external-drop-zone > div,
+.external-drop-zone > img {
+    position: absolute;
+}
+
+.external-drop-zone {
+    position: relative;
+    border: 1px dashed #f17f21 !important;
+    cursor: pointer;
+}
+
+.external-drop-zone,
+.dragZoneText {
+    height: 150px;
+    font-size: 12px;
+}
+
+.dropZoneText {
+    width: 300px;
+    height: 150px;
+    color: #fff;
+    background-color: #888;
+}
+
+#dropZone {
+    top: 0;
+    padding: 100px 25px;
+}
+
+.uploadControlDropZone,
+.hidden {
+    display: none;
+}
+
+.dxucInlineDropZoneSys span {
+    color: #fff !important;
+    font-size: 10pt;
+    font-weight: normal !important;
+}
+
+.uploadControlProgressBar {
+    width: 350px !important;
+}
+
+.validationMessage {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.uploadControl {
+    margin-top: 10px;
+}
+
+.Note {
+    max-width: 500px;
+}
+
+.clearImg {
+    background-image: url('/Images/trash2.png');
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+}
+
+    .clearImg:hover {
+        background-image: url('/Images/trash2Hover.png');
+        cursor: pointer;
+    }
+
+/***Uploaded documents styles***/
+.uploaded-link {
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+    .uploaded-link:hover {
+        text-decoration: none;
+    }
+
+    .uploaded-link:focus {
+        text-decoration: none;
+    }
+
+.uploaded-doc {
+    content: "";
+    width: 64px;
+    height: 64px;
+    position: relative;
+    margin: 0 5px 0 0;
+    background-image: url('/Images/documentLogo.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+    .uploaded-doc:hover {
+        background-size: 90%;
+        background-position: center center;
+    }
+
+    .uploaded-doc span {
+        display: block;
+        position: relative;
+        top: 60px;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+.uploaded-image {
+    background-image: url('/Images/documentImage.png');
+}
+
+
+
+.container-doc {
+    border: 1px solid #e1e1e1;
+    margin: 20px auto;
+    padding: 5px 10px;
+    box-shadow: 4px 6px 8px #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*.documentOpen {
+    margin-bottom:20px;
+}*/
+.documentOpen, .documentDelete, .documentDownload {
+    border: 1px solid #e1e1e1;
+    border-radius: 7px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #ECF0F5;
+    color: black;
+}
+
+    .documentOpen:hover, .documentDelete:hover, .documentDownload:hover {
+        text-decoration: none;
+        background-color: #3C8DBC;
+        color: #ffffff;
+        border-color: #f8f8f8;
+        cursor: pointer;
+    }
+
+

@@ -774,12 +774,12 @@
                                                         </dx:GridViewDataTextColumn>
                                                         <dx:GridViewDataTextColumn Caption="Skrbnik"
                                                             FieldName="OsebeIzvajalec" ShowInCustomizationForm="True"
-                                                            VisibleIndex="5" Width="20%">
+                                                            VisibleIndex="5" Width="15%">
                                                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                                                         </dx:GridViewDataTextColumn>
                                                         <dx:GridViewDataTextColumn Caption="Status"
                                                             FieldName="StatusDogodek" ShowInCustomizationForm="True"
-                                                            VisibleIndex="6" Width="20%">
+                                                            VisibleIndex="6" Width="5%">
                                                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                                                         </dx:GridViewDataTextColumn>
                                                         <dx:GridViewDataTextColumn Caption="Opis"
@@ -799,15 +799,15 @@
                                                             <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy"></PropertiesDateEdit>
                                                             <CellStyle HorizontalAlign="Right"></CellStyle>
                                                         </dx:GridViewDataDateColumn>
-                                                        <dx:GridViewDataDateColumn Caption="Datum zad. zaprtja"
-                                                            FieldName="DatumZadZaprtja" ShowInCustomizationForm="True"
-                                                            VisibleIndex="10" Width="105px" Visible="false">
-                                                            <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy"></PropertiesDateEdit>
+                                                        <dx:GridViewDataDateColumn Caption="Datum vpisa"
+                                                            FieldName="ts" ShowInCustomizationForm="True"
+                                                            VisibleIndex="9" Width="10%" Visible="true">
+                                                            <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy - HH:mm"></PropertiesDateEdit>
                                                             <CellStyle HorizontalAlign="Right"></CellStyle>
                                                         </dx:GridViewDataDateColumn>
-                                                        <dx:GridViewDataTextColumn Caption="Oseba vnosa"
-                                                            FieldName="tsIDOsebe" ShowInCustomizationForm="True"
-                                                            VisibleIndex="11" Width="150px" Visible="false">
+                                                        <dx:GridViewDataTextColumn Caption="Vnesel"
+                                                            FieldName="VneselOseba" ShowInCustomizationForm="True"
+                                                            VisibleIndex="10" Width="10%" Visible="true">
                                                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                                                         </dx:GridViewDataTextColumn>
                                                     </Columns>
@@ -877,26 +877,25 @@
                                                             ReadOnly="true" ShowInCustomizationForm="True" VisibleIndex="1"
                                                             Visible="false">
                                                         </dx:GridViewDataTextColumn>
-
-                                                        <dx:GridViewDataTextColumn Caption="Stranka"
+                                                        <%--<dx:GridViewDataTextColumn Caption="Stranka"
                                                             FieldName="Stranka" ShowInCustomizationForm="True"
                                                             VisibleIndex="2" Width="25%">
                                                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
-                                                        </dx:GridViewDataTextColumn>
+                                                        </dx:GridViewDataTextColumn>--%>
                                                         <dx:GridViewDataTextColumn Caption="Opomba"
                                                             FieldName="Opomba" ShowInCustomizationForm="True" PropertiesTextEdit-EncodeHtml ="false"
-                                                            VisibleIndex="4" Width="65%">
+                                                            VisibleIndex="4" Width="80%">
                                                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                                                         </dx:GridViewDataTextColumn>                                                       
                                                         <dx:GridViewDataDateColumn Caption="Datum vpisa"
                                                             FieldName="ts" ShowInCustomizationForm="True"
-                                                            VisibleIndex="9" Width="120px" Visible="false">
+                                                            VisibleIndex="9" Width="10%" Visible="true">
                                                             <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy - HH:mm"></PropertiesDateEdit>
                                                             <CellStyle HorizontalAlign="Right"></CellStyle>
                                                         </dx:GridViewDataDateColumn>
-                                                        <dx:GridViewDataTextColumn Caption="Oseba vnosa"
-                                                            FieldName="tsIDOsebe" ShowInCustomizationForm="True"
-                                                            VisibleIndex="10" Width="100px" Visible="false">
+                                                        <dx:GridViewDataTextColumn Caption="Vnesel"
+                                                            FieldName="VneselOseba" ShowInCustomizationForm="True"
+                                                            VisibleIndex="10" Width="10%" Visible="true">
                                                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                                                         </dx:GridViewDataTextColumn>
                                                     </Columns>

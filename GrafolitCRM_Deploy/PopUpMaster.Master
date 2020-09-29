@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PopUpMaster.master.cs" Inherits="AnalizaProdaje.PopUpMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="Styles/Content.css" rel="stylesheet" />
+    <link href="Styles/Custom.css" rel="stylesheet" />
+    <link href="Styles/DevexpressCustom.css" rel="stylesheet" />
+    <link href="Styles/Common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/Images/favicon.png" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script src='<%= ResolveUrl("~/Scripts/CommonJS.js") %>'></script>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolderPopUp" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <script type="text/javascript" src="/Scripts/ChromeFix_14.js"></script>
+    </form>
+</body>
+</html>

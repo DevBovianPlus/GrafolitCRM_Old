@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<GlavniMenu>
+
+  <SuperAdmin>
+    <!--<Oddelek Text="Pregled analize" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/SalesGraphs.aspx" Linija="Prikaz grafov" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>-->
+    <Oddelek Text="Šifranti" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/CodeList/Employees/Employees.aspx" Linija="Zaposleni" ImageUrl="~/Images/Arrow-right.png" />
+      <Vrstica NavigateUrl="~/Pages/CodeList/Clients/Clients.aspx" Linija="Stranke" ImageUrl="~/Images/Arrow-right.png" />
+      <Vrstica NavigateUrl="~/Pages/CodeList/Events/Events.aspx" Linija="Dogodki" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+    <Oddelek Text="Nastavitve" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/UserInfo/UserData.aspx" Linija="Moji podatki" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+    <Oddelek Text="Testiranje" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/Testing/MailTest.aspx" Linija="Pošlji elektronsko pošto" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+  </SuperAdmin>
+
+  <Admin>
+    <!--<Oddelek Text="Pregled analize" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/SalesGraphs.aspx" Linija="Prikaz grafov" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>-->
+    <Oddelek Text="Šifranti" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/CodeList/Employees/Employees.aspx" Linija="Zaposleni" ImageUrl="~/Images/Arrow-right.png" />
+      <Vrstica NavigateUrl="~/Pages/CodeList/Clients/Clients.aspx" Linija="Stranke" ImageUrl="~/Images/Arrow-right.png" />
+      <Vrstica NavigateUrl="~/Pages/CodeList/Events/Events.aspx" Linija="Dogodki" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+    <Oddelek Text="Nastavitve" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/UserInfo/UserData.aspx" Linija="Moji podatki" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+    <Oddelek Text="Testiranje" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/Testing/MailTest.aspx" Linija="Pošlji elektronsko pošto" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+  </Admin>
+
+  <Salesman>
+    <!--<Oddelek Text="Pregled analize" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/SalesGraphs.aspx" Linija="Prikaz grafov" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>-->
+    <Oddelek Text="Šifranti" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/CodeList/Clients/Clients.aspx" Linija="Stranke" ImageUrl="~/Images/Arrow-right.png" />
+      <Vrstica NavigateUrl="~/Pages/CodeList/Events/Events.aspx" Linija="Dogodki" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+    <Oddelek Text="Nastavitve" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/UserInfo/UserData.aspx" Linija="Moji podatki" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+  </Salesman>
+
+  <User>
+    <Oddelek Text="Nastavitve" font="bold" align="center">
+      <Vrstica NavigateUrl="~/Pages/UserInfo/UserData.aspx" Linija="Moji podatki" ImageUrl="~/Images/Arrow-right.png" />
+    </Oddelek>
+  </User>
+</GlavniMenu>
+

@@ -98,6 +98,14 @@ namespace AnalizaProdaje.Pages.CodeList.Events
                             if (isReferallClient)
                                 SetFormValuesForclientReferall();
                         }
+                        lblErrorDelete.ClientVisible = false;
+                        btnConfirm.ClientEnabled = true;
+                        if (action == (int)Enums.UserAction.Delete && (model.idStatus == 2 || model.idStatus == 3))
+                        {
+                            lblErrorDelete.ClientVisible = true;
+                            btnConfirm.ClientEnabled = false;
+                        } 
+
                         //This popup shows if we set the session ShowWarning
                         ShowWarningPopUp("'Dogodka še niste shranili. Da zaključite shranjevanje dogodka pritisnite OK!'");
                     }
@@ -455,7 +463,6 @@ namespace AnalizaProdaje.Pages.CodeList.Events
             (sender as ASPxGridLookup).DataSource = SerializeToDataTable(listModel, "idStatusDogodek", "Koda");
         }
         #endregion
-
 
         #region InitializationMethods
         private void Initialize()

@@ -1,0 +1,653 @@
+﻿@font-face {
+    font-family: "RalewayLight";
+    src:url('Fonts/RALEWAY-LIGHT.ttf') format('truetype');
+}
+
+.font-raleway-light {
+    font-family: "RalewayLight";
+}
+
+.login-btn-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 100%;
+    display: block;
+    /*margin-top: 20px;
+    margin-bottom: 10px;*/
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color:white;
+}
+    hr.financial-control-rule {
+        border: 0;
+        height: 2px;
+        background: #ffffff;
+        /*background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 255));*/
+    }
+
+.new-component-btn-wrap {
+    display: block;
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+
+/*Text box styling**/
+
+.text-box-input {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+.focus-text-box-input {
+    color: #0f80ff !important;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 6px 20px 0 rgba(25, 100, 200, 0.28) !important;
+    border-color: rgba(25, 100, 200, 0.32) !important;
+    border-width: 1px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    /*padding-top: .5em;
+    padding-bottom: .5em;*/
+}
+
+/****ADD/EDIT BUTTON'S***/
+
+.AddEditButtonsWrap {
+    display: block;
+    margin: auto;
+}
+
+.AddEditButtonsElements {
+    display: inline-block;
+    float: right;
+    margin: auto;
+}
+
+.DeleteButtonElements {
+    display: inline-block;
+    float: left;
+    margin: auto;
+}
+
+.AddEditButtons {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+
+    .AddEditButtons:first-child {
+        margin-left: 0px;
+    }
+
+.clearFloatBtns {
+    float: none;
+}
+
+
+.extraBtnsForGrid {
+    display: block;
+    float: right;
+}
+
+
+/*******************************POP UP STYLES********************************/
+.popUpWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.popUpElement {
+    width: 30%;
+    display: block;
+    margin: auto;
+    top: 30%;
+    position: relative;
+    background-color: rgba(255,255,255,1);
+}
+
+.popUpElementWidth {
+    width: 80% !important;
+}
+
+
+/***************************ERROR INPUT FIELDS*************************************/
+.focus-text-box-input-error {
+    color: #0f80ff !important;
+    box-shadow: 0 4px 8px 0 rgba(255, 5, 5, 0.5), 0 6px 20px 0 rgba(255, 10, 20, 0.88) !important;
+    border-color: rgba(255, 10, 20, 0.82) !important;
+    border-width: 1px;
+}
+
+/*****Profile logo and tex main page*******/
+.userNamePosition {
+    float: left;
+    padding-left: 5px;
+}
+
+.titleCenterAlign {
+    text-align: center;
+}
+
+/*ADD EVENT ON CLIENT CHARTS TAB*/
+.addEvent {
+    background-image: url("../../../Images/eventBtn4.png");
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+}
+
+.addEventHottracked {
+    background-position: -1px 0px;
+}
+
+.addEventPressed {
+    /* background-position: -108px 0px;*/
+}
+
+/******************Spiner Loader*******************/
+.loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid blue;
+    border-bottom: 4px solid blue;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1.5s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 47%;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/******************************Drop down menu on logo.***********************************************/
+
+.drop-down-wrap {
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99999;
+}
+
+    .dropdownContent a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdownContent a:hover {
+            background-color: #f1f1f1;
+        }
+
+.drop-down-wrap:hover .dropdownContent {
+    display: block;
+}
+
+.drop-down-wrap:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*******************Row positions in charts (ClientsForm.aspx***************************/
+.threeInRow {
+    background-image: url(../../../Images/threeInOneRow.png);
+    width: 32px;
+    height: 32px;
+}
+
+.threeInRowHover {
+    background-image: url(../../../Images/threeInOneRow_hover.png);
+    width: 32px;
+    height: 32px;
+}
+
+.twoInRow {
+    background-image: url(../../../Images/TwoInRow.png);
+    width: 32px;
+    height: 32px;
+    margin-right: 2px;
+}
+
+.twoInRowHover {
+    background-image: url(/Images/TwoInRow_hover.png);
+    width: 32px;
+    height: 32px;
+    margin-right: 2px;
+}
+
+.oneInRow {
+    background-image: url(/Images/OneInRow1.png);
+    width: 10px;
+    height: 30px;
+    margin-right: 2px;
+}
+
+.oneInRowHover {
+    background-image: url(/Images/OneInRow_hover.png);
+    width: 10px;
+    height: 30px;
+    margin-right: 2px;
+}
+
+
+/**********clients charts events styles******************/
+.eventLinkWrap {
+    display: block;
+    margin: 4px;
+    float: left;
+}
+
+    .eventLinkWrap:first-child {
+        margin-left: 1px;
+    }
+
+.eventLink {
+    /*margin-left:7px;*/
+    text-decoration: none;
+    background-color: steelblue;
+    color: whitesmoke;
+    padding: 3px;
+    border-radius: 4px;
+    font-weight: 400;
+    border: solid 1px whitesmoke;
+    transition: all .2s ease-in-out;
+}
+
+    .eventLink:first-child {
+        margin-left: 0;
+    }
+
+    .eventLink:hover {
+        color: steelblue;
+        background-color: whitesmoke;
+        border: solid 1px steelblue;
+    }
+
+    .eventLink:active {
+        background-color: oldlace;
+        color: black;
+        transition: none;
+        border: solid 1px steelblue;
+    }
+
+
+/**********************UPLOAD PERSONAL IMAGE*************************************/
+.dropZoneExternal > div,
+.dropZoneExternal > img {
+    position: absolute;
+}
+
+.dropZoneExternal {
+    position: relative;
+    border: 1px dashed #f17f21 !important;
+    cursor: pointer;
+}
+
+.dropZoneExternal,
+.dragZoneText {
+    width: 200px;
+    height: 200px;
+}
+
+.dropZoneText {
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    background-color: #888;
+}
+
+#dropZone {
+    top: 0;
+    padding: 100px 25px;
+}
+
+.uploadControlDropZone,
+.hidden {
+    display: none;
+}
+
+.dropZoneText,
+.dragZoneText {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.dragZoneText {
+    color: #808080;
+}
+
+.dxucInlineDropZoneSys span {
+    color: #fff !important;
+    font-size: 10pt;
+    font-weight: normal !important;
+}
+
+.uploadControlProgressBar {
+    width: 80% !important;
+}
+
+.validationMessage {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.uploadControl {
+    margin-top: 10px;
+}
+
+.Note {
+    width: 500px;
+}
+
+/****************User Contacts styles*******************/
+.userImage {
+    display: block;
+    position: relative;
+    width: 40%;
+    float: right;
+    margin: auto;
+}
+
+.alignCenter table {
+    margin: auto;
+}
+
+.basicUserData {
+    display: block;
+    position: relative;
+    width: 60%;
+    margin: auto;
+    float: left;
+}
+
+/*Profile Images*/
+.img-circle {
+    border-radius: 50%;
+    border: 2px solid #e9e9e9;
+    /*display: block;
+    max-width:100px;
+    max-height:150px;
+    width: auto;
+    height: auto;*/
+}
+
+.hoverProfileImage:hover {
+    border: 2px solid ghostwhite;
+}
+
+/**********CLIENT - AUTO ADD EVENT**************/
+.autoAddEventBtn {
+    background-color: lightseagreen;
+    color: whitesmoke;
+    padding: 3px;
+    border-radius: 4px;
+    font-weight: 400;
+    border: solid 1px whitesmoke;
+    transition: all .2s ease-in-out;
+    background-image: none !important;
+}
+
+    .autoAddEventBtn:hover {
+        color: lightseagreen;
+        background-color: aliceblue;
+        border: solid 1px lightseagreen;
+    }
+
+    .autoAddEventBtn:active {
+        color: orange;
+        background-color: whitesmoke;
+        border: solid 1px aliceblue;
+    }
+
+
+/*****************Custom popups in Common.js file***********************/
+.messagePopUp {
+    display: block;
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.closeButton {
+    padding: 2px 15px;
+    margin: 7px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/**************SIGN IN TABLE***************************/
+.table-content-sign {
+    width: 100%;
+}
+
+    .table-content-sign td {
+        padding-top: 0;
+    }
+
+/***********UserInfo page**************/
+
+.userDataWrap {
+    display: block;
+    margin: auto;
+    float: left;
+    width: 100%;
+}
+
+.basicDataBlock {
+    background-color: whitesmoke;
+    width: 62%;
+    margin-left: 2%;
+    float: left;
+}
+
+.titleUserDate h2 {
+    margin-left: 10px;
+}
+
+.basicUserDataTable {
+    width: 90%;
+    margin: 10px;
+}
+
+.labelMaxAlign {
+    width: 1px;
+    white-space: nowrap;
+}
+
+.contactInfoWrap {
+    background-color: whitesmoke;
+    width: 30%;
+    margin-left: 3%;
+    float: left;
+}
+
+.contactInfo {
+    display: inline-block;
+    float: left;
+    margin: auto;
+    width: 100%;
+}
+
+.contactInfoTable {
+    width: 90%;
+    margin: 10px;
+}
+
+.userInfoBtnSave {
+    display: block;
+    float: left;
+    margin: 5px;
+    margin-left: 2%;
+}
+
+.clearIcon {
+    cursor: pointer;
+    text-align: right;
+    width: 80%;
+    transition: all .2s ease-in-out;
+}
+
+    .clearIcon:before {
+        content: url('/Images/clearImage.png');
+    }
+
+    .clearIcon:hover {
+        -ms-transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+    }
+
+.uploadProfileImgBtn a {
+    text-decoration: none !important;
+    color: green;
+}
+
+
+
+.smallLabelWidth div.span_1_of_2 span.content-form-element-label {
+    width: 28%;
+}
+
+.table-data-no-padding td {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/***************CHART REPORT****************/
+.report-viewer {
+    width: 85% !important;
+    margin: 0 auto;
+    overflow: auto !important;
+}
+
+    .report-viewer iframe {
+        width: 100% !important;
+    }
+
+.report-filter-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.report-filter {
+    float: left;
+    width: 80.4%;
+    margin: 5px 0px 0px 0px;
+}
+
+.report-exit-btn {
+    float: left;
+    width: 50px;
+    margin: 0px 0px 0px 8px;
+    padding-top: 10px;
+}
+
+/******GRID VIEWS*********/
+.gridview-no-header-padding table tr:first-child td {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/*******Upcoming events - Default page**********/
+.showDetailsIcon {
+    cursor: pointer;
+    /*text-align: right;
+    width: 25px;*/
+    transition: all .2s ease-in-out;
+}
+
+    .showDetailsIcon:before {
+        content: url('/Images/eventDetailIcon.png');
+    }
+
+    .showDetailsIcon:hover:before {
+        content: url('/Images/eventDetailIconHover.png');
+        /*-ms-transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);*/
+    }
+
+/******FINANCIAL CONTROL PAGE******/
+img.arrow {
+    width:20px;
+    height:20px;
+    position:relative;
+    top:20px;
+}
+.input-field-font-size {
+    font-size: 15px !important;
+}
+
+.financial-control-wrap {
+    margin: 0 auto; 
+    width: 50%; 
+    overflow: hidden;
+}
+.content-input-field-financial-control {
+    display:flex;
+    width:100%;
+}
+.parent-full-width {
+    width:33%;
+}
+
+/************ EMAIL TESTING PAGE ******************/
+.container {
+    margin:0 auto;
+    width: 100%;
+}
+.wrap {
+    margin: 0 auto;
+    width: 70%;
+    background-color:whitesmoke;
+    border: 1px solid #e1e1e1;
+    border-radius:5px;
+    box-shadow: 5px 10px 18px #e1e1e1;
+    padding:10px 10px;
+}

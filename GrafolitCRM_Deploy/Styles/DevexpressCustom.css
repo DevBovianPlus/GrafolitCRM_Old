@@ -1,0 +1,69 @@
+﻿#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_ClientPageControl_ASPxGridLookupIzvajalec_CC,
+#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_ClientPageControl_txtNazivPrvi_CC,
+#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_ClientPageControl_ComboBoxZaposleniStranke_CC,
+#ctl00_MainContentPlaceHolderPopUp_ASPxPageControl1_txtIme_CC,
+#ctl00_MainContentPlaceHolderPopUp_ASPxPageControl1_txtNaziv_CC,
+#ctl00_MainContentPlaceHolderPopUp_ASPxPageControl1_txtNaziv_EC,
+#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_ComboBoxVloga_CC,
+#ctl00_MainContentPlaceHolderPopUp_VnosUporabnik_CC,
+#ctl00_MainContentPlaceHolderPopUp_VnosGeslo_CC {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.dxrpControl_MetropolisBlue {
+    border-top-style: none !important;
+    border-bottom-style: none !important;
+}
+
+.dxtcLite_MetropolisBlue > .dxtc-content {
+    background-color: #f7f7f7 !important;
+}
+
+/************ERROR INPUT FIELDS*************/
+.dxeErrorFrameWithoutError_DevEx {
+    border: none !important;
+}
+
+/******EMPLOYEES POP UP TABS*******/
+#ctl00_MainContentPlaceHolderPopUp_ASPxPageControl1_TC {
+    height: 28px !important;
+}
+
+/*************EVENT PAGE - ROUND CONTROL******************/
+#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_ClientPageControl_TC {
+    height: 30px !important;
+}
+
+/***********HEADER BUTTONS - ON THE RIGHT SIDE*******************/
+#ctl00_ASPxButton3_CD, #ctl00_ReportErrorBtnClick_CD, #ctl00_ASPxButton2_CD, #ctl00_ASPxButton1_CD {
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+
+/**********************ASPxGridView ZAPOSLENI**************************/
+#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_EmployeeCallback_ASPxGridViewZaposleni_DXMainTable tr td,
+#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_ASPxGridViewStranke_DXMainTable tr td,
+#ctl00_ContentPlaceHolder2_ASPxRoundPanel1_ASPxGridViewEvents_DXMainTable tr td {
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 1280px) {
+    .dxp-pageSizeItem {
+        display: none !important;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .dxeButtonEdit_MetropolisBlue td.dxic {
+        padding: 3px 3px 4px 3px; /*This style is using on small screen for gridlookup, dateedit, combobox,etc. we resize field with padding. Otherwise 
+            our grid will break columns and the input form will not be deisplayed correctly*/
+    }
+}
+
+/*Financial control*/
+#ctl00_ContentPlaceHolder2_txtInvesticijskoVzdrzevanje_ET, #ctl00_ContentPlaceHolder2_txtInvesticije_ET {
+    margin-right:20px;
+}

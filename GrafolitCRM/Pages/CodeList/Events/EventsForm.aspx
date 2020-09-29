@@ -698,7 +698,9 @@
                                                 </dx:ASPxButton>
                                             </span>
                                         </div>
+                                        <dx:ASPxLabel ID="lblErrorDelete" runat="server" Text="      Brisanje zaključenega ali v teku dogodka ni dovoljeno!" Font-Bold="true" ForeColor="Red" ClientVisible="false"></dx:ASPxLabel>
                                     </div>
+                                    
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:TabPage>

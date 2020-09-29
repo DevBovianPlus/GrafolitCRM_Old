@@ -438,6 +438,15 @@ namespace AnalizaProdaje.Pages.CodeList.Events
         protected global::DevExpress.Web.ASPxButton btnCancel;
 
         /// <summary>
+        /// lblErrorDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel lblErrorDelete;
+
+        /// <summary>
         /// test control.
         /// </summary>
         /// <remarks>

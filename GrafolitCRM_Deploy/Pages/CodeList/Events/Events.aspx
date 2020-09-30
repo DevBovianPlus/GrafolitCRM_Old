@@ -23,7 +23,7 @@
         <PanelCollection>
             <dx:PanelContent>
                 <dx:ASPxCallback ID="ASPxCallback1" runat="server" ClientInstanceName="callback" OnCallback="ASPxCallback1_Callback"></dx:ASPxCallback>
-                 <dx:ASPxButton ID="btnExportEvents" runat="server" RenderMode="Link" ClientEnabled="true" OnClick="btnExportEvents_Click"
+                <dx:ASPxButton ID="btnExportEvents" runat="server" RenderMode="Link" ClientEnabled="true" OnClick="btnExportEvents_Click"
                     AutoPostBack="false" UseSubmitBehavior="false" ClientInstanceName="clientbtnExportStranke" ToolTip="Izvozi v excel">
                     <DisabledStyle CssClass="icon-disabled" />
                     <HoverStyle CssClass="icon-hover" />
@@ -40,7 +40,7 @@
                     <Settings ShowVerticalScrollBar="True" VerticalScrollableHeight="400"
                         ShowHorizontalScrollBar="True" ShowFilterBar="Auto" ShowFilterRow="True"
                         ShowFilterRowMenu="True" VerticalScrollBarStyle="Standard" />
-                    <SettingsPager PageSize="10" ShowNumericButtons="true" >
+                    <SettingsPager PageSize="10" ShowNumericButtons="true">
                         <PageSizeItemSettings Visible="true" Items="10,20,30" Caption="Zapisi na stran : " AllItemText="Vsi">
                         </PageSizeItemSettings>
                         <Summary Visible="true" Text="Vseh zapisov : {2}" />
@@ -53,13 +53,7 @@
                     <Columns>
                         <dx:GridViewDataTextColumn Caption="ID" FieldName="idDogodek" Width="80px"
                             ReadOnly="true" ShowInCustomizationForm="True" VisibleIndex="1" Visible="false">
-                        </dx:GridViewDataTextColumn>
-
-                        <dx:GridViewDataTextColumn Caption="Stranka"
-                            FieldName="Stranka" ShowInCustomizationForm="True"
-                            VisibleIndex="2" Width="20%">
-                            <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
-                        </dx:GridViewDataTextColumn>
+                        </dx:GridViewDataTextColumn>                       
                         <dx:GridViewDataTextColumn Caption="Kategorija"
                             FieldName="Kategorija" ShowInCustomizationForm="True"
                             VisibleIndex="3" Width="10%">
@@ -97,15 +91,15 @@
                             <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy"></PropertiesDateEdit>
                             <CellStyle HorizontalAlign="Right"></CellStyle>
                         </dx:GridViewDataDateColumn>
-                        <dx:GridViewDataDateColumn Caption="Datum zad. zaprtja"
-                            FieldName="DatumZadZaprtja" ShowInCustomizationForm="True"
-                            VisibleIndex="10" Width="105px" Visible="false">
-                            <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy"></PropertiesDateEdit>
+                        <dx:GridViewDataDateColumn Caption="Datum vpisa"
+                            FieldName="ts" ShowInCustomizationForm="True"
+                            VisibleIndex="9" Width="10%" Visible="true">
+                            <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy - HH:mm"></PropertiesDateEdit>
                             <CellStyle HorizontalAlign="Right"></CellStyle>
                         </dx:GridViewDataDateColumn>
-                        <dx:GridViewDataTextColumn Caption="Oseba vnosa"
-                            FieldName="tsIDOsebe" ShowInCustomizationForm="True"
-                            VisibleIndex="11" Width="150px" Visible="false">
+                        <dx:GridViewDataTextColumn Caption="Vnesel"
+                            FieldName="VneselOseba" ShowInCustomizationForm="True"
+                            VisibleIndex="10" Width="10%" Visible="true">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                     </Columns>
@@ -120,7 +114,7 @@
                         </span>
                     </div>
                     <div style="display: inline-block; position: relative; left: 30%">
-                        <dx:ASPxLabel ID="ErrorLabel" runat="server" ForeColor="Red" Font-Size="Medium"></dx:ASPxLabel>
+                        <dx:ASPxLabel ID="ErrorLabel" runat="server" ForeColor="Red" Font-Size="Medium" ClientVisible="false" Text="Zaključen ali V Teku dogodek ni dovoljeno brisati"></dx:ASPxLabel>
                     </div>
                     <div class="AddEditButtonsElements">
                         <span class="AddEditButtons">

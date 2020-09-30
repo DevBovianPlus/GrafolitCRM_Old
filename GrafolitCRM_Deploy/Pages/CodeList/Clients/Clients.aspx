@@ -60,7 +60,7 @@
                         <dx:GridViewDataTextColumn Caption="Internetni Nalov" FieldName="InternetniNalov" Width="185px"
                             Visible="true" ReadOnly="true" ShowInCustomizationForm="True" VisibleIndex="12" Visible="false">
                         </dx:GridViewDataTextColumn>--%>
-                        <dx:GridViewCommandColumn ShowInCustomizationForm="True" VisibleIndex="0">
+                        <dx:GridViewCommandColumn ShowInCustomizationForm="True" VisibleIndex="0" Visible="false">
                         </dx:GridViewCommandColumn>
                         <dx:GridViewDataTextColumn Caption="ID" FieldName="idStranka" Width="80px"
                             ReadOnly="true" Visible="false" ShowInCustomizationForm="True" VisibleIndex="1">
@@ -97,6 +97,12 @@
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Skrbnik"
                             FieldName="ImeInPriimekZaposlen" ShowInCustomizationForm="True"
+                            VisibleIndex="8" Width="15%">
+                            <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
+                        </dx:GridViewDataTextColumn>
+
+                        <dx:GridViewDataTextColumn Caption="Zadnji status dog."
+                            FieldName="LastDogodekNaziv" ShowInCustomizationForm="True"
                             VisibleIndex="8" Width="15%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>

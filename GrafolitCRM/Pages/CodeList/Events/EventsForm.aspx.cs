@@ -174,6 +174,10 @@ namespace AnalizaProdaje.Pages.CodeList.Events
             {
                 model = GetEventDataProviderInstance().GetEventFullModel();
             }
+
+            model.ts = model.ts.Equals(DateTime.MinValue) ? DateTime.Now : model.ts;
+            model.tsIDOsebe = model.tsIDOsebe > 0 ? model.tsIDOsebe : PrincipalHelper.GetUserPrincipal().ID;
+
             model.idStranka = CommonMethods.ParseNullableInt(GetGridLookupValue(ASPxGridLookupStranke));
             model.idKategorija = CommonMethods.ParseNullableInt(GetGridLookupValue(ASPxGridLookupKategorije));
             model.Skrbnik = CommonMethods.ParseNullableInt(GetGridLookupValue(ASPxGridLookupSkrbnik));

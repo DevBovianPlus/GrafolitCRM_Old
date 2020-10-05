@@ -634,114 +634,114 @@ namespace AnalizaProdaje.Pages.CodeList.Events
 
         #endregion
 
-        #region Attachments
-        protected void test_PopulateAttachments(object sender, EventArgs e)
-        {
-            if (model != null && !String.IsNullOrEmpty(model.Priloge))
-            {
-                List<DocumentEntity> list = new List<DocumentEntity>();
-                DocumentEntity document = null;
-                string[] split = model.Priloge.Split('|');
-                string resultExtension = "";
-                foreach (var item in split)
-                {
-                    string[] fileData = item.Split(';');
-                    document = new DocumentEntity();
-                    document.Url = fileData[0];
-                    document.Name = fileData[1];
+        //#region Attachments
+        //protected void test_PopulateAttachments(object sender, EventArgs e)
+        //{
+        //    if (model != null && !String.IsNullOrEmpty(model.Priloge))
+        //    {
+        //        List<DocumentEntity> list = new List<DocumentEntity>();
+        //        DocumentEntity document = null;
+        //        string[] split = model.Priloge.Split('|');
+        //        string resultExtension = "";
+        //        foreach (var item in split)
+        //        {
+        //            string[] fileData = item.Split(';');
+        //            document = new DocumentEntity();
+        //            document.Url = fileData[0];
+        //            document.Name = fileData[1];
 
-                    resultExtension = Path.GetExtension(fileData[1]);
-                    if (resultExtension.Equals(".png") || resultExtension.Equals(".jpg") || resultExtension.Equals(".jpeg"))
-                        document.isImage = true;
+        //            resultExtension = Path.GetExtension(fileData[1]);
+        //            if (resultExtension.Equals(".png") || resultExtension.Equals(".jpg") || resultExtension.Equals(".jpeg"))
+        //                document.isImage = true;
 
-                    list.Add(document);
-                }
-                (sender as UploadAttachment).files = list;
-                //HtmlGenericControl control = (HtmlGenericControl)attachmentsItem.FindControl("attachmentsBadge");
-                //control.InnerText = list.Count.ToString();
-            }
-            (sender as UploadAttachment).ActiveDropZoneID = "active-drop-zone";
-        }
+        //            list.Add(document);
+        //        }
+        //        (sender as UploadAttachment).files = list;
+        //        //HtmlGenericControl control = (HtmlGenericControl)attachmentsItem.FindControl("attachmentsBadge");
+        //        //control.InnerText = list.Count.ToString();
+        //    }
+        //    (sender as UploadAttachment).ActiveDropZoneID = "active-drop-zone";
+        //}
 
-        protected void test_UploadComplete(object sender, EventArgs e)
-        {
-            model = GetEventDataProviderInstance().GetEventFullModel();
-            if (model != null)
-            {
-                string pipe = "";
-                if (!String.IsNullOrEmpty(model.Priloge))
-                    pipe = "|";
+        //protected void test_UploadComplete(object sender, EventArgs e)
+        //{
+        //    model = GetEventDataProviderInstance().GetEventFullModel();
+        //    if (model != null)
+        //    {
+        //        string pipe = "";
+        //        if (!String.IsNullOrEmpty(model.Priloge))
+        //            pipe = "|";
                
-                model.Priloge += pipe + (sender as UploadAttachment).currentFile.Url + ";" + (sender as UploadAttachment).currentFile.Name;
-                EventFullModel returnModel = CheckModelValidation(GetDatabaseConnectionInstance().SaveEventChanges(model));
-                GetEventDataProviderInstance().SetEventFullModel(model);
-                //HtmlGenericControl control = (HtmlGenericControl)attachmentsItem.FindControl("attachmentsBadge");
-                //control.InnerText = model.Priloge.Split('|').Length.ToString();
-            }
-        }
+        //        model.Priloge += pipe + (sender as UploadAttachment).currentFile.Url + ";" + (sender as UploadAttachment).currentFile.Name;
+        //        EventFullModel returnModel = CheckModelValidation(GetDatabaseConnectionInstance().SaveEventChanges(model));
+        //        GetEventDataProviderInstance().SetEventFullModel(model);
+        //        //HtmlGenericControl control = (HtmlGenericControl)attachmentsItem.FindControl("attachmentsBadge");
+        //        //control.InnerText = model.Priloge.Split('|').Length.ToString();
+        //    }
+        //}
 
 
 
-        protected void test_DeleteAttachments(object sender, EventArgs e)
-        {
-            model = GetEventDataProviderInstance().GetEventFullModel();
-            if (model != null)
-            {
-                int hasPipe = 0;
-                string fileToDelete = (sender as UploadAttachment).currentFile.Name;
-                DocumentEntity obj = GetAttachmentFromDB(fileToDelete);
+        //protected void test_DeleteAttachments(object sender, EventArgs e)
+        //{
+        //    model = GetEventDataProviderInstance().GetEventFullModel();
+        //    if (model != null)
+        //    {
+        //        int hasPipe = 0;
+        //        string fileToDelete = (sender as UploadAttachment).currentFile.Name;
+        //        DocumentEntity obj = GetAttachmentFromDB(fileToDelete);
 
-                if (obj != null)
-                {
-                    string item = obj.Url + ";" + obj.Name;
-                    string strPhysicalFolder = Server.MapPath(obj.Url);
-                    if (File.Exists(strPhysicalFolder))
-                        File.Delete(strPhysicalFolder);
+        //        if (obj != null)
+        //        {
+        //            string item = obj.Url + ";" + obj.Name;
+        //            string strPhysicalFolder = Server.MapPath(obj.Url);
+        //            if (File.Exists(strPhysicalFolder))
+        //                File.Delete(strPhysicalFolder);
 
-                    if (model.Priloge.Contains("|"))
-                        hasPipe = 1;
-                    else
-                        hasPipe = 0;
+        //            if (model.Priloge.Contains("|"))
+        //                hasPipe = 1;
+        //            else
+        //                hasPipe = 0;
 
-                    model.Priloge = model.Priloge.Remove(model.Priloge.IndexOf(item) - hasPipe, item.Length + hasPipe);                    
-                    EventFullModel returnModel = CheckModelValidation(GetDatabaseConnectionInstance().SaveEventChanges(model));
-                }
+        //            model.Priloge = model.Priloge.Remove(model.Priloge.IndexOf(item) - hasPipe, item.Length + hasPipe);                    
+        //            EventFullModel returnModel = CheckModelValidation(GetDatabaseConnectionInstance().SaveEventChanges(model));
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
-        protected void test_DownloadAttachments(object sender, EventArgs e)
-        {
-            model = GetEventDataProviderInstance().GetEventFullModel();
-            if (model != null)
-            {
-                string fileName = (sender as UploadAttachment).currentFile.Name;
-                DocumentEntity obj = GetAttachmentFromDB(fileName);
+        //protected void test_DownloadAttachments(object sender, EventArgs e)
+        //{
+        //    model = GetEventDataProviderInstance().GetEventFullModel();
+        //    if (model != null)
+        //    {
+        //        string fileName = (sender as UploadAttachment).currentFile.Name;
+        //        DocumentEntity obj = GetAttachmentFromDB(fileName);
 
-                AddValueToSession(Enums.CommonSession.DownloadDocument, obj);
-                //Response.Redirect(Request.RawUrl);
-                ASPxWebControl.RedirectOnCallback(Request.RawUrl);
-            }
-        }
+        //        AddValueToSession(Enums.CommonSession.DownloadDocument, obj);
+        //        //Response.Redirect(Request.RawUrl);
+        //        ASPxWebControl.RedirectOnCallback(Request.RawUrl);
+        //    }
+        //}
 
-        private DocumentEntity GetAttachmentFromDB(string fileName)
-        {
-            model = GetEventDataProviderInstance().GetEventFullModel();
-            if (model != null)
-            {
-                string[] split = model.Priloge.Split('|');
-                foreach (var item in split)
-                {
-                    string[] fileSplit = item.Split(';');
-                    if (fileSplit[1].Equals(fileName))
-                    {
-                        return new DocumentEntity { Url = fileSplit[0], Name = fileSplit[1] };
-                    }
-                }
-            }
-            return null;
-        }
+        //private DocumentEntity GetAttachmentFromDB(string fileName)
+        //{
+        //    model = GetEventDataProviderInstance().GetEventFullModel();
+        //    if (model != null)
+        //    {
+        //        string[] split = model.Priloge.Split('|');
+        //        foreach (var item in split)
+        //        {
+        //            string[] fileSplit = item.Split(';');
+        //            if (fileSplit[1].Equals(fileName))
+        //            {
+        //                return new DocumentEntity { Url = fileSplit[0], Name = fileSplit[1] };
+        //            }
+        //        }
+        //    }
+        //    return null;
+        //}
 
-        #endregion
+        //#endregion
     }
 }

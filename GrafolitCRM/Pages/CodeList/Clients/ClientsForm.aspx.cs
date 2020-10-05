@@ -570,7 +570,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
         #region Events
         protected void EventsCallback_Callback(object sender, CallbackEventArgsBase e)
         {
-            if (e.Parameter == "2")
+            if (e.Parameter == "eventDblClick")
             {
                 object valueID = null;
                 if (ASPxGridViewEvents.VisibleRowCount > 0)

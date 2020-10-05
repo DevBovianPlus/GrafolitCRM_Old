@@ -53,15 +53,10 @@
                     <Columns>
                         <dx:GridViewDataTextColumn Caption="ID" FieldName="idDogodek" Width="80px"
                             ReadOnly="true" ShowInCustomizationForm="True" VisibleIndex="1" Visible="false">
-                        </dx:GridViewDataTextColumn>   
-                         <dx:GridViewDataTextColumn Caption="Stranka"
-                            FieldName="Stranka" ShowInCustomizationForm="True"
-                            VisibleIndex="2" Width="18%">
-                            <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
-                        </dx:GridViewDataTextColumn>
+                        </dx:GridViewDataTextColumn>                       
                         <dx:GridViewDataTextColumn Caption="Kategorija"
                             FieldName="Kategorija" ShowInCustomizationForm="True"
-                            VisibleIndex="3" Width="7%">
+                            VisibleIndex="3" Width="10%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Nadrejeni"
@@ -71,12 +66,12 @@
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Skrbnik"
                             FieldName="OsebeIzvajalec" ShowInCustomizationForm="True"
-                            VisibleIndex="5" Width="10%">
+                            VisibleIndex="5" Width="13%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Status"
                             FieldName="StatusDogodek" ShowInCustomizationForm="True"
-                            VisibleIndex="6" Width="7%">
+                            VisibleIndex="6" Width="10%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Opis"

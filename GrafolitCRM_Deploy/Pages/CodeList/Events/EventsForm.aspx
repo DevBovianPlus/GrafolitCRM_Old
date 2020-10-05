@@ -2,7 +2,7 @@
 
 <%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
-<%--<%@ Register TagPrefix="widget" TagName="UploadAttachment" Src="~/UserControls/Widgets/UploadAttachment.ascx" %>--%>
+<%@ Register TagPrefix="widget" TagName="UploadAttachment" Src="~/UserControls/Widgets/UploadAttachment.ascx" %>
 
 <%@ MasterType VirtualPath="~/MasterPage.Master" %>
 
@@ -704,7 +704,7 @@
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:TabPage>
-                       <%-- <dx:TabPage Name="Attachment" Text="PRIPONKE">
+                        <dx:TabPage Name="Attachment" Text="PRIPONKE">
                             <ContentCollection>
                                 <dx:ContentControl BackColor="#f8f8f8">
                                     <widget:UploadAttachment ID="test" runat="server" OnPopulateAttachments="test_PopulateAttachments" OnUploadComplete="test_UploadComplete"
@@ -713,7 +713,7 @@
 
                                 </dx:ContentControl>
                             </ContentCollection>
-                        </dx:TabPage>--%>
+                        </dx:TabPage>
                     </TabPages>
                 </dx:ASPxPageControl>
             </dx:PanelContent>

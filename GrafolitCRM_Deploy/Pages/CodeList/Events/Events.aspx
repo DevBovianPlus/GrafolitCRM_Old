@@ -53,25 +53,30 @@
                     <Columns>
                         <dx:GridViewDataTextColumn Caption="ID" FieldName="idDogodek" Width="80px"
                             ReadOnly="true" ShowInCustomizationForm="True" VisibleIndex="1" Visible="false">
-                        </dx:GridViewDataTextColumn>                       
-                        <dx:GridViewDataTextColumn Caption="Kategorija"
-                            FieldName="Kategorija" ShowInCustomizationForm="True"
-                            VisibleIndex="3" Width="10%">
+                        </dx:GridViewDataTextColumn> 
+                         <dx:GridViewDataTextColumn Caption="Stranka"
+                            FieldName="Stranka" ShowInCustomizationForm="True"
+                            VisibleIndex="2" Width="18%" Visible="True">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Kategorija"
+                            FieldName="Kategorija" ShowInCustomizationForm="True"
+                            VisibleIndex="3" Width="7%">
+                            <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
+                        </dx:GridViewDataTextColumn>                        
                         <dx:GridViewDataTextColumn Caption="Nadrejeni"
                             FieldName="OsebeSkrbnik" ShowInCustomizationForm="True"
-                            VisibleIndex="4" Width="170px" Visible="false">
+                            VisibleIndex="4" Width="150px" Visible="false">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Skrbnik"
                             FieldName="OsebeIzvajalec" ShowInCustomizationForm="True"
-                            VisibleIndex="5" Width="13%">
+                            VisibleIndex="5" Width="8%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Status"
                             FieldName="StatusDogodek" ShowInCustomizationForm="True"
-                            VisibleIndex="6" Width="10%">
+                            VisibleIndex="6" Width="7%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Opis"
@@ -81,13 +86,13 @@
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataDateColumn Caption="Datum otvoritve"
                             FieldName="DatumOtvoritve" ShowInCustomizationForm="True"
-                            VisibleIndex="8" Width="10%">
+                            VisibleIndex="8" Width="8%">
                             <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy"></PropertiesDateEdit>
                             <CellStyle HorizontalAlign="Right"></CellStyle>
                         </dx:GridViewDataDateColumn>
                         <dx:GridViewDataDateColumn Caption="Rok"
                             FieldName="Rok" ShowInCustomizationForm="True"
-                            VisibleIndex="9" Width="10%">
+                            VisibleIndex="9" Width="8%">
                             <PropertiesDateEdit DisplayFormatString="dd.MM.yyyy"></PropertiesDateEdit>
                             <CellStyle HorizontalAlign="Right"></CellStyle>
                         </dx:GridViewDataDateColumn>

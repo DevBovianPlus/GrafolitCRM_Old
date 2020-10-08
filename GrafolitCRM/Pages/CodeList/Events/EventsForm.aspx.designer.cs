@@ -348,6 +348,24 @@ namespace AnalizaProdaje.Pages.CodeList.Events
         protected global::DevExpress.Web.ASPxGridView ASPxGridView_Sestanek;
 
         /// <summary>
+        /// ASPxEventMeetingNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxPopupControl ASPxEventMeetingNotes;
+
+        /// <summary>
+        /// PopupControlContentControl4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl4;
+
+        /// <summary>
         /// idPripravaSection control.
         /// </summary>
         /// <remarks>
@@ -445,15 +463,6 @@ namespace AnalizaProdaje.Pages.CodeList.Events
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel lblErrorDelete;
-
-        /// <summary>
-        /// test control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AnalizaProdaje.UserControls.Widgets.UploadAttachment test;
 
         /// <summary>
         /// Master property.

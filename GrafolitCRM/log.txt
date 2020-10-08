@@ -7448,3 +7448,743 @@ System
 5. 10. 2020 16:49:26 Request failed! => Message: 
 The operation has timed out 
 System
+6. 10. 2020 10:04:19 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 10:04:19 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:23 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:26 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => Count ChartRenderData1
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:28 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:28 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:04:28 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:04:28 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:04:28 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:04:28 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:29 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 10:14:29 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:29 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:14:31 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:29:04 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 10:29:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:07 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:07 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:07 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 10:29:07 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:08 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:29:09 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:31:56 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 10:31:56 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:56 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:57 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 10:31:58 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:04:59 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:05:00 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:05:01 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:05:01 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 11:18:28 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 11:18:28 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:30 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:30 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 11:18:30 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:30 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:31 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:32 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:32 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 11:18:32 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:18:32 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:18:32 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:18:32 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 11:52:21 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 11:52:21 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:21 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:52:22 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 11:52:23 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 13:49:04 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 13:49:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:06 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:07 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 13:49:08 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 14:28:01 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 14:28:01 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:03 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:04 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 14:28:05 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 15:04:25 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 15:04:25 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:27 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:04:28 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:04:29 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:04:29 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred foreach 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => Count ChartRenderData5
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:52 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => Count ChartRenderData6
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => Count ChartRenderData4
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred nalaganje user contorls 
+
+6. 10. 2020 15:07:53 Metoda: CreateCharts => pred klicem web service sql funkcije 
+
+6. 10. 2020 15:07:54 Metoda: CreateCharts => po klicu web service sql funkcije 
+
+6. 10. 2020 15:07:54 Metoda: CreateCharts => Count ChartRenderData0
+
+6. 10. 2020 15:52:20 Request failed! => Message: 
+'Repository failed to save dataValidation failed for one or more entities. See EntityValidationErrors property for more details.'
+7. 10. 2020 07:55:35 
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Events/EventsForm.aspx?action=2&recordId=5547
+
+7. 10. 2020 07:58:32 
+ 
+ASP._global_asax
+http://localhost:9861/Pages/CodeList/Events/EventsForm.aspx?action=2&recordId=5547
+
+7. 10. 2020 11:21:12 Request failed! => Message: 
+'Repository failed to save dataValidation failed for one or more entities. See EntityValidationErrors property for more details.'

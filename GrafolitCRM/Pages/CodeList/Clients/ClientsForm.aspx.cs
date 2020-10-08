@@ -683,6 +683,8 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
         {
             if (CheckClientExistInDB())
             {
+                model = CheckModelValidation<ClientFullModel>(GetDatabaseConnectionInstance().GetClient(clientID));
+
                 DataTable dt = new DataTable();
                 CheckForClientName(model.Opombe);
                 string Notes = JsonConvert.SerializeObject(model.Opombe);

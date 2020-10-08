@@ -114,7 +114,7 @@
                     break;
                 case "Events":
                     //parameter = "eventDblClick";
-                    parameter = HandleUserActionsOnTabs(gridEvents, clientBtnAddEvent, clientBtnEditEvent, clientBtnDeleteEvent, s);
+                    parameter = HandleUserActionsOnTabs(gridEvents, clientBtnAddEvent, clientBtnEditEvent, clientBtnDeleteEvents, s);
                     clientEventsCallback.PerformCallback(parameter);
                     break;
                 case "Device":

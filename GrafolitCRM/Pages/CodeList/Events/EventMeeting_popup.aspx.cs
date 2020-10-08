@@ -14,23 +14,23 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AnalizaProdaje.Pages.CodeList.Clients
+namespace AnalizaProdaje.Pages.CodeList.Events
 {
-    public partial class Notes_popup : ServerMasterPage
+    public partial class EventMeeting_popup : ServerMasterPage
     {
-        NotesModel model = null;
-        EventMeetingModel modelEM = null;
-
-        int NotesID = -1;
+        EventMeetingModel model = null;
+        int eventID = -1;
         int action = -1;
         int clientID = -1;
-        int eventMessageID = -1;
+        int eventMeetingID = -1;
+        int statusID = -1;
         protected void Page_Init(object sender, EventArgs e)
         {
             clientID = CommonMethods.ParseInt(GetStringValueFromSession(Enums.ClientSession.ClientId));
             action = CommonMethods.ParseInt(GetStringValueFromSession(Enums.CommonSession.UserActionPopUp));
-            NotesID = CommonMethods.ParseInt(GetStringValueFromSession(Enums.ClientSession.NotesPopUpID));
-            
+            eventMeetingID = CommonMethods.ParseInt(GetStringValueFromSession(Enums.EventSession.EventMeetingID));
+            eventID = CommonMethods.ParseInt(GetStringValueFromSession(Enums.EventSession.EventID));
+            statusID = CommonMethods.ParseInt(GetStringValueFromSession(Enums.EventSession.EventStatusID));
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -40,15 +40,15 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 //ComboBoxKategorije.DataBind();                
                 if (action == (int)Enums.UserAction.Edit || action == (int)Enums.UserAction.Delete)
                 {
-                    if (NotesID > 0 && SessionHasValue(Enums.ClientSession.ClientModel))
+                    if (eventMeetingID > 0 && eventMeetingID > 0)
                     {
-                        model = GetClientDataProviderInstance().GetNotesFromClientModelSession(NotesID, clientID);
+                        model = GetEventDataProviderInstance().GetEventMeetingFromEventModelSession(eventMeetingID, eventID);
                         FillForm();
                     }
                 }
                 else if (action == (int)Enums.UserAction.Add)//acion ADD
                 {
-                    txtIdStranke.Text = clientID.ToString();
+                    //txtIdStranke.Text = clientID.ToString();
                     // ComboBoxKategorije.SelectedIndex = 0;
                 }
                 UserActionConfirmBtnUpdate(btnConfirmPopUp, action, true);
@@ -57,43 +57,49 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
 
         private void FillForm()
         {
-            txtNotesID.Text = model.idOpombaStranka.ToString();
-            txtIdStranke.Text = model.idStranka.ToString();
-            htmlOpomba.Html = model.Opomba;            
+            txtNotesID.Text = model.DogodekSestanekID.ToString();
+
+            htmlOpombaSestanek.Html = model.Opis;
+
+            if (statusID == 2)
+            {
+                btnConfirmPopUp.ClientEnabled = false;
+            }
         }
 
         private bool AddOrEditEntityObject(bool add = false)
         {
             if (add)
             {
-                model = new NotesModel();
+                model = new EventMeetingModel();
 
-                model.idOpombaStranka = 0;
-                model.idStranka = clientID;
+                model.DogodekSestanekID = 0;
+                
                 model.tsIDOsebe = PrincipalHelper.GetUserPrincipal().ID;
                 model.ts = DateTime.Now;
             }
             else if (model == null && !add)
             {
-                model = GetClientDataProviderInstance().GetNotesFromClientModelSession(NotesID, clientID);
+                model = GetEventDataProviderInstance().GetEventMeetingFromEventModelSession(eventMeetingID, eventID);
             }
             model.ts = DateTime.Now;
             model.tsIDOsebe = PrincipalHelper.GetUserPrincipal().ID;
-            model.Opomba = htmlOpomba.Html;
+            model.Opis = htmlOpombaSestanek.Html;
 
-            NotesModel newModel = CheckModelValidation(GetDatabaseConnectionInstance().SaveNotesChanges(model));
+            model = CheckModelValidation(GetDatabaseConnectionInstance().SaveEventMeetingChanges(model));
 
-            if (newModel != null)//If new record is added we need to refresh aspxgridview. We add new record to session model.
-            {
-                if (add)
-                    return GetClientDataProviderInstance().AddNotesToClientModelSession(newModel);
-                else
-                    return GetClientDataProviderInstance().UpdateNotesToClientModelSession(newModel);
-            }
-            else
-            {
-                return false;
-            }
+            //if (newModel != null)//If new record is added we need to refresh aspxgridview. We add new record to session model.
+            //{
+            //    if (add)
+            //        return GetClientDataProviderInstance().AddNotesToClientModelSession(newModel);
+            //    else
+            //        return GetClientDataProviderInstance().UpdateNotesToClientModelSession(newModel);
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+            return true;
         }
 
         protected void btnCancelPopUp_Click(object sender, EventArgs e)
@@ -114,7 +120,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                     isValid = AddOrEditEntityObject();
                     break;
                 case (int)Enums.UserAction.Delete:
-                    isValid = DeletePlanObject();
+                    //isValid = DeletePlanObject();
                     break;
             }
 
@@ -124,14 +130,14 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 ShowClientPopUp("Something went wrong. Contact administrator", 1);
         }
 
-        private bool DeletePlanObject()
-        {
-            bool isDeleted = CheckModelValidation(GetDatabaseConnectionInstance().DeleteNotes(NotesID, clientID));
+        //private bool DeletePlanObject()
+        //{
+        //    bool isDeleted = CheckModelValidation(GetDatabaseConnectionInstance().DeleteNotes(NotesID, clientID));
 
-            GetClientDataProviderInstance().DeleteNotesFromClientModelSession(NotesID, clientID);
+        //    GetClientDataProviderInstance().DeleteNotesFromClientModelSession(NotesID, clientID);
 
-            return isDeleted;
-        }
+        //    return isDeleted;
+        //}
 
         private void RemoveSessionsAndClosePopUP(bool confirm = false)
         {
@@ -143,7 +149,8 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             //RemoveSession(Enums.ClientSession.PlanPopUpID);
             RemoveSession(Enums.CommonSession.UserActionPopUp);
             RemoveSession(Enums.ClientSession.ClientId);
-            ClientScript.RegisterStartupScript(GetType(), "ANY_KEY", string.Format("window.parent.OnClosePopupEventHandler_Notes('{0}');", confirmCancelAction), true);
+            RemoveSession(Enums.EventSession.EventMeetingID);
+            ClientScript.RegisterStartupScript(GetType(), "ANY_KEY", string.Format("window.parent.OnClosePopupEventHandler_EventMeeting_popup('{0}');", confirmCancelAction), true);
 
         }
 

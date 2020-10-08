@@ -59,7 +59,9 @@ namespace AnalizaProdaje.Common
             EventModel,
             MessagePopupID, 
             EventID,
-            SendEmail
+            EventMeetingID,
+            SendEmail,
+            EventStatusID
         }
 
         public enum CommonSession

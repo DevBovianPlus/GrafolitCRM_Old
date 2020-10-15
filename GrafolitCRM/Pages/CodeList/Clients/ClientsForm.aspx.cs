@@ -35,8 +35,15 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
         {
             if (!Request.IsAuthenticated) RedirectHome();
 
+            if (Request.QueryString[Enums.QueryStringName.action.ToString()] == null)
+            {
+                RedirectHome();
+            }
+
             action = CommonMethods.ParseInt(Request.QueryString[Enums.QueryStringName.action.ToString()].ToString());
             clientID = CommonMethods.ParseInt(Request.QueryString[Enums.QueryStringName.recordId.ToString()].ToString());
+
+
 
             //if user's previous page was eventsForm then we check if there is an query string for setting active tab-s
             if (SessionHasValue(Enums.CommonSession.activeTab))
@@ -168,7 +175,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 ComboBoxZaposleniStranke.ReadOnly = true;
                 ComboBoxZaposleniStranke.Enabled = false;
             }
-            
+
             ASPxRoundPanel1.HeaderText = model.NazivPrvi;
         }
 
@@ -570,12 +577,13 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
         #region Events
         protected void EventsCallback_Callback(object sender, CallbackEventArgsBase e)
         {
-            if (e.Parameter == "2")
+            if (e.Parameter == "2" || e.Parameter == "1")
             {
                 object valueID = null;
                 if (ASPxGridViewEvents.VisibleRowCount > 0)
                     valueID = ASPxGridViewEvents.GetRowValues(ASPxGridViewEvents.FocusedRowIndex, "idDogodek");
 
+                if (e.Parameter == "1") valueID = 0;
 
                 if (valueID != null)
                 {
@@ -590,7 +598,7 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                     }
                     List<QueryStrings> queryList = new List<QueryStrings>();
 
-                    QueryStrings item = new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = ((int)Enums.UserAction.Edit).ToString() };
+                    QueryStrings item = new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = (e.Parameter == "1" ? ((int)Enums.UserAction.Add).ToString() : ((int)Enums.UserAction.Edit).ToString())};
                     queryList.Add(item);
                     item = new QueryStrings() { Attribute = Enums.QueryStringName.recordId.ToString(), Value = valueID.ToString() };
                     queryList.Add(item);
@@ -605,8 +613,33 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
 
                     ClearSessionsAndRedirect(true, GenerateURI("../Events/EventsForm.aspx", queryList), true);
                 }
+                //}
+                //else if (e.Parameter == "1")
+                //{
+                //    List<QueryStrings> queryList = new List<QueryStrings>();
+
+                //    int employeeID = 0;
+                //    if (model != null)
+                //        employeeID = model.StrankaZaposleni[0].idOsebe;
+
+                //    QueryStrings item = new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = "1" };
+                //    queryList.Add(item);
+                //    item = new QueryStrings() { Attribute = Enums.QueryStringName.recordId.ToString(), Value = "0" };
+                //    queryList.Add(item);
+                //    item = new QueryStrings() { Attribute = Enums.QueryStringName.eventClientId.ToString(), Value = clientID.ToString() };
+                //    queryList.Add(item);
+                //    item = new QueryStrings() { Attribute = Enums.QueryStringName.eventCategorieId.ToString(), Value = (-1).ToString() };
+                //    queryList.Add(item);
+                //    item = new QueryStrings() { Attribute = Enums.QueryStringName.eventEmployeeId.ToString(), Value = employeeID.ToString() };
+                //    queryList.Add(item);
+
+                //    AddValueToSession(Enums.CommonSession.activeTab, "Basic");
+
+
+
             }
         }
+
 
         protected void ASPxGridViewEvents_DataBinding(object sender, EventArgs e)
         {
@@ -894,9 +927,8 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
             GetClientDataProviderInstance().SetGraphBindingList(bindingCollection);
         }
 
-        private void ucf2_btnAddEventClick(object sender, EventArgs e)
+        private void addEvent(object sender)
         {
-
             UserControlGraph ucf2 = (UserControlGraph)sender;
             if (PrincipalHelper.GetUserPrincipal().HasSupervisor && (model.StrankaZaposleni != null && model.StrankaZaposleni.Count > 0))
             {
@@ -918,7 +950,6 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 queryList.Add(item);
 
                 AddValueToSession(Enums.CommonSession.activeTab, (ucf2 != null ? "Charts" : "Basic"));
-
                 ClearSessionsAndRedirect(true, GenerateURI("../Events/EventsForm.aspx", queryList));
             }
             else
@@ -927,6 +958,11 @@ namespace AnalizaProdaje.Pages.CodeList.Clients
                 ClientPageControl.ActiveTabIndex = ClientPageControl.TabPages.FindByName("Basic").Index;
                 ErrorLabel.Text = "Skrbnik in zaposlen za stranko ni izbran!";
             }
+        }
+
+        private void ucf2_btnAddEventClick(object sender, EventArgs e)
+        {
+            addEvent(sender);
         }
 
         #endregion

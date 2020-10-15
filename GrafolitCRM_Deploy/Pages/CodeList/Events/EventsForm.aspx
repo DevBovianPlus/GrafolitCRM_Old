@@ -2,7 +2,7 @@
 
 <%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
-<%@ Register TagPrefix="widget" TagName="UploadAttachment" Src="~/UserControls/Widgets/UploadAttachment.ascx" %>
+<%--<%@ Register TagPrefix="widget" TagName="UploadAttachment" Src="~/UserControls/Widgets/UploadAttachment.ascx" %>--%>
 
 <%@ MasterType VirtualPath="~/MasterPage.Master" %>
 
@@ -26,11 +26,11 @@
 
         function PlanPopUpShow(s, e) {
             var parameter = "";
-            parameter = HandleUserActionsOnTabs(gridMessage, clientBtnAdd, clientBtnEdit, clientBtnDelete, s);
+            parameter = HandleUserActionsOnTabs(gridSestanekClient, null, null, null, s);
 
             if (CheckValidData()) {
                 //ShowSpinnerLoader();
-                clientMessageCallback.PerformCallback(parameter);
+                meetingCallbackPanelClient.PerformCallback(parameter);
             }
         }
 
@@ -121,6 +121,19 @@
 
         function textareaFocus(s, e) {
             $(s.GetInputElement()).parent().removeClass("focus-text-box-input-error");
+        }
+
+        function OnClosePopupEventHandler_EventMeeting_popup(command) {
+            switch (command) {
+                case 'Potrdi':
+                    clientPopUpEventMeeting.Hide();
+                    //gridDevice.Refresh();
+                    meetingCallbackPanelClient.PerformCallback("RefreshGrid");
+                    break;
+                case 'Preklici':
+                    clientPopUpEventMeeting.Hide();
+                    break;
+            }
         }
     </script>
 </asp:Content>
@@ -584,9 +597,9 @@
                                                     KeyFieldName="DogodekSestanekID" OnDataBinding="ASPxGridView_Sestanek_DataBinding"
                                                     ClientInstanceName="gridSestanekClient" OnHtmlRowPrepared="ASPxGridView_Sestanek_HtmlRowPrepared"
                                                     Paddings-PaddingTop="0" Paddings-PaddingBottom="0" Visible="false">
-
+                                                    <ClientSideEvents RowDblClick="PlanPopUpShow" />
                                                     <SettingsPager Mode="ShowAllRecords" />
-                                                    <SettingsBehavior AllowSort="false" AllowGroup="false" />
+                                                    <SettingsBehavior AllowSort="false" AllowGroup="false" AllowFocusedRow="true"/>                                                     
                                                     <Settings ShowVerticalScrollBar="True" VerticalScrollableHeight="250"
                                                         VerticalScrollBarStyle="Standard" />
                                                     <Columns>
@@ -622,6 +635,19 @@
                                                     </Templates>
                                                     <SettingsDetail ShowDetailRow="true" AllowOnlyOneMasterRowExpanded="true" />
                                                 </dx:ASPxGridView>
+                                                 <dx:ASPxPopupControl ID="ASPxEventMeetingNotes" runat="server" ContentUrl="EventMeeting_popup.aspx"
+                                                    ClientInstanceName="clientPopUpEventMeeting" Modal="True" HeaderText="Urejanje"
+                                                    Theme="MetropolisBlue" CloseAction="CloseButton" Width="750px" Height="600px" PopupHorizontalAlign="WindowCenter"
+                                                    PopupVerticalAlign="WindowCenter" PopupAnimationType="Fade" AllowDragging="true" ShowSizeGrip="true"
+                                                    AllowResize="true">
+                                                    <ContentStyle BackColor="#F7F7F7">
+                                                        <Paddings PaddingBottom="0px" PaddingLeft="6px" PaddingRight="0px" PaddingTop="0px"></Paddings>
+                                                    </ContentStyle>
+                                                    <ContentCollection>
+                                                        <dx:PopupControlContentControl ID="PopupControlContentControl4" runat="server">
+                                                        </dx:PopupControlContentControl>
+                                                    </ContentCollection>
+                                                </dx:ASPxPopupControl>
 
                                                 <div class="section group">
                                                     <div id="idPripravaSection" class="col span_3_of_3 no-margin-left-important" runat="server">
@@ -704,7 +730,7 @@
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:TabPage>
-                        <dx:TabPage Name="Attachment" Text="PRIPONKE">
+                        <%--<dx:TabPage Name="Attachment" Text="PRIPONKE">
                             <ContentCollection>
                                 <dx:ContentControl BackColor="#f8f8f8">
                                     <widget:UploadAttachment ID="test" runat="server" OnPopulateAttachments="test_PopulateAttachments" OnUploadComplete="test_UploadComplete"
@@ -713,7 +739,7 @@
 
                                 </dx:ContentControl>
                             </ContentCollection>
-                        </dx:TabPage>
+                        </dx:TabPage>--%>
                     </TabPages>
                 </dx:ASPxPageControl>
             </dx:PanelContent>
